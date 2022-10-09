@@ -3,18 +3,12 @@
 @import url(./layout/sidebar.css);
 @import url(./layout/header.css);
 @import url(./layout/content.css);
-@import url(./layout/popup.css);
+
 /* CSS base */
 @import url(./base/icon.css);
 @import url(./base/button.css);
 @import url(./base/input.css);
 @import url(./base/table.css);
-@import url(./base/pagination.css);
-@import url(./base/dropdown.css);
-@import url(./base/skeleton.css);
-@import url(./base/combobox.css);
-@import url(./base/dialog.css);
-
 
 
 @font-face {
