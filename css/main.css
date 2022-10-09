@@ -1,7 +1,7 @@
 /* CSS layout */
 @import url(./layout/main-content.css);
 @import url(./layout/sidebar.css);
-@import url(./layout/navbar.css);
+@import url(./layout/header.css);
 @import url(./layout/content.css);
 @import url(./layout/popup.css);
 /* CSS base */

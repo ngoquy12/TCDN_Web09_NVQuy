@@ -32,7 +32,6 @@
 .m-sidebar-item {
     height: calc(100vh - 62px);
     padding-top: 14px;
-    overflow: auto;
 }
 
 .m-item-router {
