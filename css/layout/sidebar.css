@@ -1,0 +1,66 @@
+.m-sidebar {
+    width: 200px;
+    background-color: #393a3d;
+    color: #ffffff;
+}
+
+.m-sidebar a {
+    color: #ffffff;
+    text-decoration: none;
+    cursor: pointer;
+
+}
+.m-sidebar-logo {
+    height: 0;
+    padding: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.m-option-icon {
+    width: 24px;
+    height: 24px;
+    margin-right: 12px;
+    background: url(../../assets/img/Sprites.64af8f61.svg) no-repeat -424px -86px;
+}
+
+.m-logo-icon {
+    height: 32px;
+}
+
+.m-sidebar-item {
+    height: calc(100vh - 62px);
+    padding-top: 14px;
+    overflow: auto;
+}
+
+.m-item-router {
+    height: 44px;
+    display: flex;
+    align-items: center;
+    padding: 0 12px;
+    border-left: 6px solid transparent;
+    position: relative;
+    margin-bottom: 4px;
+}
+
+.m-item-router.active {
+    border-left: 6px solid rgb(44, 160, 28);
+}
+
+.m-item-router.active::before, .m-item-router:hover::before {
+    content: "";
+    background: rgb(212, 215, 220);
+    opacity: 0.2;
+    width: calc(100% + 6px);
+    height: 42px;
+    left: -6px;
+    top: 0px;
+    position: absolute;
+}
+
+.m-item-icon {
+    margin-right: 12px;
+}
+
