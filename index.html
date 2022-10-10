@@ -127,35 +127,1366 @@
                     <div class="m-header-icon m-icon-24 m-icon-bell"></div>
                     <div class="m-header-user">
                         <div class="m-user-image">
-                            <img src="./assets/img/default-avatar.jpg" alt="Ảnh đại diện" />
+                            <img src="./assets/img/default-avatar.jpg" alt="User image" />
                         </div>
                         <div class="m-user-name">Nguyễn Văn Mạnh</div>
                         <div class="m-header-icon m-icon-14 m-icon-chevron-down"></div>
                     </div>
                 </div>
             </div>
-        
-        <!-- Thanh function -->
-        <div class="m-main-content">
-            <div class="m-content-header">
-                <div class="m-header-di">
-                    <div class="m-header-title">Nhân viên</div>
-                    <button class="m-button m-button-add-emp">
-                        <div class="m-button-text">Thêm mới nhân viên</div>
-                    </button>
+            <div class="m-main-content">
+                <div class="m-content-header">
+                    <div class="m-header-di">
+                        <div class="m-header-title">Nhân viên</div>
+                        <button class="m-button m-button-add-emp">
+                            <div class="m-button-text">Thêm mới nhân viên</div>
+                        </button>
+                    </div>
+                </div>
+                <div class="m-content-body">
+                    <div class="m-body-toolbar">
+                        <div class="m-search-area">
+                            <input type="text" class="m-input m-input-icon m-input-search m-search-emp"
+                                placeholder="Tìm theo mã, tên nhân viên" />
+                            <div class="m-icon-after m-icon-16 m-icon-search"></div>
+                        </div>
+                        <div class="m-refresh-button m-icon-24 m-icon-refresh"></div>
+                    </div>
+                    <div class="m-body-table">
+                        <table class="m-table">
+                            <thead class="m-thead">
+                                <tr class="m-tr">
+                                    <th class="m-out-left-white-16" style="top: -78px"></th>
+                                    <th class="m-th m-checkall" style="left: 16px; top: -87px">
+                                        <label class="m-table-checkbox">
+                                            <input type="checkbox" class="m-input-checkall" />
+                                            <span class="m-checkbox">
+                                                <span class="m-checkbox-inner">
+                                                    <div class="m-icon-16 m-icon-checkbox-active"></div>
+                                                </span>
+                                            </span>
+                                        </label>
+                                    </th>
+                                    <th class="m-th m-dynamic-col" style="min-width: 143px; width: 143px; top: -87px">
+                                        <div class="m-th-title">Mã nhân viên</div>
+                                    </th>
+                                    <th class="m-th m-dynamic-col" style="min-width: 173px; top: -87px">
+                                        <div class="m-th-title">Tên nhân viên</div>
+                                    </th>
+                                    <th class="m-th m-dynamic-col" style="min-width: 120px; width: 120px; top: -87px">
+                                        <div class="m-th-title">Giới tính</div>
+                                    </th>
+                                    <th class="m-th m-dynamic-col" style="min-width: 145px; width: 145px; top: -87px">
+                                        <div class="m-th-title">Ngày sinh</div>
+                                    </th>
+                                    <th class="m-th m-dynamoc-col" style="min-width: 122px; width: 122px; top: -87px">
+                                        <div class="m-th-title">Chức danh</div>
+                                    </th>
+                                    <th class="m-th m-dynamic-col" style="min-width: 200px; width: 200px; top: -87px">
+                                        <div class="m-th-title">Số CMND</div>
+                                    </th>
+                                    <th class="m-th m-dynamic-col" style="min-width: 250px; top: -87px">
+                                        <div class="m-th-title">Tên đơn vị</div>
+                                    </th>
+                                    <th class="m-th m-dynamic-col" style="min-width: 150px; width: 150px; top: -87px">
+                                        <div class="m-th-title">Số tài khoản</div>
+                                    </th>
+                                    <th class="m-th m-dynamic-col" style="min-width: 250px; width: 250px; top: -87px">
+                                        <div class="m-th-title">Tên ngân hàng</div>
+                                    </th>
+                                    <th class="m-th m-dynamic-col" style="min-width: 250px; width: 250px; top: -87px">
+                                        <div class="m-th-title">Chi nhánh TK ngân hàng</div>
+                                    </th>
+                                    <th class="m-th m-dynamic-col" style="min-width: 150px; width: 150px; top: -87px">
+                                        <div class="m-th-title">Chi nhánh</div>
+                                    </th>
+                                    <th class="m-th m-th-widget"
+                                        style="right: 30px; width: 120px; min-width: 120px; top: -87px">
+                                        <div class="m-th-title">Chức năng</div>
+                                    </th>
+                                    <th class="m-out-right-white-30" style="top: -87px"></th>
+                                    <th class="m-out-right-grey-30" style="top: -87px"></th>
+                                </tr>
+                            </thead>
+                            <tbody class="m-tbody">
+                                <tr class="m-tr">
+                                    <td class="m-out-left-white-16"></td>
+                                    <td class="m-td m-td-multi" style="left: 16px">
+                                        <div class="m-skeleton">
+                                            <div class="m-skeleton-rectangle" style="width: 18px; height: 18px">
+                                                <div class="m-skeleton-box ">
+                                                    <label class="m-table-checkbox">
+                                                        <input type="checkbox" class="m-input-checkall" />
+                                                        <span class="m-checkbox">
+                                                            <span class="m-checkbox-inner">
+                                                                <div class="m-icon-16 m-icon-checkbox-active"></div>
+                                                            </span>
+                                                        </span>
+                                                    </label>
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td class="m-td">
+                                        <div class="m-skeleton">
+                                            <div class="m-skeleton-text">
+                                                <div class="m-skeleton-box">0001</div>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td class="m-td">
+                                        <div class="m-skeleton">
+                                            <div class="m-skeleton-text">
+                                                <div class="m-skeleton-box">Nguyễn Văn Việt</div>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td class="m-td">
+                                        <div class="m-skeleton">
+                                            <div class="m-skeleton-text">
+                                                <div class="m-skeleton-box">Nam</div>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td class="m-td">
+                                        <div class="m-skeleton">
+                                            <div class="m-skeleton-text">
+                                                <div class="m-skeleton-box">31/12/1985</div>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td class="m-td">
+                                        <div class="m-skeleton">
+                                            <div class="m-skeleton-text">
+                                                <div class="m-skeleton-box">36250865</div>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td class="m-td">
+                                        <div class="m-skeleton">
+                                            <div class="m-skeleton-text">
+                                                <div class="m-skeleton-box">Trưởng nhóm</div>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td class="m-td">
+                                        <div class="m-skeleton">
+                                            <div class="m-skeleton-text">
+                                                <div class="m-skeleton-box">Vận hành tại Hà Nội</div>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td class="m-td">
+                                        <div class="m-skeleton">
+                                            <div class="m-skeleton-text">
+                                                <div class="m-skeleton-box"></div>
+                                            </div>
+                                        </div>
+                                    </td>
+
+                                    <td class="m-td">
+                                        <div class="m-skeleton">
+                                            <div class="m-skeleton-text">
+                                                <div class="m-skeleton-box"></div>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td class="m-td">
+                                        <div class="m-skeleton">
+                                            <div class="m-skeleton-text">
+                                                <div class="m-skeleton-box"></div>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td class="m-td">
+                                        <div class="m-skeleton">
+                                            <div class="m-skeleton-text">
+                                                <div class="m-skeleton-box"></div>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td class="m-td m-td-widget" style="right: 30px">
+                                        <div class="m-skeleton">
+                                            <div class="m-skeleton-text">
+                                                <div class="m-skeleton-box"></div>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td class="m-out-right-white-30"></td>
+                                    <td class="m-out-right-grey-30"></td>
+                                </tr>
+                                <tr class="m-tr">
+                                    <td class="m-out-left-white-16"></td>
+                                    <td class="m-td m-td-multi" style="left: 16px">
+                                        <div class="m-skeleton">
+                                            <div class="m-skeleton-rectangle" style="width: 18px; height: 18px">
+                                                <div class="m-skeleton-box ">
+                                                    <label class="m-table-checkbox">
+                                                        <input type="checkbox" class="m-input-checkall" />
+                                                        <span class="m-checkbox">
+                                                            <span class="m-checkbox-inner">
+                                                                <div class="m-icon-16 m-icon-checkbox-active"></div>
+                                                            </span>
+                                                        </span>
+                                                    </label>
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td class="m-td">
+                                        <div class="m-skeleton">
+                                            <div class="m-skeleton-text">
+                                                <div class="m-skeleton-box">0001</div>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td class="m-td">
+                                        <div class="m-skeleton">
+                                            <div class="m-skeleton-text">
+                                                <div class="m-skeleton-box">Nguyễn Văn Việt</div>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td class="m-td">
+                                        <div class="m-skeleton">
+                                            <div class="m-skeleton-text">
+                                                <div class="m-skeleton-box">Nam</div>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td class="m-td">
+                                        <div class="m-skeleton">
+                                            <div class="m-skeleton-text">
+                                                <div class="m-skeleton-box">31/12/1985</div>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td class="m-td">
+                                        <div class="m-skeleton">
+                                            <div class="m-skeleton-text">
+                                                <div class="m-skeleton-box">36250865</div>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td class="m-td">
+                                        <div class="m-skeleton">
+                                            <div class="m-skeleton-text">
+                                                <div class="m-skeleton-box">Trưởng nhóm</div>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td class="m-td">
+                                        <div class="m-skeleton">
+                                            <div class="m-skeleton-text">
+                                                <div class="m-skeleton-box">Vận hành tại Hà Nội</div>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td class="m-td">
+                                        <div class="m-skeleton">
+                                            <div class="m-skeleton-text">
+                                                <div class="m-skeleton-box"></div>
+                                            </div>
+                                        </div>
+                                    </td>
+
+                                    <td class="m-td">
+                                        <div class="m-skeleton">
+                                            <div class="m-skeleton-text">
+                                                <div class="m-skeleton-box"></div>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td class="m-td">
+                                        <div class="m-skeleton">
+                                            <div class="m-skeleton-text">
+                                                <div class="m-skeleton-box"></div>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td class="m-td">
+                                        <div class="m-skeleton">
+                                            <div class="m-skeleton-text">
+                                                <div class="m-skeleton-box"></div>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td class="m-td m-td-widget" style="right: 30px">
+                                        <div class="m-skeleton">
+                                            <div class="m-skeleton-text">
+                                                <div class="m-skeleton-box"></div>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td class="m-out-right-white-30"></td>
+                                    <td class="m-out-right-grey-30"></td>
+                                </tr>
+                                <tr class="m-tr">
+                                    <td class="m-out-left-white-16"></td>
+                                    <td class="m-td m-td-multi" style="left: 16px">
+                                        <div class="m-skeleton">
+                                            <div class="m-skeleton-rectangle" style="width: 18px; height: 18px">
+                                                <div class="m-skeleton-box ">
+                                                    <label class="m-table-checkbox">
+                                                        <input type="checkbox" class="m-input-checkall" />
+                                                        <span class="m-checkbox">
+                                                            <span class="m-checkbox-inner">
+                                                                <div class="m-icon-16 m-icon-checkbox-active"></div>
+                                                            </span>
+                                                        </span>
+                                                    </label>
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td class="m-td">
+                                        <div class="m-skeleton">
+                                            <div class="m-skeleton-text">
+                                                <div class="m-skeleton-box">0001</div>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td class="m-td">
+                                        <div class="m-skeleton">
+                                            <div class="m-skeleton-text">
+                                                <div class="m-skeleton-box">Nguyễn Văn Việt</div>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td class="m-td">
+                                        <div class="m-skeleton">
+                                            <div class="m-skeleton-text">
+                                                <div class="m-skeleton-box">Nam</div>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td class="m-td">
+                                        <div class="m-skeleton">
+                                            <div class="m-skeleton-text">
+                                                <div class="m-skeleton-box">31/12/1985</div>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td class="m-td">
+                                        <div class="m-skeleton">
+                                            <div class="m-skeleton-text">
+                                                <div class="m-skeleton-box">36250865</div>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td class="m-td">
+                                        <div class="m-skeleton">
+                                            <div class="m-skeleton-text">
+                                                <div class="m-skeleton-box">Trưởng nhóm</div>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td class="m-td">
+                                        <div class="m-skeleton">
+                                            <div class="m-skeleton-text">
+                                                <div class="m-skeleton-box">Vận hành tại Hà Nội</div>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td class="m-td">
+                                        <div class="m-skeleton">
+                                            <div class="m-skeleton-text">
+                                                <div class="m-skeleton-box"></div>
+                                            </div>
+                                        </div>
+                                    </td>
+
+                                    <td class="m-td">
+                                        <div class="m-skeleton">
+                                            <div class="m-skeleton-text">
+                                                <div class="m-skeleton-box"></div>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td class="m-td">
+                                        <div class="m-skeleton">
+                                            <div class="m-skeleton-text">
+                                                <div class="m-skeleton-box"></div>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td class="m-td">
+                                        <div class="m-skeleton">
+                                            <div class="m-skeleton-text">
+                                                <div class="m-skeleton-box"></div>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td class="m-td m-td-widget" style="right: 30px">
+                                        <div class="m-skeleton">
+                                            <div class="m-skeleton-text">
+                                                <div class="m-skeleton-box"></div>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td class="m-out-right-white-30"></td>
+                                    <td class="m-out-right-grey-30"></td>
+                                </tr>
+                                <tr class="m-tr">
+                                    <td class="m-out-left-white-16"></td>
+                                    <td class="m-td m-td-multi" style="left: 16px">
+                                        <div class="m-skeleton">
+                                            <div class="m-skeleton-rectangle" style="width: 18px; height: 18px">
+                                                <div class="m-skeleton-box ">
+                                                    <label class="m-table-checkbox">
+                                                        <input type="checkbox" class="m-input-checkall" />
+                                                        <span class="m-checkbox">
+                                                            <span class="m-checkbox-inner">
+                                                                <div class="m-icon-16 m-icon-checkbox-active"></div>
+                                                            </span>
+                                                        </span>
+                                                    </label>
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td class="m-td">
+                                        <div class="m-skeleton">
+                                            <div class="m-skeleton-text">
+                                                <div class="m-skeleton-box">0001</div>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td class="m-td">
+                                        <div class="m-skeleton">
+                                            <div class="m-skeleton-text">
+                                                <div class="m-skeleton-box">Nguyễn Văn Việt</div>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td class="m-td">
+                                        <div class="m-skeleton">
+                                            <div class="m-skeleton-text">
+                                                <div class="m-skeleton-box">Nam</div>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td class="m-td">
+                                        <div class="m-skeleton">
+                                            <div class="m-skeleton-text">
+                                                <div class="m-skeleton-box">31/12/1985</div>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td class="m-td">
+                                        <div class="m-skeleton">
+                                            <div class="m-skeleton-text">
+                                                <div class="m-skeleton-box">36250865</div>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td class="m-td">
+                                        <div class="m-skeleton">
+                                            <div class="m-skeleton-text">
+                                                <div class="m-skeleton-box">Trưởng nhóm</div>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td class="m-td">
+                                        <div class="m-skeleton">
+                                            <div class="m-skeleton-text">
+                                                <div class="m-skeleton-box">Vận hành tại Hà Nội</div>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td class="m-td">
+                                        <div class="m-skeleton">
+                                            <div class="m-skeleton-text">
+                                                <div class="m-skeleton-box"></div>
+                                            </div>
+                                        </div>
+                                    </td>
+
+                                    <td class="m-td">
+                                        <div class="m-skeleton">
+                                            <div class="m-skeleton-text">
+                                                <div class="m-skeleton-box"></div>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td class="m-td">
+                                        <div class="m-skeleton">
+                                            <div class="m-skeleton-text">
+                                                <div class="m-skeleton-box"></div>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td class="m-td">
+                                        <div class="m-skeleton">
+                                            <div class="m-skeleton-text">
+                                                <div class="m-skeleton-box"></div>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td class="m-td m-td-widget" style="right: 30px">
+                                        <div class="m-skeleton">
+                                            <div class="m-skeleton-text">
+                                                <div class="m-skeleton-box"></div>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td class="m-out-right-white-30"></td>
+                                    <td class="m-out-right-grey-30"></td>
+                                </tr>
+                                <tr class="m-tr">
+                                    <td class="m-out-left-white-16"></td>
+                                    <td class="m-td m-td-multi" style="left: 16px">
+                                        <div class="m-skeleton">
+                                            <div class="m-skeleton-rectangle" style="width: 18px; height: 18px">
+                                                <div class="m-skeleton-box ">
+                                                    <label class="m-table-checkbox">
+                                                        <input type="checkbox" class="m-input-checkall" />
+                                                        <span class="m-checkbox">
+                                                            <span class="m-checkbox-inner">
+                                                                <div class="m-icon-16 m-icon-checkbox-active"></div>
+                                                            </span>
+                                                        </span>
+                                                    </label>
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td class="m-td">
+                                        <div class="m-skeleton">
+                                            <div class="m-skeleton-text">
+                                                <div class="m-skeleton-box">0001</div>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td class="m-td">
+                                        <div class="m-skeleton">
+                                            <div class="m-skeleton-text">
+                                                <div class="m-skeleton-box">Nguyễn Văn Việt</div>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td class="m-td">
+                                        <div class="m-skeleton">
+                                            <div class="m-skeleton-text">
+                                                <div class="m-skeleton-box">Nam</div>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td class="m-td">
+                                        <div class="m-skeleton">
+                                            <div class="m-skeleton-text">
+                                                <div class="m-skeleton-box">31/12/1985</div>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td class="m-td">
+                                        <div class="m-skeleton">
+                                            <div class="m-skeleton-text">
+                                                <div class="m-skeleton-box">36250865</div>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td class="m-td">
+                                        <div class="m-skeleton">
+                                            <div class="m-skeleton-text">
+                                                <div class="m-skeleton-box">Trưởng nhóm</div>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td class="m-td">
+                                        <div class="m-skeleton">
+                                            <div class="m-skeleton-text">
+                                                <div class="m-skeleton-box">Vận hành tại Hà Nội</div>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td class="m-td">
+                                        <div class="m-skeleton">
+                                            <div class="m-skeleton-text">
+                                                <div class="m-skeleton-box"></div>
+                                            </div>
+                                        </div>
+                                    </td>
+
+                                    <td class="m-td">
+                                        <div class="m-skeleton">
+                                            <div class="m-skeleton-text">
+                                                <div class="m-skeleton-box"></div>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td class="m-td">
+                                        <div class="m-skeleton">
+                                            <div class="m-skeleton-text">
+                                                <div class="m-skeleton-box"></div>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td class="m-td">
+                                        <div class="m-skeleton">
+                                            <div class="m-skeleton-text">
+                                                <div class="m-skeleton-box"></div>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td class="m-td m-td-widget" style="right: 30px">
+                                        <div class="m-skeleton">
+                                            <div class="m-skeleton-text">
+                                                <div class="m-skeleton-box"></div>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td class="m-out-right-white-30"></td>
+                                    <td class="m-out-right-grey-30"></td>
+                                </tr>
+                                <tr class="m-tr">
+                                    <td class="m-out-left-white-16"></td>
+                                    <td class="m-td m-td-multi" style="left: 16px">
+                                        <div class="m-skeleton">
+                                            <div class="m-skeleton-rectangle" style="width: 18px; height: 18px">
+                                                <div class="m-skeleton-box ">
+                                                    <label class="m-table-checkbox">
+                                                        <input type="checkbox" class="m-input-checkall" />
+                                                        <span class="m-checkbox">
+                                                            <span class="m-checkbox-inner">
+                                                                <div class="m-icon-16 m-icon-checkbox-active"></div>
+                                                            </span>
+                                                        </span>
+                                                    </label>
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td class="m-td">
+                                        <div class="m-skeleton">
+                                            <div class="m-skeleton-text">
+                                                <div class="m-skeleton-box">0001</div>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td class="m-td">
+                                        <div class="m-skeleton">
+                                            <div class="m-skeleton-text">
+                                                <div class="m-skeleton-box">Nguyễn Văn Việt</div>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td class="m-td">
+                                        <div class="m-skeleton">
+                                            <div class="m-skeleton-text">
+                                                <div class="m-skeleton-box">Nam</div>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td class="m-td">
+                                        <div class="m-skeleton">
+                                            <div class="m-skeleton-text">
+                                                <div class="m-skeleton-box">31/12/1985</div>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td class="m-td">
+                                        <div class="m-skeleton">
+                                            <div class="m-skeleton-text">
+                                                <div class="m-skeleton-box">36250865</div>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td class="m-td">
+                                        <div class="m-skeleton">
+                                            <div class="m-skeleton-text">
+                                                <div class="m-skeleton-box">Trưởng nhóm</div>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td class="m-td">
+                                        <div class="m-skeleton">
+                                            <div class="m-skeleton-text">
+                                                <div class="m-skeleton-box">Vận hành tại Hà Nội</div>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td class="m-td">
+                                        <div class="m-skeleton">
+                                            <div class="m-skeleton-text">
+                                                <div class="m-skeleton-box"></div>
+                                            </div>
+                                        </div>
+                                    </td>
+
+                                    <td class="m-td">
+                                        <div class="m-skeleton">
+                                            <div class="m-skeleton-text">
+                                                <div class="m-skeleton-box"></div>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td class="m-td">
+                                        <div class="m-skeleton">
+                                            <div class="m-skeleton-text">
+                                                <div class="m-skeleton-box"></div>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td class="m-td">
+                                        <div class="m-skeleton">
+                                            <div class="m-skeleton-text">
+                                                <div class="m-skeleton-box"></div>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td class="m-td m-td-widget" style="right: 30px">
+                                        <div class="m-skeleton">
+                                            <div class="m-skeleton-text">
+                                                <div class="m-skeleton-box"></div>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td class="m-out-right-white-30"></td>
+                                    <td class="m-out-right-grey-30"></td>
+                                </tr>
+                                <tr class="m-tr">
+                                    <td class="m-out-left-white-16"></td>
+                                    <td class="m-td m-td-multi" style="left: 16px">
+                                        <div class="m-skeleton">
+                                            <!-- Nhập dữ liệu cho bảng -->
+                                            <div class="m-skeleton-rectangle" style="width: 18px; height: 18px">
+                                                <div class="m-skeleton-box ">
+                                                    <label class="m-table-checkbox">
+                                                        <input type="checkbox" class="m-input-checkall" />
+                                                        <span class="m-checkbox">
+                                                            <span class="m-checkbox-inner">
+                                                                <div class="m-icon-16 m-icon-checkbox-active"></div>
+                                                            </span>
+                                                        </span>
+                                                    </label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td class="m-td">
+                                        <div class="m-skeleton">
+                                            <div class="m-skeleton-text">
+                                                <div class="m-skeleton-box">0001</div>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td class="m-td">
+                                        <div class="m-skeleton">
+                                            <div class="m-skeleton-text">
+                                                <div class="m-skeleton-box">Nguyễn Văn Việt</div>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td class="m-td">
+                                        <div class="m-skeleton">
+                                            <div class="m-skeleton-text">
+                                                <div class="m-skeleton-box">Nam</div>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td class="m-td">
+                                        <div class="m-skeleton">
+                                            <div class="m-skeleton-text">
+                                                <div class="m-skeleton-box">31/12/1985</div>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td class="m-td">
+                                        <div class="m-skeleton">
+                                            <div class="m-skeleton-text">
+                                                <div class="m-skeleton-box">36250865</div>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td class="m-td">
+                                        <div class="m-skeleton">
+                                            <div class="m-skeleton-text">
+                                                <div class="m-skeleton-box">Trưởng nhóm</div>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td class="m-td">
+                                        <div class="m-skeleton">
+                                            <div class="m-skeleton-text">
+                                                <div class="m-skeleton-box">Vận hành tại Hà Nội</div>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td class="m-td">
+                                        <div class="m-skeleton">
+                                            <div class="m-skeleton-text">
+                                                <div class="m-skeleton-box"></div>
+                                            </div>
+                                        </div>
+                                    </td>
+
+                                    <td class="m-td">
+                                        <div class="m-skeleton">
+                                            <div class="m-skeleton-text">
+                                                <div class="m-skeleton-box"></div>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td class="m-td">
+                                        <div class="m-skeleton">
+                                            <div class="m-skeleton-text">
+                                                <div class="m-skeleton-box"></div>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td class="m-td">
+                                        <div class="m-skeleton">
+                                            <div class="m-skeleton-text">
+                                                <div class="m-skeleton-box"></div>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td class="m-td m-td-widget" style="right: 30px">
+                                        <div class="m-skeleton">
+                                            <div class="m-skeleton-text">
+                                                <div class="m-skeleton-box"></div>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td class="m-out-right-white-30"></td>
+                                    <td class="m-out-right-grey-30"></td>
+                                </tr>
+                                <tr class="m-tr">
+                                    <td class="m-out-left-white-16"></td>
+                                    <td class="m-td m-td-multi" style="left: 16px">
+                                        <div class="m-skeleton">
+                                            <div class="m-skeleton-rectangle" style="width: 18px; height: 18px">
+                                                <div class="m-skeleton-box ">
+                                                    <label class="m-table-checkbox">
+                                                        <input type="checkbox" class="m-input-checkall" />
+                                                        <span class="m-checkbox">
+                                                            <span class="m-checkbox-inner">
+                                                                <div class="m-icon-16 m-icon-checkbox-active"></div>
+                                                            </span>
+                                                        </span>
+                                                    </label>
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td class="m-td">
+                                        <div class="m-skeleton">
+                                            <div class="m-skeleton-text">
+                                                <div class="m-skeleton-box">0001</div>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td class="m-td">
+                                        <div class="m-skeleton">
+                                            <div class="m-skeleton-text">
+                                                <div class="m-skeleton-box">Nguyễn Văn Việt</div>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td class="m-td">
+                                        <div class="m-skeleton">
+                                            <div class="m-skeleton-text">
+                                                <div class="m-skeleton-box">Nam</div>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td class="m-td">
+                                        <div class="m-skeleton">
+                                            <div class="m-skeleton-text">
+                                                <div class="m-skeleton-box">31/12/1985</div>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td class="m-td">
+                                        <div class="m-skeleton">
+                                            <div class="m-skeleton-text">
+                                                <div class="m-skeleton-box">36250865</div>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td class="m-td">
+                                        <div class="m-skeleton">
+                                            <div class="m-skeleton-text">
+                                                <div class="m-skeleton-box">Trưởng nhóm</div>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td class="m-td">
+                                        <div class="m-skeleton">
+                                            <div class="m-skeleton-text">
+                                                <div class="m-skeleton-box">Vận hành tại Hà Nội</div>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td class="m-td">
+                                        <div class="m-skeleton">
+                                            <div class="m-skeleton-text">
+                                                <div class="m-skeleton-box"></div>
+                                            </div>
+                                        </div>
+                                    </td>
+
+                                    <td class="m-td">
+                                        <div class="m-skeleton">
+                                            <div class="m-skeleton-text">
+                                                <div class="m-skeleton-box"></div>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td class="m-td">
+                                        <div class="m-skeleton">
+                                            <div class="m-skeleton-text">
+                                                <div class="m-skeleton-box"></div>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td class="m-td">
+                                        <div class="m-skeleton">
+                                            <div class="m-skeleton-text">
+                                                <div class="m-skeleton-box"></div>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td class="m-td m-td-widget" style="right: 30px">
+                                        <div class="m-skeleton">
+                                            <div class="m-skeleton-text">
+                                                <div class="m-skeleton-box"></div>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td class="m-out-right-white-30"></td>
+                                    <td class="m-out-right-grey-30"></td>
+                                </tr>
+                                <tr class="m-tr">
+                                    <td class="m-out-left-white-16"></td>
+                                    <td class="m-td m-td-multi" style="left: 16px">
+                                        <div class="m-skeleton">
+                                            <div class="m-skeleton-rectangle" style="width: 18px; height: 18px">
+                                                <div class="m-skeleton-box"></div>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td class="m-td m-static-col" style="left: 56px">
+                                        <div class="m-skeleton">
+                                            <div class="m-skeleton-text">
+                                                <div class="m-skeleton-box"></div>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td class="m-td">
+                                        <div class="m-skeleton">
+                                            <div class="m-skeleton-text">
+                                                <div class="m-skeleton-box"></div>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td class="m-td">
+                                        <div class="m-skeleton">
+                                            <div class="m-skeleton-text">
+                                                <div class="m-skeleton-box"></div>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td class="m-td">
+                                        <div class="m-skeleton">
+                                            <div class="m-skeleton-text">
+                                                <div class="m-skeleton-box"></div>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td class="m-td">
+                                        <div class="m-skeleton">
+                                            <div class="m-skeleton-text">
+                                                <div class="m-skeleton-box"></div>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td class="m-td">
+                                        <div class="m-skeleton">
+                                            <div class="m-skeleton-text">
+                                                <div class="m-skeleton-box"></div>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td class="m-td">
+                                        <div class="m-skeleton">
+                                            <div class="m-skeleton-text">
+                                                <div class="m-skeleton-box"></div>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td class="m-td">
+                                        <div class="m-skeleton">
+                                            <div class="m-skeleton-text">
+                                                <div class="m-skeleton-box"></div>
+                                            </div>
+                                        </div>
+                                    </td>
+
+                                    <td class="m-td">
+                                        <div class="m-skeleton">
+                                            <div class="m-skeleton-text">
+                                                <div class="m-skeleton-box"></div>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td class="m-td">
+                                        <div class="m-skeleton">
+                                            <div class="m-skeleton-text">
+                                                <div class="m-skeleton-box"></div>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td class="m-td">
+                                        <div class="m-skeleton">
+                                            <div class="m-skeleton-text">
+                                                <div class="m-skeleton-box"></div>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td class="m-td m-td-widget" style="right: 30px">
+                                        <div class="m-skeleton">
+                                            <div class="m-skeleton-text">
+                                                <div class="m-skeleton-box"></div>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td class="m-out-right-white-30"></td>
+                                    <td class="m-out-right-grey-30"></td>
+                                </tr>
+                                <tr class="m-tr">
+                                    <td class="m-out-left-white-16"></td>
+                                    <td class="m-td m-td-multi" style="left: 16px">
+                                        <div class="m-skeleton">
+                                            <div class="m-skeleton-rectangle" style="width: 18px; height: 18px">
+                                                <div class="m-skeleton-box"></div>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td class="m-td m-static-col" style="left: 56px">
+                                        <div class="m-skeleton">
+                                            <div class="m-skeleton-text">
+                                                <div class="m-skeleton-box"></div>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td class="m-td">
+                                        <div class="m-skeleton">
+                                            <div class="m-skeleton-text">
+                                                <div class="m-skeleton-box"></div>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td class="m-td">
+                                        <div class="m-skeleton">
+                                            <div class="m-skeleton-text">
+                                                <div class="m-skeleton-box"></div>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td class="m-td">
+                                        <div class="m-skeleton">
+                                            <div class="m-skeleton-text">
+                                                <div class="m-skeleton-box"></div>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td class="m-td">
+                                        <div class="m-skeleton">
+                                            <div class="m-skeleton-text">
+                                                <div class="m-skeleton-box"></div>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td class="m-td">
+                                        <div class="m-skeleton">
+                                            <div class="m-skeleton-text">
+                                                <div class="m-skeleton-box"></div>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td class="m-td">
+                                        <div class="m-skeleton">
+                                            <div class="m-skeleton-text">
+                                                <div class="m-skeleton-box"></div>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td class="m-td">
+                                        <div class="m-skeleton">
+                                            <div class="m-skeleton-text">
+                                                <div class="m-skeleton-box"></div>
+                                            </div>
+                                        </div>
+                                    </td>
+
+                                    <td class="m-td">
+                                        <div class="m-skeleton">
+                                            <div class="m-skeleton-text">
+                                                <div class="m-skeleton-box"></div>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td class="m-td">
+                                        <div class="m-skeleton">
+                                            <div class="m-skeleton-text">
+                                                <div class="m-skeleton-box"></div>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td class="m-td">
+                                        <div class="m-skeleton">
+                                            <div class="m-skeleton-text">
+                                                <div class="m-skeleton-box"></div>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td class="m-td m-td-widget" style="right: 30px">
+                                        <div class="m-skeleton">
+                                            <div class="m-skeleton-text">
+                                                <div class="m-skeleton-box"></div>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td class="m-out-right-white-30"></td>
+                                    <td class="m-out-right-grey-30"></td>
+                                </tr>
+                                <tr class="m-tr">
+                                    <td class="m-out-left-white-16"></td>
+                                    <td class="m-td m-td-multi" style="left: 16px">
+                                        <div class="m-skeleton">
+                                            <div class="m-skeleton-rectangle" style="width: 18px; height: 18px">
+                                                <div class="m-skeleton-box"></div>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td class="m-td m-static-col" style="left: 56px">
+                                        <div class="m-skeleton">
+                                            <div class="m-skeleton-text">
+                                                <div class="m-skeleton-box"></div>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td class="m-td">
+                                        <div class="m-skeleton">
+                                            <div class="m-skeleton-text">
+                                                <div class="m-skeleton-box"></div>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td class="m-td">
+                                        <div class="m-skeleton">
+                                            <div class="m-skeleton-text">
+                                                <div class="m-skeleton-box"></div>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td class="m-td">
+                                        <div class="m-skeleton">
+                                            <div class="m-skeleton-text">
+                                                <div class="m-skeleton-box"></div>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td class="m-td">
+                                        <div class="m-skeleton">
+                                            <div class="m-skeleton-text">
+                                                <div class="m-skeleton-box"></div>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td class="m-td">
+                                        <div class="m-skeleton">
+                                            <div class="m-skeleton-text">
+                                                <div class="m-skeleton-box"></div>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td class="m-td">
+                                        <div class="m-skeleton">
+                                            <div class="m-skeleton-text">
+                                                <div class="m-skeleton-box"></div>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td class="m-td">
+                                        <div class="m-skeleton">
+                                            <div class="m-skeleton-text">
+                                                <div class="m-skeleton-box"></div>
+                                            </div>
+                                        </div>
+                                    </td>
+
+                                    <td class="m-td">
+                                        <div class="m-skeleton">
+                                            <div class="m-skeleton-text">
+                                                <div class="m-skeleton-box"></div>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td class="m-td">
+                                        <div class="m-skeleton">
+                                            <div class="m-skeleton-text">
+                                                <div class="m-skeleton-box"></div>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td class="m-td">
+                                        <div class="m-skeleton">
+                                            <div class="m-skeleton-text">
+                                                <div class="m-skeleton-box"></div>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td class="m-td m-td-widget" style="right: 30px">
+                                        <div class="m-skeleton">
+                                            <div class="m-skeleton-text">
+                                                <div class="m-skeleton-box"></div>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td class="m-out-right-white-30"></td>
+                                    <td class="m-out-right-grey-30"></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <div class="m-pagination">
+                            <div class="m-pagination-bar">
+                                <div class="m-pagination-left">
+                                    <div class="m-total-record">Tổng số: <b class="m-total">1035</b> bản ghi</div>
+                                </div>
+                                <div class="m-pagination-right">
+                                    <div class="m-record-in-page">
+                                        <div class="m-combo-box">
+                                            <div class="m-combo-main-content">
+                                                <div class="m-selected-options">
+                                                    <input type="text" class="m-combo-input" readonly="true"
+                                                        autofocus="autofocus" value="10 bản ghi trên 1 trang" />
+                                                </div>
+                                                <div class="m-combo-action m-select-record">
+                                                    <div class="m-btn-dropdown">
+                                                        <div class="m-icon-16 m-icon-arrow-dropdown m-dropdown-close">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="m-page-number">
+                                        <div class="m-prev-page">Trước</div>
+                                        <div class="m-page-index">1 2 3 ...52</div>
+                                        <div class="m-next-page">Sau</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="m-out-right-white-30"></div>
+                            <div class="m-out-right-grey-30"></div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Danger Dialog -->
+                <div class="m-dialog m-employee-danger" hidden>
+                    <div class="m-dialog-box">
+                        <div class="m-dialog-center">
+                            <div class="m-dialog-background"></div>
+                            <div class="m-dialog-drag">
+                                <div class="m-dialog-message">
+                                    <div class="m-dialog-content">
+                                        <div class="m-content-icon">
+                                            <div class="m-icon-48 m-icon-danger"></div>
+                                        </div>
+                                        <div class="m-content-message">Tên không được để trống.</div>
+                                    </div>
+                                    <div class="m-dialog-line"></div>
+                                    <div class="m-dialog-footer">
+                                        <button
+                                            class="m-button m-close-employee-danger m-button-size-default m-button-border-false">
+                                            <div class="m-button-text">Đóng</div>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Warning dialog -->
+                <div class="m-dialog m-delete-warning" hidden>
+                    <div class="m-dialog-box">
+                        <div class="m-dialog-center">
+                            <div class="m-dialog-background"></div>
+                            <div class="m-dialog-drag">
+                                <div class="m-dialog-message">
+                                    <div class="m-dialog-content">
+                                        <div class="m-content-icon">
+                                            <div class="m-icon-48 m-icon-warning"></div>
+                                        </div>
+                                        <div class="m-content-message">Bạn có thực sự muốn xóa nhân viên <000579> không?</div>
+                                    </div>
+                                    <div class="m-dialog-line"></div>
+                                    <div class="m-dialog-footer">
+                                        <button
+                                            class="m-button m-button-secondary m-close-delete-warning m-button-size-default m-button-border-false">
+                                            <div class="m-button-text">Không</div>
+                                        </button>
+                                        <button
+                                            class="m-button m-confirm-delete m-button-size-default m-button-border-false">
+                                            <div class="m-button-text">Có</div>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Question dialog -->
+                <div class="m-dialog m-employee-question"  >
+                    <div class="m-dialog-box">
+                        <div class="m-dialog-center">
+                            <div class="m-dialog-background"></div>
+                            <div class="m-dialog-drag">
+                                <div class="m-dialog-message">
+                                    <div class="m-dialog-content">
+                                        <div class="m-content-icon">
+                                            <div class="m-icon-48 m-icon-question"></div>
+                                        </div>
+                                        <div class="m-content-message">Dữ liệu đã bị thay đổi. Bạn có muốn cất không?</div>
+                                    </div>
+                                    <div class="m-dialog-line"></div>
+                                    <div class="m-dialog-footer">
+                                        <div class="m-btn-left">
+                                            <button
+                                                class="m-button m-button-secondary m-question-cancel m-button-size-default m-button-border-false">
+                                                <div class="m-button-text">Hủy</div>
+                                            </button>
+                                        </div>
+                                        <div class="m-btn-right">
+                                            <button
+                                                class="m-button m-button-secondary m-question-close m-button-size-default m-button-border-false">
+                                                <div class="m-button-text">Không</div>
+                                            </button>
+                                            <button
+                                                class="m-button m-question-store m-button-size-default m-button-border-false m-ml-8">
+                                                <div class="m-button-text">Cất</div>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
-            <div class="m-content-body">
-                <div class="m-body-toolbar">
-                    <div class="m-search-area">
-                        <input type="text" class="m-input m-input-icon m-input-search m-search-emp"
-                            placeholder="Tìm theo mã, tên nhân viên" />
-                        <div class="m-icon-after m-icon-16 m-icon-search"></div>
-                    </div>
-                    <div class="m-refresh-button m-icon-24 m-icon-refresh"></div>
-                </div>
         </div>
-           
+    </div>
+    
 </body>
 
 </html>

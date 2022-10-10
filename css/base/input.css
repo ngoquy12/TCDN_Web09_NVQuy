@@ -47,4 +47,78 @@
     white-space: nowrap;
 }
 
+.m-input-title-require {
+    color: red;
+}
 
+.m-input-error, .m-input-error:focus {
+    border-color: red!important;
+}
+
+/* Input radio */
+.m-con-radio {
+    margin-right: 20px;
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    justify-content: flex-start;
+    -webkit-box-align: center;
+    -webkit-box-pack: center;
+}
+
+.m-input-radio {
+    position: absolute;
+    left: 0;
+    opacity: 0;
+    width: 20px;
+}
+
+.m-radio {
+    cursor: pointer;
+    position: relative;
+}
+
+.m-radio-border {
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    border: 1px solid #afafaf;
+    background: #fff;
+    z-index: 1;
+    justify-content: center;
+    display: block;
+}
+
+.m-input-radio:checked + .m-radio .m-radio-border {
+    border-color: #2ca01c;
+}
+
+.m-input-radio:checked + .m-radio .m-radio-circle {
+    display: block;
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    top: 4px;
+    left: 4px;
+    border-radius: 50%;
+    background: #2ca01c;
+}
+
+.m-radio-label {
+    margin-left: 10px;
+    cursor: pointer;
+}
+
+/* CSS input width */
+
+.m-input-40 {
+    width: 40%!important;
+}
+
+.m-input-60 {
+    width: 60%!important;
+}
+
+.m-input-100 {
+    width: 100%!important;
+}

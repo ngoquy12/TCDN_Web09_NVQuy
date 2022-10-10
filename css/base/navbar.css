@@ -1,0 +1,45 @@
+.m-navbar {
+    height: 48px;
+    width: 100%;
+    background-color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.m-navbar-left, .m-navbar-right {
+    display: flex;
+    align-items: center;
+}
+
+.m-navbar-icon {
+    margin: 0 10px;
+}
+
+.m-navbar-branch {
+    display: flex;
+    align-items: center;
+}
+
+.m-branch-name, .m-user-name {
+    font-size: 14px;
+    font-weight: 600;
+    padding-left: 8px;
+}
+
+.m-navbar-user {
+    display: flex;
+    align-items: center;
+    padding: 0 16px;
+}
+
+.m-user-image {
+    margin-right: 6px;
+}
+
+.m-user-image img {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+}
+

@@ -1,0 +1,165 @@
+.m-popup {
+    position: relative;
+    transition: all .2s;
+    z-index: 200;
+    max-width: calc(100% - 30px);
+    box-shadow: 0 5px 20px 0 rgba(0, 0, 0, .1);
+    flex-direction: column;
+    background: #fff;
+}
+
+.m-popup-con {
+    transition: all .2s;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    left: 0;
+    top: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 1;
+    z-index: 200;
+}
+
+.m-popup-background {
+    width: 100%;
+    background: rgba(0, 0, 0, .4);
+    position: fixed;
+    left: 0;
+    top: 0;
+    height: 100%;
+    z-index: 98;
+    transition: all .25s ease;
+    opacity: 1;
+}
+
+.m-popup-drag {
+    cursor: grab;
+    position: absolute;
+    z-index: 100;
+}
+
+.m-popup-content {
+    min-width: 900px;
+    max-width: 900px;
+    width: 900px;
+    height: 625px;
+    position: relative;
+}
+
+.m-popup--header {
+    width: 100%;
+    display: flex;
+    position: relative;
+}
+
+.m-popup-checkbox {
+    padding: 0 19.5px;
+    position: relative;
+    display: flex;
+    cursor: pointer;
+    align-items: center;
+}
+
+.m-input-checkbox-popup {
+    position: absolute;
+    width: 10%;
+    height: 100%;
+    opacity: 0;
+    z-index: 200;
+    cursor: pointer;
+}
+
+.m-input-checkbox-popup:checked+.m-checkbox {
+    border: 1px solid #2ca01c;
+    transform: rotate(0deg);
+}
+
+.m-input-checkbox-popup:checked+.m-checkbox>.m-checkbox-inner>.m-icon-checkbox-active {
+    display: block;
+}
+
+.m-input-checkbox-popup:focus+.m-checkbox::before {
+    content: "";
+    height: 22px;
+    width: 22px;
+    position: absolute;
+    border: 1px solid #a4dfff;
+    display: block;
+    border-radius: 2px;
+}
+
+.m-popup--content-scroll {
+    overflow: auto;
+}
+
+.m-popup--title {
+    padding: 20px 12px 20px 32px;
+    position: relative;
+    display: flex;
+    width: 100%;
+}
+
+.m-title {
+    font-size: 24px;
+    color: #111;
+    font-weight: 700;
+}
+
+.m-input-checkbox-label {
+    white-space: nowrap;
+    padding-left: 10px;
+    font-size: 13px;
+}
+
+.m-popup--close {
+    display: flex;
+    padding: 12px;
+}
+
+.m-popup--content {
+    height: calc(100% - 73px);
+    padding: 0 32px 20px;
+    display: flex;
+    flex-direction: column;
+    overflow: auto;
+    overflow-y: visible;
+}
+
+.m-content-2-col, .m-content-1-col, .m-content-4-col {
+    display: flex;
+    padding-bottom: 12px;
+}
+
+.m-content-2-col > div {
+    width: 50%!important;
+}
+
+.m-content-2-col .m-col-1 {
+    padding-right: 26px;
+}
+
+.m-radio-group {
+    padding: 5px 0 6px 10px;
+}
+
+.m-close-dialog {
+    cursor: pointer;
+}
+
+.m-divine {
+    width: 100%;
+    border-top: 1px solid #e0e0e0;
+    margin: 32px 0 20px;
+    position: relative;
+}
+
+.m-popup-btn {
+    display: flex;
+    justify-content: space-between;
+}
+
+.m-popup-btn-right .m-button-secondary {
+    margin: 0 9.75px;
+}

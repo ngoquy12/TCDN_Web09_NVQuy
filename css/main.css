@@ -3,12 +3,18 @@
 @import url(./layout/sidebar.css);
 @import url(./layout/header.css);
 @import url(./layout/content.css);
-
+@import url(./layout/popup.css);
 /* CSS base */
 @import url(./base/icon.css);
 @import url(./base/button.css);
 @import url(./base/input.css);
 @import url(./base/table.css);
+@import url(./base/pagination.css);
+@import url(./base/dropdown.css);
+@import url(./base/skeleton.css);
+@import url(./base/combobox.css);
+@import url(./base/dialog.css);
+
 
 
 @font-face {
@@ -56,11 +62,6 @@ body {
     font-size: inherit;
 }
 
-.m-container {
-  display: flex;
-  height: 100vh;
-}
-
 ::-webkit-scrollbar {
   width: 10px;
   height: 10px
@@ -81,6 +82,11 @@ body {
 ::-webkit-scrollbar-track-piece {
   background-color: #f1f1f1;
   width: 10px
+}
+
+.m-container {
+  display: flex;
+  height: 100vh;
 }
 
 .m-flex {
