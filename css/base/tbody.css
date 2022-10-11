@@ -1,13 +1,13 @@
-.m-skeleton .m-skeleton-box {
+.m-tbody .m-tbody-box {
     display: inline-block;
     position: relative;
     overflow: hidden;
     width: 100%;
     height: 100%;
-    /* background-color: #ebedf0; */
+    
 }
 
-.m-skeleton .m-skeleton-box::after {
+.m-tbody .m-tbody-box::after {
     position: absolute;
     top: 0;
     right: 0;
@@ -20,20 +20,27 @@
     content: ""
 }
 
+.m-tbody-box-birthday{
+    text-align: center;
+}
+.m-th-title-birthday{
+    display: inline-block;
+    text-align: center;
+    padding-right: 0;
+}
 
-
-.m-skeleton .m-skeleton-circle {
+.m-tbody .m-tbody-circle {
     border-radius: 50%
 }
 
-.m-skeleton .m-skeleton-rectangle {
+.m-tbody .m-tbody-rectangle {
     border-radius: 2px
 }
 
-.m-skeleton .m-skeleton-text {
+.m-tbody .m-tbody-text {
     height: 1.125rem
 }
 
-.m-skeleton .m-skeleton-text .m-skeleton-box {
+.m-tbody .m-tbody-text .m-tbody-box {
     border-radius: 1px
 }

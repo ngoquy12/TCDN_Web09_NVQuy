@@ -4,6 +4,7 @@
     bottom: 0;
     background-color: #fff;
     /* display: none   ; */
+  
 }
 
 .m-pagination-bar {
@@ -24,6 +25,10 @@
     margin: 0 16px;
     width: 200px;
     min-width: 200px;
+}
+
+.m-number:hover{
+    border: 1px solid;
 }
 
 .m-page-number {

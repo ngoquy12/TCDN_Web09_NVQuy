@@ -6,6 +6,7 @@
     box-shadow: 0 5px 20px 0 rgba(0, 0, 0, .1);
     flex-direction: column;
     background: #fff;
+    top: 20px;
 }
 
 .m-popup-con {
@@ -35,7 +36,7 @@
 }
 
 .m-popup-drag {
-    cursor: grab;
+    /* cursor: grab; */
     position: absolute;
     z-index: 100;
 }
@@ -120,11 +121,12 @@
 
 .m-popup--content {
     height: calc(100% - 73px);
-    padding: 0 32px 20px;
+    padding: 0 32px 10px;
     display: flex;
     flex-direction: column;
     overflow: auto;
     overflow-y: visible;
+    
 }
 
 .m-content-2-col, .m-content-1-col, .m-content-4-col {
@@ -151,7 +153,7 @@
 .m-divine {
     width: 100%;
     border-top: 1px solid #e0e0e0;
-    margin: 32px 0 20px;
+    margin: 20px 0;
     position: relative;
 }
 

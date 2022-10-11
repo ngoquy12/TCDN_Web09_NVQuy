@@ -31,8 +31,9 @@
     cursor: pointer;
     position: absolute;
     left: auto;
-    right: 22px;
-    top: 7px;
+    right: 62px;
+    top: 24px;
+    padding: 0 8px;
 }
 
 .m-input-search {
@@ -47,13 +48,9 @@
     white-space: nowrap;
 }
 
-.m-input-title-require {
+.m-input-title-require{
     color: red;
-}
-
-.m-input-error, .m-input-error:focus {
-    border-color: red!important;
-}
+} 
 
 /* Input radio */
 .m-con-radio {

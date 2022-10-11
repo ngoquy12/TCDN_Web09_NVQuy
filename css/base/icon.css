@@ -104,10 +104,13 @@
 
 .m-icon-refresh {
     background-position: -423px -201px;
+    
 }
 
 .m-icon-refresh:hover {
-    background-position: -1097px -88px  ;
+    background-position: -1097px -88px;
+    cursor: pointer;
+    
 }
 
 .m-icon-search {
@@ -130,9 +133,18 @@
     background-position: -89px -144px;
 }
 
+.m-icon-help {
+    cursor: pointer;
+    opacity: 0.8;
+}
+
 .m-icon-close {
     background-position: -144px -144px;
+}
+
+.m-icon-close:hover {
     cursor: pointer;
+    opacity: 0.8;
 }
 
 .m-icon-danger {

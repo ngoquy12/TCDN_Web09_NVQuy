@@ -25,7 +25,7 @@
 
 .m-header-title {
     font-weight: 700;
-    font-size: 24px;
+    font-size: 20px;
     color: #111;
 }
 
@@ -50,16 +50,4 @@
     left: 0;
 }
 
-.m-refresh-button {
-    margin: 0 6px;
-    cursor: pointer;
-}
 
-.m-search-area {
-    display: flex;
-    align-items: flex-start;
-    flex-direction: column;
-    position: relative;
-    justify-content: center;
-    width: fit-content;
-}

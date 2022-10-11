@@ -1,7 +1,7 @@
 /* CSS layout */
 @import url(./layout/main-content.css);
-@import url(./layout/sidebar.css);
-@import url(./layout/header.css);
+@import url(./layout/menu.css);
+@import url(./layout/navbar.css);
 @import url(./layout/content.css);
 @import url(./layout/popup.css);
 /* CSS base */
@@ -11,11 +11,11 @@
 @import url(./base/table.css);
 @import url(./base/pagination.css);
 @import url(./base/dropdown.css);
-@import url(./base/skeleton.css);
+@import url(./base/tbody.css);
 @import url(./base/combobox.css);
 @import url(./base/dialog.css);
-
-
+@import url(./base/loading.css);
+@import url(./base/keyframes.css);
 
 @font-face {
   font-family: Noto-Sans-Regular;
