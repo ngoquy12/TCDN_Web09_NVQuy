@@ -1,10 +1,9 @@
 .m-input {
-    padding-left: 10px;
-    padding-right: 12px;
-    border-radius: 2px;
-    height: 32px;
+    padding-left: 12px;
+    padding-right: 8px;
+    border-radius: 4px;
+    height: 36px;
     border: 1px solid #babec5;
-    box-sizing: border-box;
     outline: none;
     width: -webkit-fill-available;
 }
@@ -32,25 +31,33 @@
     position: absolute;
     left: auto;
     right: 62px;
-    top: 24px;
+    top: 26px;
     padding: 0 8px;
 }
 
 .m-input-search {
+    min-width: 240px;
     width: 240px;
     margin-right: 10px;
+}
+
+.m-input-title-gender{
+    padding-left: 6px;
+
 }
 
 .m-input-title {
     font-size: 12px;
     font-weight: 700;
-    padding-bottom: 4px;
+    padding-bottom: 8px;
     white-space: nowrap;
 }
 
 .m-input-title-require{
-    color: red;
+    color: #E60000;
 } 
+
+
 
 /* Input radio */
 .m-con-radio {

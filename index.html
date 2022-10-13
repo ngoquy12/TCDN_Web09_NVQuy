@@ -386,17 +386,14 @@
                                                                 <div class="m-input-title-require">&nbsp;*</div>
                                                             </div>
                                                             <input type="text" class="m-input m-input-require"
-                                                                name="EmployeeCode" maxlength="25"
-                                                                propName="EmployeeCode" />
+                                                                name="EmployeeCode"/>
                                                         </div>
                                                         <div class="m-input-60 m-pb-12">
                                                             <div class="m-flex">
                                                                 <div class="m-input-title">Tên</div>
                                                                 <div class="m-input-title-require">&nbsp;*</div>
                                                             </div>
-                                                            <input type="text" class="m-input m-input-require"
-                                                                name="EmployeeName" maxlength="128"
-                                                                propName="EmployeeName" />
+                                                            <input type="text" class="m-input m-input-require" />
                                                         </div>
                                                         <div class="m-input-100 m-pb-12">
                                                             <div class="m-flex">
@@ -406,11 +403,9 @@
                                                             <div class="m-combo-box">
                                                                 <div class="m-combo-main-content">
                                                                     <div class="m-selected-options">
-                                                                        <input type="hidden" name="DepartmentId"
-                                                                            propName="DepartmentId" />
-                                                                        <input type="text" class="m-combo-input"
-                                                                            name="DepartmentName"
-                                                                            propName="DepartmentName" />
+                                                                        <input type="hidden">
+                                                                        <input type="text" class="m-combo-input" />
+
                                                                     </div>
                                                                     <div class="m-combo-action m-select-department">
                                                                         <div class="m-btn-dropdown">
@@ -426,8 +421,7 @@
                                                             <div class="m-flex-wrap">
                                                                 <div class="m-input-title">Chức danh</div>
                                                             </div>
-                                                            <input type="text" class="m-input" name="EmployeePosition"
-                                                                maxlength="128" propName="EmployeePosition" />
+                                                            <input type="text" class="m-input" />
                                                         </div>
                                                     </div>
                                                     <div class="m-col-2 m-flex-wrap">
@@ -435,12 +429,11 @@
                                                             <div class="m-flex-wrap">
                                                                 <div class="m-input-title">Ngày sinh</div>
                                                             </div>
-                                                            <input type="date" class="m-input" name="DateOfBirth"
-                                                                propName="DateOfBirth" />
+                                                            <input type="date" class="m-input">
                                                         </div>
                                                         <div class="m-input-60 m-pb-12">
                                                             <div class="m-flex-wrap">
-                                                                <div class="m-input-title">Giới tính</div>
+                                                                <div class="m-input-title m-input-title-gender">Giới tính</div>
                                                             </div>
                                                             <div class="m-radio-group">
                                                                 <label class="m-con-radio">
@@ -461,6 +454,15 @@
                                                                     </span>
                                                                     <span class="m-radio-label">Nữ</span>
                                                                 </label>
+                                                                <label class="m-con-radio">
+                                                                    <input type="radio" class="m-input-radio"
+                                                                        name="Gender" />
+                                                                    <span class="m-radio">
+                                                                        <span class="m-radio-border"></span>
+                                                                        <span class="m-radio-circle"></span>
+                                                                    </span>
+                                                                    <span class="m-radio-label">Khác</span>
+                                                                </label>
                                                             </div>
                                                         </div>
                                                         <div class="m-input-60 m-pr-6 m-pb-12">
@@ -468,22 +470,21 @@
                                                                 <div class="m-input-title"
                                                                     title="Số chứng minh nhân dân">Số CMND</div>
                                                             </div>
-                                                            <input type="text" class="m-input" name="IdentityNumber"
-                                                                maxlength="20" propName="IdentityNumber" />
+                                                            <input type="text" class="m-input" />
+
                                                         </div>
                                                         <div class="m-input-40 m-pb-12">
                                                             <div class="m-flex-wrap">
                                                                 <div class="m-input-title">Ngày cấp</div>
                                                             </div>
-                                                            <input type="date" class="m-input" name="IdentityDate"
-                                                                propName="IdentityDate" />
+                                                            <input type="date" class="m-input" />
                                                         </div>
                                                         <div class="m-input-100 m-pb-12">
                                                             <div class="m-flex-wrap">
                                                                 <div class="m-input-title">Nơi cấp</div>
                                                             </div>
-                                                            <input type="text" class="m-input" name="IdentityPlace"
-                                                                propName="IdentityPlace" />
+                                                            <input type="text" class="m-input" />
+
                                                         </div>
                                                     </div>
                                                 </div>
@@ -492,8 +493,7 @@
                                                         <div class="m-flex-wrap">
                                                             <div class="m-input-title">Địa chỉ</div>
                                                         </div>
-                                                        <input type="text" class="m-input" name="Address"
-                                                            propName="Address" />
+                                                        <input type="text" class="m-input"/>
                                                     </div>
                                                 </div>
                                                 <div class="m-content-4-col">
@@ -503,15 +503,15 @@
                                                                 <div class="m-input-title" title="Điện thoại di động">ĐT
                                                                     di động</div>
                                                             </div>
-                                                            <input type="text" class="m-input" name="TelephoneNumber"
-                                                                propName="TelephoneNumber" />
+                                                            <input type="text" class="m-input"/>
+                                                                
                                                         </div>
                                                         <div class="m-input-100 m-pb-12">
                                                             <div class="m-flex-wrap">
                                                                 <div class="m-input-title">Tài khoản ngân hàng</div>
                                                             </div>
-                                                            <input type="text" class="m-input" name="BankAccountNumber"
-                                                                propName="BankAccountNumber" />
+                                                            <input type="text" class="m-input"/>
+                                                                
                                                         </div>
                                                     </div>
                                                     <div class="m-col-2 m-pr-6">
@@ -520,15 +520,13 @@
                                                                 <div class="m-input-title" title="Điện thoại cố định">ĐT
                                                                     cố định</div>
                                                             </div>
-                                                            <input type="text" class="m-input" name="PhoneNumber"
-                                                                propName="PhoneNumber" />
+                                                            <input type="text" class="m-input"/>
                                                         </div>
                                                         <div class="m-input-100 m-pb-12">
                                                             <div class="m-flex-wrap">
                                                                 <div class="m-input-title">Tên ngân hàng</div>
                                                             </div>
-                                                            <input type="text" class="m-input" name="BankName"
-                                                                propName="BankName" />
+                                                            <input type="text" class="m-input"/>
                                                         </div>
                                                     </div>
                                                     <div class="m-col-3 m-pr-6">
@@ -536,15 +534,14 @@
                                                             <div class="m-flex-wrap">
                                                                 <div class="m-input-title">Email</div>
                                                             </div>
-                                                            <input type="text" class="m-input" name="Email"
-                                                                propName="Email" />
+                                                            <input type="text" class="m-input" name="Email"/>
+                                                               
                                                         </div>
                                                         <div class="m-input-100 m-pb-12">
                                                             <div class="m-flex-wrap">
                                                                 <div class="m-input-title">Chi nhánh</div>
                                                             </div>
-                                                            <input type="text" class="m-input" name="BankBranchName"
-                                                                propName="BankBranchName" />
+                                                            <input type="text" class="m-input"/>
                                                         </div>
                                                     </div>
                                                     <div class="m-col-4"></div>
@@ -582,6 +579,142 @@
         </div>
     </div>
 
+    <!-- Warning dialog 1 -->
+    <div class="m-dialog m-delete-warning" hidden>
+        <div class="m-dialog-box">
+            <div class="m-dialog-center">
+                <div class="m-dialog-background"></div>
+                <div class="m-dialog-drag">
+                    <div class="m-dialog-message">
+                        <div class="m-dialog-content">
+                            <div class="m-content-icon">
+                                <div class="m-icon-48 m-icon-warning"></div>
+                            </div>
+                            <div class="m-content-message">Bạn có thực sự muốn xóa nhân viên <000579> không?</div>
+                        </div>
+                        <div class="m-dialog-line"></div>
+                        <div class="m-dialog-footer">
+                            <button
+                                class="m-button m-button-secondary m-close-delete-warning m-button-size-default m-button-border-false">
+                                <div class="m-button-text">Không</div>
+                            </button>
+                            <button class="m-button m-confirm-delete m-button-size-default m-button-border-false">
+                                <div class="m-button-text">Có</div>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Warning dialog 2 -->
+    <div class="m-dialog m-delete-warning" hidden>
+        <div class="m-dialog-box">
+            <div class="m-dialog-center">
+                <div class="m-dialog-background"></div>
+                <div class="m-dialog-drag">
+                    <div class="m-dialog-message">
+                        <div class="m-dialog-content">
+                            <div class="m-content-icon">
+                                <div class="m-icon-48 m-icon-warning"></div>
+                            </div>
+                            <div class="m-content-message">Mã nhân viên <NV-0001> đã tồn tại trong hệ thống, vui lòng
+                                    kiểm tra lại.</div>
+                        </div>
+                        <div class="m-dialog-line"></div>
+                        <div class="m-dialog-footer">
+                            <button class="m-button m-confirm-delete m-button-size-default m-button-border-false">
+                                <div class="m-button-text">Đồng ý
+
+                                </div>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Question dialog -->
+    <div class="m-dialog m-employee-question" hidden>
+        <div class="m-dialog-box">
+            <div class="m-dialog-center">
+                <div class="m-dialog-background"></div>
+                <div class="m-dialog-drag">
+                    <div class="m-dialog-message">
+                        <div class="m-dialog-content">
+                            <div class="m-content-icon">
+                                <div class="m-icon-48 m-icon-question"></div>
+                            </div>
+                            <div class="m-content-message">Dữ liệu đã bị thay đổi. Bạn có muốn cất không?</div>
+                        </div>
+                        <div class="m-dialog-line"></div>
+                        <div class="m-dialog-footer">
+                            <div class="m-btn-left">
+                                <button
+                                    class="m-button m-button-secondary m-question-cancel m-button-size-default m-button-border-false">
+                                    <div class="m-button-text">Hủy</div>
+                                </button>
+                            </div>
+                            <div class="m-btn-right">
+                                <button
+                                    class="m-button m-button-secondary m-question-close m-button-size-default m-button-border-false">
+                                    <div class="m-button-text">Không</div>
+                                </button>
+                                <button
+                                    class="m-button m-question-store m-button-size-default m-button-border-false m-ml-8">
+                                    <div class="m-button-text">Cất</div>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Danger Dialog -->
+    <div class="m-dialog m-employee-danger" hidden >
+        <div class="m-dialog-box">
+            <div class="m-dialog-center">
+                <div class="m-dialog-background"></div>
+                <div class="m-dialog-drag">
+                    <div class="m-dialog-message">
+                        <div class="m-dialog-content">
+                            <div class="m-content-icon">
+                                <div class="m-icon-48 m-icon-danger"></div>
+                            </div>
+                            <div class="m-content-message">Tên không được để trống.</div>
+                        </div>
+                        <div class="m-dialog-line"></div>
+                        <div class="m-dialog-footer">
+                            <button
+                                class="m-button m-close-employee-danger m-button-size-default m-button-border-false">
+                                <div class="m-button-text">Đóng</div>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+     <!-- Dropdown menu xóa nhân viên -->
+     <div class="m-dropdown-menu m-dropdown-emp">
+        <ul class="m-dropdown-menu-items">
+            <li class="m-dropdown-item">
+                <a class="m-dropdown-item-link">Nhân bản</a>
+            </li>
+            <li class="m-dropdown-item m-item-delete">
+                <a class="m-dropdown-item-link">Xóa</a>
+            </li>
+            <li class="m-dropdown-item">
+                <a class="m-dropdown-item-link">Ngừng sử dụng</a>
+            </li>
+        </ul>
+    </div>
+
+
 
     <script>
         // Hiển thị form chi tiết nhân viên
@@ -599,8 +732,6 @@
         function showForm1() {
             btnElement.style.display = "block";
         }
-
-
 
     </script>
 

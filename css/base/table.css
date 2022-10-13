@@ -7,6 +7,8 @@ td, th {
     overflow: unset;
     max-height: none;
     min-width: calc(100% + 30px);
+    position: sticky;
+    position: -webkit-sticky;
 }
 
 .m-table {
@@ -59,6 +61,13 @@ td, th {
     z-index: 2;
     background-color: #e5e8ec;
     vertical-align: middle;
+}
+
+.m-tr{
+    position: sticky;
+    position: -webkit-sticky;
+    top: -100px;
+    overflow: auto;
 }
 
 .m-checkall {

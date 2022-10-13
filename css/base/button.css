@@ -6,6 +6,7 @@
     border-radius: 4px;
     height: 36px;
     cursor: pointer;
+    min-width: 80px;
 }
 
 .m-button:hover {

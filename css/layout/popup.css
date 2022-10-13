@@ -131,7 +131,7 @@
 
 .m-content-2-col, .m-content-1-col, .m-content-4-col {
     display: flex;
-    padding-bottom: 12px;
+    padding-bottom: 6px;
 }
 
 .m-content-2-col > div {
@@ -143,7 +143,7 @@
 }
 
 .m-radio-group {
-    padding: 5px 0 6px 10px;
+    padding: 5px 0 6px 6px;
 }
 
 .m-close-dialog {
@@ -153,13 +153,14 @@
 .m-divine {
     width: 100%;
     border-top: 1px solid #e0e0e0;
-    margin: 20px 0;
+    margin: 2px 0;
     position: relative;
 }
 
 .m-popup-btn {
     display: flex;
     justify-content: space-between;
+    padding: 6px 0;
 }
 
 .m-popup-btn-right .m-button-secondary {

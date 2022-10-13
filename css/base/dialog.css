@@ -45,12 +45,17 @@
     align-items: flex-start;
 }
 
-.m-content-message {
+.m-content-message  {
     overflow: auto;
     max-height: 400px;
     margin-bottom: 32px;
     padding-left: 16px;
     padding-top: 12px;
+}
+
+.m-content-message-p{
+    display: inline-block;
+
 }
 
 .m-dialog-line {
