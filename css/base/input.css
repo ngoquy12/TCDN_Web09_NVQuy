@@ -8,6 +8,20 @@
     width: -webkit-fill-available;
 }
 
+/* CSS input width */
+
+.m-input-40 {
+    width: 40% !important;
+}
+
+.m-input-60 {
+    width: 60% !important;
+}
+
+.m-input-100 {
+    width: 100% !important;
+}
+
 .m-input::placeholder {
     font-size: 12px;
     color: #949494;
@@ -41,7 +55,7 @@
     margin-right: 10px;
 }
 
-.m-input-title-gender{
+.m-input-title-gender {
     padding-left: 6px;
 
 }
@@ -53,11 +67,9 @@
     white-space: nowrap;
 }
 
-.m-input-title-require{
+.m-input-title-require {
     color: #E60000;
-} 
-
-
+}
 
 /* Input radio */
 .m-con-radio {
@@ -93,11 +105,11 @@
     display: block;
 }
 
-.m-input-radio:checked + .m-radio .m-radio-border {
+.m-input-radio:checked+.m-radio .m-radio-border {
     border-color: #2ca01c;
 }
 
-.m-input-radio:checked + .m-radio .m-radio-circle {
+.m-input-radio:checked+.m-radio .m-radio-circle {
     display: block;
     position: absolute;
     width: 10px;
@@ -111,18 +123,4 @@
 .m-radio-label {
     margin-left: 10px;
     cursor: pointer;
-}
-
-/* CSS input width */
-
-.m-input-40 {
-    width: 40%!important;
-}
-
-.m-input-60 {
-    width: 60%!important;
-}
-
-.m-input-100 {
-    width: 100%!important;
 }

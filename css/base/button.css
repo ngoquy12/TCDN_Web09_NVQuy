@@ -1,9 +1,9 @@
 .m-button {
-    background-color: #2ca01c;
+    background-color: var(--backgroud-primary-color);
     border: 1px solid transparent;
     color: #fff;
-    padding: 8px 16px 8px 20px;
-    border-radius: 4px;
+    padding: 0 16px;
+    border-radius: var(--boder-radius);
     height: 36px;
     cursor: pointer;
     min-width: 80px;
@@ -29,10 +29,6 @@
 
 .m-button-secondary:focus, .m-button-secondary:active {
     background-color: #d2d3d6;
-}
-
-.m-button-radius-false {
-    border-radius: 3px;
 }
 
 .m-button-size-default {

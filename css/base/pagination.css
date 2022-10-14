@@ -3,7 +3,6 @@
     z-index: 30;
     bottom: 0;
     background-color: #fff;
-    /* display: none   ; */
   
 }
 
@@ -27,8 +26,12 @@
     min-width: 200px;
 }
 
+.m-number{
+    border: 1px solid transparent;
+}
+
 .m-number:hover{
-    border: 1px solid;
+    border: 1px solid ;
 }
 
 .m-page-number {

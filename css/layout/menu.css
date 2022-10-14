@@ -1,7 +1,8 @@
 .m-menu {
-  width: auto;
+  width: 200px;
   background-color: #393a3d;
   color: #fff;
+  height: 100vh;
 }
 
 .m-menu a {
@@ -11,7 +12,7 @@
 }
 
 .m-logo-container {
-  height: 0;
+  height: 56px;
   padding: 24px;
   display: flex;
   align-items: center;
@@ -30,17 +31,18 @@
 }
 
 .m-menu-item {
-  height: calc(100vh - 62px);
+  height: calc(100vh - 56px);
   padding-top: 14px;
-  /* overflow: scroll; */
+  overflow: auto;
 }
 
 .m-item-router {
-  height: 42px;
+  height: 44px;
   display: flex;
   align-items: center;
-  padding-right: 14px;
-  padding-left: 8px;
+  padding-right: 12px;
+  padding-left: 12px;
+  padding-bottom: 4px;
   border-left: 6px solid transparent;
   position: relative;
 }
@@ -54,13 +56,13 @@
   background: rgb(212, 215, 220);
   opacity: 0.2;
   width: calc(100% + 6px);
-  height: 42px;
+  height: 44px;
   left: -6px;
   top: 0px;
   position: absolute;
 }
 
 .m-item-icon {
-  margin-right: 8px;
+  margin-right: 12px;
 }
 

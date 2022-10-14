@@ -6,7 +6,6 @@
     box-shadow: 0 5px 20px 0 rgba(0, 0, 0, .1);
     flex-direction: column;
     background: #fff;
-    top: 20px;
 }
 
 .m-popup-con {
@@ -36,7 +35,7 @@
 }
 
 .m-popup-drag {
-    /* cursor: grab; */
+    cursor: grab;
     position: absolute;
     z-index: 100;
 }
@@ -45,7 +44,7 @@
     min-width: 900px;
     max-width: 900px;
     width: 900px;
-    height: 625px;
+    height: auto;
     position: relative;
 }
 
@@ -121,17 +120,16 @@
 
 .m-popup--content {
     height: calc(100% - 73px);
-    padding: 0 32px 10px;
+    padding: 0 32px 20px;
     display: flex;
     flex-direction: column;
     overflow: auto;
     overflow-y: visible;
-    
 }
 
 .m-content-2-col, .m-content-1-col, .m-content-4-col {
     display: flex;
-    padding-bottom: 6px;
+    padding-bottom: 12px;
 }
 
 .m-content-2-col > div {
@@ -143,7 +141,7 @@
 }
 
 .m-radio-group {
-    padding: 5px 0 6px 6px;
+    padding: 5px 0 6px 10px;
 }
 
 .m-close-dialog {
@@ -153,14 +151,13 @@
 .m-divine {
     width: 100%;
     border-top: 1px solid #e0e0e0;
-    margin: 2px 0;
+    margin: 32px 0 20px;
     position: relative;
 }
 
 .m-popup-btn {
     display: flex;
     justify-content: space-between;
-    padding: 6px 0;
 }
 
 .m-popup-btn-right .m-button-secondary {
