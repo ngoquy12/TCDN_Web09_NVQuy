@@ -7,13 +7,17 @@
     justify-content: space-between;
 }
 
+.m-navbar:hover{
+    cursor: pointer;
+}
+
 .m-navbar-left, .m-navbar-right {
     display: flex;
     align-items: center;
 }
 
 .m-navbar-icon {
-    margin: 0 10px;
+    margin: 0 16px;
 }
 
 .m-navbar-branch {

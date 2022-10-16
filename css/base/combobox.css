@@ -68,7 +68,7 @@
 
 .m-combo-dropdown-panel, .m-combo-menu {
     transition: opacity .1s, transform .1s, width .2s ease;
-    z-index: 100000;
+    z-index: 10000;
     position: absolute;
     background-color: #fff;
     border: 1px solid #babec5;

@@ -47,7 +47,7 @@
     height: auto;
     width: auto;
     z-index: 9990;
-    /* transform: translate(-100%); */
+    transform: translate(-100%);
     transition: opacity .25s, transform .25s, width .3s ease;
 }
 

@@ -15,16 +15,7 @@ class EmployeePage {
         try {
             // Gán con trỏ this
             let self = this;
-
-            /**********************************************
-             * Các sự kiện cần gán css
-             * 1. Gán css top để phần header trong body trượt khi scroll
-             */
-            $('.m-content-body').scroll(function () {
-                $('.m-content-header').css({ top: -$(this).scrollTop() });
-            });
-            // 2. Gán chiều rộng cho phần phân trang
-            $('.m-pagination').css({ width: $('.m-table').width() });
+           
 
             /**********************************************
              * Xử lý các sự kiện liên quan đến checkbox
@@ -705,8 +696,8 @@ class EmployeePage {
                                         </span>
                                     </label>
                                 </td>
-                                <td class="m-td m-td-emp-code">${emp.EmployeeCode ? emp.EmployeeCode : ''}</td>
-                                <td class="m-td">${emp.EmployeeName ? emp.EmployeeName : ''}</td>
+                                <td class="m-td m-td-emp-code"></td>
+                                <td class="m-td"></td>
                                 <td class="m-td">${emp.GenderName ? emp.GenderName : ''}</td>
                                 <td class="m-td" style="text-align: center;">${dob ? dob : ''}</td>
                                 <td class="m-td">${emp.EmployeePosition ? emp.EmployeePosition : ''}</td>
@@ -745,21 +736,21 @@ class EmployeePage {
                 /**********************************************
                  * Các sự kiện sau khi đổ dữ liệu ra table
                  */
-                function handleEvent() {
-                    try {
-                        // 1. Hiển thị phân trang
-                        $('.m-total-record .m-total').html(employees.length);
-                        $('.m-pagination').css({ display: 'flex' });
+                // function handleEvent() {
+                //     try {
+                //         // 1. Hiển thị phân trang
+                //         $('.m-total-record .m-total').html(employees.length);
+                //         $('.m-pagination').css({ display: 'flex' });
 
-                        // 2. Nếu checkall được tích thì check tất cả các checkbox hiển thị
-                        if ($('.m-input-checkall').prop('checked')) {
-                            $('.m-input-checkbox').prop('checked', true);
-                            $('.m-input-checkbox').parents('tr').addClass('checked');
-                        }
-                    } catch (error) {
-                        console.log(error);
-                    }
-                }
+                //         // 2. Nếu checkall được tích thì check tất cả các checkbox hiển thị
+                //         if ($('.m-input-checkall').prop('checked')) {
+                //             $('.m-input-checkbox').prop('checked', true);
+                //             $('.m-input-checkbox').parents('tr').addClass('checked');
+                //         }
+                //     } catch (error) {
+                //         console.log(error);
+                //     }
+                // }
 
                 /**********************************************
                  * Các sự kiện cần đổ lại dữ liệu ra bảng
@@ -805,29 +796,7 @@ class EmployeePage {
             },
         });
 
-        // Gọi API lấy dữ liệu phòng ban
-        $.ajax({
-            type: 'GET',
-            url: 'https://amis.manhnv.net/api/v1/Departments',
-            success: function (response) {
-                // debugger
-                const departments = response;
-                $('.m-departments-list').empty();
-                for (const department of departments) {
-                    var trHTML = $(`
-                    <tr class="m-menu-items-tr">
-                        <td class="m-menu-items-td" style="width: 100px; text-align: left"><span>${department.DepartmentCode ? department.DepartmentCode : ''}</span></td>
-                        <td class="m-menu-items-td" style="width: 250px; text-align: left"><span>${department.DepartmentName}</span></td>
-                    </tr>
-                    `);
-                    $(trHTML).data('object', department);
-                    $('.m-departments-list').append(trHTML);
-                }
-            },
-            error: function () {
-                debugger;
-            },
-        });
+        
     }
 }
 

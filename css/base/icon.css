@@ -102,6 +102,7 @@
     background-position: -787px -30px;
 }
 
+
 .m-icon-refresh {
     background-position: -423px -201px;
     
@@ -163,9 +164,9 @@
     background-position: -984px -456px;
 }
 
-.m-loading-icon {
+/* .m-loading-icon {
     background: url(../../assets/loading.svg) no-repeat center;
     width: 100%;
     height: 100%;
-    animation: rotate 1s ease infinite;
-}
+    animation: rotate 1s ease ;
+} */

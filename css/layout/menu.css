@@ -32,7 +32,7 @@
 
 .m-menu-item {
   height: calc(100vh - 56px);
-  padding-top: 14px;
+  padding-top: 20px;
   overflow: auto;
 }
 
@@ -51,7 +51,8 @@
   border-left: 6px solid rgb(44, 160, 28);
 }
 
-.m-item-router.active::before, .m-item-router:hover::before {
+.m-item-router.active::before,
+.m-item-router:hover::before {
   content: "";
   background: rgb(212, 215, 220);
   opacity: 0.2;
@@ -65,4 +66,3 @@
 .m-item-icon {
   margin-right: 12px;
 }
-

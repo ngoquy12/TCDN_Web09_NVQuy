@@ -53,8 +53,8 @@ td, th {
 .m-table .m-thead .m-tr .m-th {
     border-right: 1px solid #c7c7c7;
     border-bottom: 1px solid #c7c7c7;
-    min-height: 34px;
-    height: 34px;
+    min-height: 48px;
+    height: 48px;
     top: 0;
     z-index: 2;
     background-color: #e5e8ec;
@@ -161,6 +161,10 @@ td, th {
     cursor: pointer;
     padding-right: 12px;
 }
+.m-th-title-dob{
+    display: inline-block;
+    text-align: center;
+}
 
 .m-td-widget {
     border-right: none;
@@ -192,7 +196,7 @@ td, th {
     background-color: #fff;
 }
 
-.m-tr:hover .m-td {
+.m-tr:hover, .m-tbody-box:hover {
     background-color: #f2f9ff !important;
 }
 

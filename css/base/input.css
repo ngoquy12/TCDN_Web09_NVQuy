@@ -56,7 +56,9 @@
 }
 
 .m-input-title-gender {
-    padding-left: 6px;
+    padding-top: 5px;
+    padding-bottom: 6px;
+    padding-left: 10px;
 
 }
 
@@ -65,6 +67,10 @@
     font-weight: 700;
     padding-bottom: 8px;
     white-space: nowrap;
+}
+
+.m-input-error{
+    border-color: #E60000;
 }
 
 .m-input-title-require {

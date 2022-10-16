@@ -51,6 +51,7 @@
 
 .m-page-index {
     display: flex; 
+    margin-right: 5px;
 }
 
 .m-page-index div {
