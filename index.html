@@ -138,7 +138,7 @@
                 <div class="m-content-header">
                     <div class="m-header-di">
                         <div class="m-header-title">Nhân viên</div>
-                        <button class="m-button m-button-add-emp" onclick="showForm()">
+                        <button class="m-button m-button-add-emp" onclick="showForm()" title="(Insert)">
                             <div class="m-button-text">Thêm mới nhân viên</div>
                         </button>
                     </div>
@@ -151,7 +151,7 @@
                                 placeholder="Tìm theo mã, tên nhân viên" />
                             <div class="m-icon-after m-icon-16 m-icon-search" title="Tìm kiếm"></div>
                         </div>
-                        <div class="m-refresh-button m-icon-24 m-icon-refresh" onclick="reload()" title="Tải lại trang">
+                        <div class="m-refresh-button m-icon-24 m-icon-refresh" onclick="reload()" title="Tải lại trang(F5)">
                         </div>
                     </div>
                     <div class="m-body-table">
@@ -213,7 +213,7 @@
                             </thead>
                             <tbody class="m-tbody">
                                 <!-- Nhập dữ liệu cho bảng -->
-                                <tr class="m-tr" ondblclick="doubleClick()">
+                                <tr class="m-tr">
                                     <td class="m-out-left-white-16"></td>
                                     <td class="m-td m-td-multi" style="left: 16px">
                                         <label class="m-table-checkbox">
@@ -228,1137 +228,77 @@
                                     <td class="m-td m-td-emp-code">
                                         <div class="m-tbody">
                                             <div class="m-tbody-text">
-                                                <div class="m-tbody-box">NV0001</div>
+                                                <div class="m-tbody-box"></div>
                                             </div>
                                         </div>
                                     </td>
                                     <td class="m-td">
                                         <div class="m-tbody">
                                             <div class="m-tbody-text">
-                                                <div class="m-tbody-box">Ngọ Văn Quý</div>
+                                                <div class="m-tbody-box"></div>
                                             </div>
                                         </div>
                                     </td>
                                     <td class="m-td">
                                         <div class="m-tbody">
                                             <div class="m-tbody-text">
-                                                <div class="m-tbody-box">Nam</div>
-                                            </div>
-                                        </div>
-                                    </td>
-                                    <td class="m-td" style="text-align: center;">
-                                        <div class="m-tbody">
-                                            <div class="m-tbody-text">
-                                                <div class="m-tbody-box">28/06/2001</div>
-                                            </div>
-                                        </div>
-                                    </td>
-                                    <td class="m-td">
-                                        <div class="m-tbody">
-                                            <div class="m-tbody-text">
-                                                <div class="m-tbody-box">Fresher</div>
-                                            </div>
-                                        </div>
-                                    </td>
-                                    <td class="m-td">
-                                        <div class="m-tbody">
-                                            <div class="m-tbody-text">
-                                                <div class="m-tbody-box">0123456789</div>
-                                            </div>
-                                        </div>
-                                    </td>
-                                    <td class="m-td">
-                                        <div class="m-tbody">
-                                            <div class="m-tbody-text">
-                                                <div class="m-tbody-box">Web09</div>
-                                            </div>
-                                        </div>
-                                    </td>
-                                    <td class="m-td">
-                                        <div class="m-tbody">
-                                            <div class="m-tbody-text">
-                                                <div class="m-tbody-box">0123456789</div>
-                                            </div>
-                                        </div>
-                                    </td>
-                                    <td class="m-td">
-                                        <div class="m-tbody">
-                                            <div class="m-tbody-text">
-                                                <div class="m-tbody-box">Techcombank</div>
-                                            </div>
-                                        </div>
-                                    </td>
-                                    <td class="m-td">
-                                        <div class="m-tbody">
-                                            <div class="m-tbody-text">
-                                                <div class="m-tbody-box">Thanh Xuân, Hà Nội</div>
-                                            </div>
-                                        </div>
-                                    </td>
-                                    <td class="m-td">
-                                        <div class="m-tbody">
-                                            <div class="m-tbody-text">
-                                                <div class="m-tbody-box">Thanh Xuân, Hà Nội</div>
-                                            </div>
-                                        </div>
-                                    </td>
-                                    <td class="m-td m-td-widget" style="right: 30px">
-                                        <div class="m-dropdown">
-                                            <button class="m-dropdown-type-feature m-dropdown-btn-text m-edit-employee">
-                                                <div class="m-btn-text">Sửa</div>
-                                            </button>
-                                            <button
-                                                class="m-dropdown-type-feature m-dropdown-btn-icon m-dropdown-icon-emp">
-                                                <div class="m-btn-text">
-                                                    <div class="m-icon-16 m-icon-arrow-down-blue"></div>
-                                                </div>
-                                            </button>
-                                        </div>
-                                    </td>
-                                    <td class="m-out-right-white-30"></td>
-                                    <td class="m-out-right-grey-30"></td>
-                                </tr>
-                                <!-- Nhập dữ liệu cho bảng -->
-                                <tr class="m-tr" ondblclick="doubleClick()">
-                                    <td class="m-out-left-white-16"></td>
-                                    <td class="m-td m-td-multi" style="left: 16px">
-                                        <label class="m-table-checkbox">
-                                            <input type="checkbox" class="m-input-checkbox" />
-                                            <span class="m-checkbox">
-                                                <span class="m-checkbox-inner">
-                                                    <div class="m-icon-16 m-icon-checkbox-active"></div>
-                                                </span>
-                                            </span>
-                                        </label>
-                                    </td>
-                                    <td class="m-td m-td-emp-code">
-                                        <div class="m-tbody">
-                                            <div class="m-tbody-text">
-                                                <div class="m-tbody-box">NV0001</div>
-                                            </div>
-                                        </div>
-                                    </td>
-                                    <td class="m-td">
-                                        <div class="m-tbody">
-                                            <div class="m-tbody-text">
-                                                <div class="m-tbody-box">Ngọ Văn Quý</div>
-                                            </div>
-                                        </div>
-                                    </td>
-                                    <td class="m-td">
-                                        <div class="m-tbody">
-                                            <div class="m-tbody-text">
-                                                <div class="m-tbody-box">Nam</div>
+                                                <div class="m-tbody-box"></div>
                                             </div>
                                         </div>
                                     </td>
                                     <td class="m-td" style="text-align: center;">
                                         <div class="m-tbody">
                                             <div class="m-tbody-text">
-                                                <div class="m-tbody-box">28/06/2001</div>
+                                                <div class="m-tbody-box"></div>
                                             </div>
                                         </div>
                                     </td>
                                     <td class="m-td">
                                         <div class="m-tbody">
                                             <div class="m-tbody-text">
-                                                <div class="m-tbody-box">Fresher</div>
+                                                <div class="m-tbody-box"></div>
                                             </div>
                                         </div>
                                     </td>
                                     <td class="m-td">
                                         <div class="m-tbody">
                                             <div class="m-tbody-text">
-                                                <div class="m-tbody-box">0123456789</div>
+                                                <div class="m-tbody-box"></div>
                                             </div>
                                         </div>
                                     </td>
                                     <td class="m-td">
                                         <div class="m-tbody">
                                             <div class="m-tbody-text">
-                                                <div class="m-tbody-box">Web09</div>
+                                                <div class="m-tbody-box"></div>
                                             </div>
                                         </div>
                                     </td>
                                     <td class="m-td">
                                         <div class="m-tbody">
                                             <div class="m-tbody-text">
-                                                <div class="m-tbody-box">0123456789</div>
+                                                <div class="m-tbody-box"></div>
                                             </div>
                                         </div>
                                     </td>
                                     <td class="m-td">
                                         <div class="m-tbody">
                                             <div class="m-tbody-text">
-                                                <div class="m-tbody-box">Techcombank</div>
+                                                <div class="m-tbody-box"></div>
                                             </div>
                                         </div>
                                     </td>
                                     <td class="m-td">
                                         <div class="m-tbody">
                                             <div class="m-tbody-text">
-                                                <div class="m-tbody-box">Thanh Xuân, Hà Nội</div>
+                                                <div class="m-tbody-box"></div>
                                             </div>
                                         </div>
                                     </td>
                                     <td class="m-td">
                                         <div class="m-tbody">
                                             <div class="m-tbody-text">
-                                                <div class="m-tbody-box">Thanh Xuân, Hà Nội</div>
-                                            </div>
-                                        </div>
-                                    </td>
-                                    <td class="m-td m-td-widget" style="right: 30px">
-                                        <div class="m-dropdown">
-                                            <button class="m-dropdown-type-feature m-dropdown-btn-text m-edit-employee">
-                                                <div class="m-btn-text">Sửa</div>
-                                            </button>
-                                            <button
-                                                class="m-dropdown-type-feature m-dropdown-btn-icon m-dropdown-icon-emp">
-                                                <div class="m-btn-text">
-                                                    <div class="m-icon-16 m-icon-arrow-down-blue"></div>
-                                                </div>
-                                            </button>
-                                        </div>
-                                    </td>
-                                    <td class="m-out-right-white-30"></td>
-                                    <td class="m-out-right-grey-30"></td>
-                                </tr>
-                                <!-- Nhập dữ liệu cho bảng -->
-                                <tr class="m-tr" ondblclick="doubleClick()">
-                                    <td class="m-out-left-white-16"></td>
-                                    <td class="m-td m-td-multi" style="left: 16px">
-                                        <label class="m-table-checkbox">
-                                            <input type="checkbox" class="m-input-checkbox" />
-                                            <span class="m-checkbox">
-                                                <span class="m-checkbox-inner">
-                                                    <div class="m-icon-16 m-icon-checkbox-active"></div>
-                                                </span>
-                                            </span>
-                                        </label>
-                                    </td>
-                                    <td class="m-td m-td-emp-code">
-                                        <div class="m-tbody">
-                                            <div class="m-tbody-text">
-                                                <div class="m-tbody-box">NV0001</div>
-                                            </div>
-                                        </div>
-                                    </td>
-                                    <td class="m-td">
-                                        <div class="m-tbody">
-                                            <div class="m-tbody-text">
-                                                <div class="m-tbody-box">Ngọ Văn Quý</div>
-                                            </div>
-                                        </div>
-                                    </td>
-                                    <td class="m-td">
-                                        <div class="m-tbody">
-                                            <div class="m-tbody-text">
-                                                <div class="m-tbody-box">Nam</div>
-                                            </div>
-                                        </div>
-                                    </td>
-                                    <td class="m-td" style="text-align: center;">
-                                        <div class="m-tbody">
-                                            <div class="m-tbody-text">
-                                                <div class="m-tbody-box">28/06/2001</div>
-                                            </div>
-                                        </div>
-                                    </td>
-                                    <td class="m-td">
-                                        <div class="m-tbody">
-                                            <div class="m-tbody-text">
-                                                <div class="m-tbody-box">Fresher</div>
-                                            </div>
-                                        </div>
-                                    </td>
-                                    <td class="m-td">
-                                        <div class="m-tbody">
-                                            <div class="m-tbody-text">
-                                                <div class="m-tbody-box">0123456789</div>
-                                            </div>
-                                        </div>
-                                    </td>
-                                    <td class="m-td">
-                                        <div class="m-tbody">
-                                            <div class="m-tbody-text">
-                                                <div class="m-tbody-box">Web09</div>
-                                            </div>
-                                        </div>
-                                    </td>
-                                    <td class="m-td">
-                                        <div class="m-tbody">
-                                            <div class="m-tbody-text">
-                                                <div class="m-tbody-box">0123456789</div>
-                                            </div>
-                                        </div>
-                                    </td>
-                                    <td class="m-td">
-                                        <div class="m-tbody">
-                                            <div class="m-tbody-text">
-                                                <div class="m-tbody-box">Techcombank</div>
-                                            </div>
-                                        </div>
-                                    </td>
-                                    <td class="m-td">
-                                        <div class="m-tbody">
-                                            <div class="m-tbody-text">
-                                                <div class="m-tbody-box">Thanh Xuân, Hà Nội</div>
-                                            </div>
-                                        </div>
-                                    </td>
-                                    <td class="m-td">
-                                        <div class="m-tbody">
-                                            <div class="m-tbody-text">
-                                                <div class="m-tbody-box">Thanh Xuân, Hà Nội</div>
-                                            </div>
-                                        </div>
-                                    </td>
-                                    <td class="m-td m-td-widget" style="right: 30px">
-                                        <div class="m-dropdown">
-                                            <button class="m-dropdown-type-feature m-dropdown-btn-text m-edit-employee">
-                                                <div class="m-btn-text">Sửa</div>
-                                            </button>
-                                            <button
-                                                class="m-dropdown-type-feature m-dropdown-btn-icon m-dropdown-icon-emp">
-                                                <div class="m-btn-text">
-                                                    <div class="m-icon-16 m-icon-arrow-down-blue"></div>
-                                                </div>
-                                            </button>
-                                        </div>
-                                    </td>
-                                    <td class="m-out-right-white-30"></td>
-                                    <td class="m-out-right-grey-30"></td>
-                                </tr>
-                                <!-- Nhập dữ liệu cho bảng -->
-                                <tr class="m-tr" ondblclick="doubleClick()">
-                                    <td class="m-out-left-white-16"></td>
-                                    <td class="m-td m-td-multi" style="left: 16px">
-                                        <label class="m-table-checkbox">
-                                            <input type="checkbox" class="m-input-checkbox" />
-                                            <span class="m-checkbox">
-                                                <span class="m-checkbox-inner">
-                                                    <div class="m-icon-16 m-icon-checkbox-active"></div>
-                                                </span>
-                                            </span>
-                                        </label>
-                                    </td>
-                                    <td class="m-td m-td-emp-code">
-                                        <div class="m-tbody">
-                                            <div class="m-tbody-text">
-                                                <div class="m-tbody-box">NV0001</div>
-                                            </div>
-                                        </div>
-                                    </td>
-                                    <td class="m-td">
-                                        <div class="m-tbody">
-                                            <div class="m-tbody-text">
-                                                <div class="m-tbody-box">Ngọ Văn Quý</div>
-                                            </div>
-                                        </div>
-                                    </td>
-                                    <td class="m-td">
-                                        <div class="m-tbody">
-                                            <div class="m-tbody-text">
-                                                <div class="m-tbody-box">Nam</div>
-                                            </div>
-                                        </div>
-                                    </td>
-                                    <td class="m-td" style="text-align: center;">
-                                        <div class="m-tbody">
-                                            <div class="m-tbody-text">
-                                                <div class="m-tbody-box">28/06/2001</div>
-                                            </div>
-                                        </div>
-                                    </td>
-                                    <td class="m-td">
-                                        <div class="m-tbody">
-                                            <div class="m-tbody-text">
-                                                <div class="m-tbody-box">Fresher</div>
-                                            </div>
-                                        </div>
-                                    </td>
-                                    <td class="m-td">
-                                        <div class="m-tbody">
-                                            <div class="m-tbody-text">
-                                                <div class="m-tbody-box">0123456789</div>
-                                            </div>
-                                        </div>
-                                    </td>
-                                    <td class="m-td">
-                                        <div class="m-tbody">
-                                            <div class="m-tbody-text">
-                                                <div class="m-tbody-box">Web09</div>
-                                            </div>
-                                        </div>
-                                    </td>
-                                    <td class="m-td">
-                                        <div class="m-tbody">
-                                            <div class="m-tbody-text">
-                                                <div class="m-tbody-box">0123456789</div>
-                                            </div>
-                                        </div>
-                                    </td>
-                                    <td class="m-td">
-                                        <div class="m-tbody">
-                                            <div class="m-tbody-text">
-                                                <div class="m-tbody-box">Techcombank</div>
-                                            </div>
-                                        </div>
-                                    </td>
-                                    <td class="m-td">
-                                        <div class="m-tbody">
-                                            <div class="m-tbody-text">
-                                                <div class="m-tbody-box">Thanh Xuân, Hà Nội</div>
-                                            </div>
-                                        </div>
-                                    </td>
-                                    <td class="m-td">
-                                        <div class="m-tbody">
-                                            <div class="m-tbody-text">
-                                                <div class="m-tbody-box">Thanh Xuân, Hà Nội</div>
-                                            </div>
-                                        </div>
-                                    </td>
-                                    <td class="m-td m-td-widget" style="right: 30px">
-                                        <div class="m-dropdown">
-                                            <button class="m-dropdown-type-feature m-dropdown-btn-text m-edit-employee">
-                                                <div class="m-btn-text">Sửa</div>
-                                            </button>
-                                            <button
-                                                class="m-dropdown-type-feature m-dropdown-btn-icon m-dropdown-icon-emp">
-                                                <div class="m-btn-text">
-                                                    <div class="m-icon-16 m-icon-arrow-down-blue"></div>
-                                                </div>
-                                            </button>
-                                        </div>
-                                    </td>
-                                    <td class="m-out-right-white-30"></td>
-                                    <td class="m-out-right-grey-30"></td>
-                                </tr>
-                                <!-- Nhập dữ liệu cho bảng -->
-                                <tr class="m-tr" ondblclick="doubleClick()">
-                                    <td class="m-out-left-white-16"></td>
-                                    <td class="m-td m-td-multi" style="left: 16px">
-                                        <label class="m-table-checkbox">
-                                            <input type="checkbox" class="m-input-checkbox" />
-                                            <span class="m-checkbox">
-                                                <span class="m-checkbox-inner">
-                                                    <div class="m-icon-16 m-icon-checkbox-active"></div>
-                                                </span>
-                                            </span>
-                                        </label>
-                                    </td>
-                                    <td class="m-td m-td-emp-code">
-                                        <div class="m-tbody">
-                                            <div class="m-tbody-text">
-                                                <div class="m-tbody-box">NV0001</div>
-                                            </div>
-                                        </div>
-                                    </td>
-                                    <td class="m-td">
-                                        <div class="m-tbody">
-                                            <div class="m-tbody-text">
-                                                <div class="m-tbody-box">Ngọ Văn Quý</div>
-                                            </div>
-                                        </div>
-                                    </td>
-                                    <td class="m-td">
-                                        <div class="m-tbody">
-                                            <div class="m-tbody-text">
-                                                <div class="m-tbody-box">Nam</div>
-                                            </div>
-                                        </div>
-                                    </td>
-                                    <td class="m-td" style="text-align: center;">
-                                        <div class="m-tbody">
-                                            <div class="m-tbody-text">
-                                                <div class="m-tbody-box">28/06/2001</div>
-                                            </div>
-                                        </div>
-                                    </td>
-                                    <td class="m-td">
-                                        <div class="m-tbody">
-                                            <div class="m-tbody-text">
-                                                <div class="m-tbody-box">Fresher</div>
-                                            </div>
-                                        </div>
-                                    </td>
-                                    <td class="m-td">
-                                        <div class="m-tbody">
-                                            <div class="m-tbody-text">
-                                                <div class="m-tbody-box">0123456789</div>
-                                            </div>
-                                        </div>
-                                    </td>
-                                    <td class="m-td">
-                                        <div class="m-tbody">
-                                            <div class="m-tbody-text">
-                                                <div class="m-tbody-box">Web09</div>
-                                            </div>
-                                        </div>
-                                    </td>
-                                    <td class="m-td">
-                                        <div class="m-tbody">
-                                            <div class="m-tbody-text">
-                                                <div class="m-tbody-box">0123456789</div>
-                                            </div>
-                                        </div>
-                                    </td>
-                                    <td class="m-td">
-                                        <div class="m-tbody">
-                                            <div class="m-tbody-text">
-                                                <div class="m-tbody-box">Techcombank</div>
-                                            </div>
-                                        </div>
-                                    </td>
-                                    <td class="m-td">
-                                        <div class="m-tbody">
-                                            <div class="m-tbody-text">
-                                                <div class="m-tbody-box">Thanh Xuân, Hà Nội</div>
-                                            </div>
-                                        </div>
-                                    </td>
-                                    <td class="m-td">
-                                        <div class="m-tbody">
-                                            <div class="m-tbody-text">
-                                                <div class="m-tbody-box">Thanh Xuân, Hà Nội</div>
-                                            </div>
-                                        </div>
-                                    </td>
-                                    <td class="m-td m-td-widget" style="right: 30px">
-                                        <div class="m-dropdown">
-                                            <button class="m-dropdown-type-feature m-dropdown-btn-text m-edit-employee">
-                                                <div class="m-btn-text">Sửa</div>
-                                            </button>
-                                            <button
-                                                class="m-dropdown-type-feature m-dropdown-btn-icon m-dropdown-icon-emp">
-                                                <div class="m-btn-text">
-                                                    <div class="m-icon-16 m-icon-arrow-down-blue"></div>
-                                                </div>
-                                            </button>
-                                        </div>
-                                    </td>
-                                    <td class="m-out-right-white-30"></td>
-                                    <td class="m-out-right-grey-30"></td>
-                                </tr>
-                                <!-- Nhập dữ liệu cho bảng -->
-                                <tr class="m-tr" ondblclick="doubleClick()">
-                                    <td class="m-out-left-white-16"></td>
-                                    <td class="m-td m-td-multi" style="left: 16px">
-                                        <label class="m-table-checkbox">
-                                            <input type="checkbox" class="m-input-checkbox" />
-                                            <span class="m-checkbox">
-                                                <span class="m-checkbox-inner">
-                                                    <div class="m-icon-16 m-icon-checkbox-active"></div>
-                                                </span>
-                                            </span>
-                                        </label>
-                                    </td>
-                                    <td class="m-td m-td-emp-code">
-                                        <div class="m-tbody">
-                                            <div class="m-tbody-text">
-                                                <div class="m-tbody-box">NV0001</div>
-                                            </div>
-                                        </div>
-                                    </td>
-                                    <td class="m-td">
-                                        <div class="m-tbody">
-                                            <div class="m-tbody-text">
-                                                <div class="m-tbody-box">Ngọ Văn Quý</div>
-                                            </div>
-                                        </div>
-                                    </td>
-                                    <td class="m-td">
-                                        <div class="m-tbody">
-                                            <div class="m-tbody-text">
-                                                <div class="m-tbody-box">Nam</div>
-                                            </div>
-                                        </div>
-                                    </td>
-                                    <td class="m-td" style="text-align: center;">
-                                        <div class="m-tbody">
-                                            <div class="m-tbody-text">
-                                                <div class="m-tbody-box">28/06/2001</div>
-                                            </div>
-                                        </div>
-                                    </td>
-                                    <td class="m-td">
-                                        <div class="m-tbody">
-                                            <div class="m-tbody-text">
-                                                <div class="m-tbody-box">Fresher</div>
-                                            </div>
-                                        </div>
-                                    </td>
-                                    <td class="m-td">
-                                        <div class="m-tbody">
-                                            <div class="m-tbody-text">
-                                                <div class="m-tbody-box">0123456789</div>
-                                            </div>
-                                        </div>
-                                    </td>
-                                    <td class="m-td">
-                                        <div class="m-tbody">
-                                            <div class="m-tbody-text">
-                                                <div class="m-tbody-box">Web09</div>
-                                            </div>
-                                        </div>
-                                    </td>
-                                    <td class="m-td">
-                                        <div class="m-tbody">
-                                            <div class="m-tbody-text">
-                                                <div class="m-tbody-box">0123456789</div>
-                                            </div>
-                                        </div>
-                                    </td>
-                                    <td class="m-td">
-                                        <div class="m-tbody">
-                                            <div class="m-tbody-text">
-                                                <div class="m-tbody-box">Techcombank</div>
-                                            </div>
-                                        </div>
-                                    </td>
-                                    <td class="m-td">
-                                        <div class="m-tbody">
-                                            <div class="m-tbody-text">
-                                                <div class="m-tbody-box">Thanh Xuân, Hà Nội</div>
-                                            </div>
-                                        </div>
-                                    </td>
-                                    <td class="m-td">
-                                        <div class="m-tbody">
-                                            <div class="m-tbody-text">
-                                                <div class="m-tbody-box">Thanh Xuân, Hà Nội</div>
-                                            </div>
-                                        </div>
-                                    </td>
-                                    <td class="m-td m-td-widget" style="right: 30px">
-                                        <div class="m-dropdown">
-                                            <button class="m-dropdown-type-feature m-dropdown-btn-text m-edit-employee">
-                                                <div class="m-btn-text">Sửa</div>
-                                            </button>
-                                            <button
-                                                class="m-dropdown-type-feature m-dropdown-btn-icon m-dropdown-icon-emp">
-                                                <div class="m-btn-text">
-                                                    <div class="m-icon-16 m-icon-arrow-down-blue"></div>
-                                                </div>
-                                            </button>
-                                        </div>
-                                    </td>
-                                    <td class="m-out-right-white-30"></td>
-                                    <td class="m-out-right-grey-30"></td>
-                                </tr>
-                                <!-- Nhập dữ liệu cho bảng -->
-                                <tr class="m-tr" ondblclick="doubleClick()">
-                                    <td class="m-out-left-white-16"></td>
-                                    <td class="m-td m-td-multi" style="left: 16px">
-                                        <label class="m-table-checkbox">
-                                            <input type="checkbox" class="m-input-checkbox" />
-                                            <span class="m-checkbox">
-                                                <span class="m-checkbox-inner">
-                                                    <div class="m-icon-16 m-icon-checkbox-active"></div>
-                                                </span>
-                                            </span>
-                                        </label>
-                                    </td>
-                                    <td class="m-td m-td-emp-code">
-                                        <div class="m-tbody">
-                                            <div class="m-tbody-text">
-                                                <div class="m-tbody-box">NV0001</div>
-                                            </div>
-                                        </div>
-                                    </td>
-                                    <td class="m-td">
-                                        <div class="m-tbody">
-                                            <div class="m-tbody-text">
-                                                <div class="m-tbody-box">Ngọ Văn Quý</div>
-                                            </div>
-                                        </div>
-                                    </td>
-                                    <td class="m-td">
-                                        <div class="m-tbody">
-                                            <div class="m-tbody-text">
-                                                <div class="m-tbody-box">Nam</div>
-                                            </div>
-                                        </div>
-                                    </td>
-                                    <td class="m-td" style="text-align: center;">
-                                        <div class="m-tbody">
-                                            <div class="m-tbody-text">
-                                                <div class="m-tbody-box">28/06/2001</div>
-                                            </div>
-                                        </div>
-                                    </td>
-                                    <td class="m-td">
-                                        <div class="m-tbody">
-                                            <div class="m-tbody-text">
-                                                <div class="m-tbody-box">Fresher</div>
-                                            </div>
-                                        </div>
-                                    </td>
-                                    <td class="m-td">
-                                        <div class="m-tbody">
-                                            <div class="m-tbody-text">
-                                                <div class="m-tbody-box">0123456789</div>
-                                            </div>
-                                        </div>
-                                    </td>
-                                    <td class="m-td">
-                                        <div class="m-tbody">
-                                            <div class="m-tbody-text">
-                                                <div class="m-tbody-box">Web09</div>
-                                            </div>
-                                        </div>
-                                    </td>
-                                    <td class="m-td">
-                                        <div class="m-tbody">
-                                            <div class="m-tbody-text">
-                                                <div class="m-tbody-box">0123456789</div>
-                                            </div>
-                                        </div>
-                                    </td>
-                                    <td class="m-td">
-                                        <div class="m-tbody">
-                                            <div class="m-tbody-text">
-                                                <div class="m-tbody-box">Techcombank</div>
-                                            </div>
-                                        </div>
-                                    </td>
-                                    <td class="m-td">
-                                        <div class="m-tbody">
-                                            <div class="m-tbody-text">
-                                                <div class="m-tbody-box">Thanh Xuân, Hà Nội</div>
-                                            </div>
-                                        </div>
-                                    </td>
-                                    <td class="m-td">
-                                        <div class="m-tbody">
-                                            <div class="m-tbody-text">
-                                                <div class="m-tbody-box">Thanh Xuân, Hà Nội</div>
-                                            </div>
-                                        </div>
-                                    </td>
-                                    <td class="m-td m-td-widget" style="right: 30px">
-                                        <div class="m-dropdown">
-                                            <button class="m-dropdown-type-feature m-dropdown-btn-text m-edit-employee">
-                                                <div class="m-btn-text">Sửa</div>
-                                            </button>
-                                            <button
-                                                class="m-dropdown-type-feature m-dropdown-btn-icon m-dropdown-icon-emp">
-                                                <div class="m-btn-text">
-                                                    <div class="m-icon-16 m-icon-arrow-down-blue"></div>
-                                                </div>
-                                            </button>
-                                        </div>
-                                    </td>
-                                    <td class="m-out-right-white-30"></td>
-                                    <td class="m-out-right-grey-30"></td>
-                                </tr>
-                                <!-- Nhập dữ liệu cho bảng -->
-                                <tr class="m-tr" ondblclick="doubleClick()">
-                                    <td class="m-out-left-white-16"></td>
-                                    <td class="m-td m-td-multi" style="left: 16px">
-                                        <label class="m-table-checkbox">
-                                            <input type="checkbox" class="m-input-checkbox" />
-                                            <span class="m-checkbox">
-                                                <span class="m-checkbox-inner">
-                                                    <div class="m-icon-16 m-icon-checkbox-active"></div>
-                                                </span>
-                                            </span>
-                                        </label>
-                                    </td>
-                                    <td class="m-td m-td-emp-code">
-                                        <div class="m-tbody">
-                                            <div class="m-tbody-text">
-                                                <div class="m-tbody-box">NV0001</div>
-                                            </div>
-                                        </div>
-                                    </td>
-                                    <td class="m-td">
-                                        <div class="m-tbody">
-                                            <div class="m-tbody-text">
-                                                <div class="m-tbody-box">Ngọ Văn Quý</div>
-                                            </div>
-                                        </div>
-                                    </td>
-                                    <td class="m-td">
-                                        <div class="m-tbody">
-                                            <div class="m-tbody-text">
-                                                <div class="m-tbody-box">Nam</div>
-                                            </div>
-                                        </div>
-                                    </td>
-                                    <td class="m-td" style="text-align: center;">
-                                        <div class="m-tbody">
-                                            <div class="m-tbody-text">
-                                                <div class="m-tbody-box">28/06/2001</div>
-                                            </div>
-                                        </div>
-                                    </td>
-                                    <td class="m-td">
-                                        <div class="m-tbody">
-                                            <div class="m-tbody-text">
-                                                <div class="m-tbody-box">Fresher</div>
-                                            </div>
-                                        </div>
-                                    </td>
-                                    <td class="m-td">
-                                        <div class="m-tbody">
-                                            <div class="m-tbody-text">
-                                                <div class="m-tbody-box">0123456789</div>
-                                            </div>
-                                        </div>
-                                    </td>
-                                    <td class="m-td">
-                                        <div class="m-tbody">
-                                            <div class="m-tbody-text">
-                                                <div class="m-tbody-box">Web09</div>
-                                            </div>
-                                        </div>
-                                    </td>
-                                    <td class="m-td">
-                                        <div class="m-tbody">
-                                            <div class="m-tbody-text">
-                                                <div class="m-tbody-box">0123456789</div>
-                                            </div>
-                                        </div>
-                                    </td>
-                                    <td class="m-td">
-                                        <div class="m-tbody">
-                                            <div class="m-tbody-text">
-                                                <div class="m-tbody-box">Techcombank</div>
-                                            </div>
-                                        </div>
-                                    </td>
-                                    <td class="m-td">
-                                        <div class="m-tbody">
-                                            <div class="m-tbody-text">
-                                                <div class="m-tbody-box">Thanh Xuân, Hà Nội</div>
-                                            </div>
-                                        </div>
-                                    </td>
-                                    <td class="m-td">
-                                        <div class="m-tbody">
-                                            <div class="m-tbody-text">
-                                                <div class="m-tbody-box">Thanh Xuân, Hà Nội</div>
-                                            </div>
-                                        </div>
-                                    </td>
-                                    <td class="m-td m-td-widget" style="right: 30px">
-                                        <div class="m-dropdown">
-                                            <button class="m-dropdown-type-feature m-dropdown-btn-text m-edit-employee">
-                                                <div class="m-btn-text">Sửa</div>
-                                            </button>
-                                            <button
-                                                class="m-dropdown-type-feature m-dropdown-btn-icon m-dropdown-icon-emp">
-                                                <div class="m-btn-text">
-                                                    <div class="m-icon-16 m-icon-arrow-down-blue"></div>
-                                                </div>
-                                            </button>
-                                        </div>
-                                    </td>
-                                    <td class="m-out-right-white-30"></td>
-                                    <td class="m-out-right-grey-30"></td>
-                                </tr>
-                                <!-- Nhập dữ liệu cho bảng -->
-                                <tr class="m-tr" ondblclick="doubleClick()">
-                                    <td class="m-out-left-white-16"></td>
-                                    <td class="m-td m-td-multi" style="left: 16px">
-                                        <label class="m-table-checkbox">
-                                            <input type="checkbox" class="m-input-checkbox" />
-                                            <span class="m-checkbox">
-                                                <span class="m-checkbox-inner">
-                                                    <div class="m-icon-16 m-icon-checkbox-active"></div>
-                                                </span>
-                                            </span>
-                                        </label>
-                                    </td>
-                                    <td class="m-td m-td-emp-code">
-                                        <div class="m-tbody">
-                                            <div class="m-tbody-text">
-                                                <div class="m-tbody-box">NV0001</div>
-                                            </div>
-                                        </div>
-                                    </td>
-                                    <td class="m-td">
-                                        <div class="m-tbody">
-                                            <div class="m-tbody-text">
-                                                <div class="m-tbody-box">Ngọ Văn Quý</div>
-                                            </div>
-                                        </div>
-                                    </td>
-                                    <td class="m-td">
-                                        <div class="m-tbody">
-                                            <div class="m-tbody-text">
-                                                <div class="m-tbody-box">Nam</div>
-                                            </div>
-                                        </div>
-                                    </td>
-                                    <td class="m-td" style="text-align: center;">
-                                        <div class="m-tbody">
-                                            <div class="m-tbody-text">
-                                                <div class="m-tbody-box">28/06/2001</div>
-                                            </div>
-                                        </div>
-                                    </td>
-                                    <td class="m-td">
-                                        <div class="m-tbody">
-                                            <div class="m-tbody-text">
-                                                <div class="m-tbody-box">Fresher</div>
-                                            </div>
-                                        </div>
-                                    </td>
-                                    <td class="m-td">
-                                        <div class="m-tbody">
-                                            <div class="m-tbody-text">
-                                                <div class="m-tbody-box">0123456789</div>
-                                            </div>
-                                        </div>
-                                    </td>
-                                    <td class="m-td">
-                                        <div class="m-tbody">
-                                            <div class="m-tbody-text">
-                                                <div class="m-tbody-box">Web09</div>
-                                            </div>
-                                        </div>
-                                    </td>
-                                    <td class="m-td">
-                                        <div class="m-tbody">
-                                            <div class="m-tbody-text">
-                                                <div class="m-tbody-box">0123456789</div>
-                                            </div>
-                                        </div>
-                                    </td>
-                                    <td class="m-td">
-                                        <div class="m-tbody">
-                                            <div class="m-tbody-text">
-                                                <div class="m-tbody-box">Techcombank</div>
-                                            </div>
-                                        </div>
-                                    </td>
-                                    <td class="m-td">
-                                        <div class="m-tbody">
-                                            <div class="m-tbody-text">
-                                                <div class="m-tbody-box">Thanh Xuân, Hà Nội</div>
-                                            </div>
-                                        </div>
-                                    </td>
-                                    <td class="m-td">
-                                        <div class="m-tbody">
-                                            <div class="m-tbody-text">
-                                                <div class="m-tbody-box">Thanh Xuân, Hà Nội</div>
-                                            </div>
-                                        </div>
-                                    </td>
-                                    <td class="m-td m-td-widget" style="right: 30px">
-                                        <div class="m-dropdown">
-                                            <button class="m-dropdown-type-feature m-dropdown-btn-text m-edit-employee">
-                                                <div class="m-btn-text">Sửa</div>
-                                            </button>
-                                            <button
-                                                class="m-dropdown-type-feature m-dropdown-btn-icon m-dropdown-icon-emp">
-                                                <div class="m-btn-text">
-                                                    <div class="m-icon-16 m-icon-arrow-down-blue"></div>
-                                                </div>
-                                            </button>
-                                        </div>
-                                    </td>
-                                    <td class="m-out-right-white-30"></td>
-                                    <td class="m-out-right-grey-30"></td>
-                                </tr>
-                                <!-- Nhập dữ liệu cho bảng -->
-                                <tr class="m-tr" ondblclick="doubleClick()">
-                                    <td class="m-out-left-white-16"></td>
-                                    <td class="m-td m-td-multi" style="left: 16px">
-                                        <label class="m-table-checkbox">
-                                            <input type="checkbox" class="m-input-checkbox" />
-                                            <span class="m-checkbox">
-                                                <span class="m-checkbox-inner">
-                                                    <div class="m-icon-16 m-icon-checkbox-active"></div>
-                                                </span>
-                                            </span>
-                                        </label>
-                                    </td>
-                                    <td class="m-td m-td-emp-code">
-                                        <div class="m-tbody">
-                                            <div class="m-tbody-text">
-                                                <div class="m-tbody-box">NV0001</div>
-                                            </div>
-                                        </div>
-                                    </td>
-                                    <td class="m-td">
-                                        <div class="m-tbody">
-                                            <div class="m-tbody-text">
-                                                <div class="m-tbody-box">Ngọ Văn Quý</div>
-                                            </div>
-                                        </div>
-                                    </td>
-                                    <td class="m-td">
-                                        <div class="m-tbody">
-                                            <div class="m-tbody-text">
-                                                <div class="m-tbody-box">Nam</div>
-                                            </div>
-                                        </div>
-                                    </td>
-                                    <td class="m-td" style="text-align: center;">
-                                        <div class="m-tbody">
-                                            <div class="m-tbody-text">
-                                                <div class="m-tbody-box">28/06/2001</div>
-                                            </div>
-                                        </div>
-                                    </td>
-                                    <td class="m-td">
-                                        <div class="m-tbody">
-                                            <div class="m-tbody-text">
-                                                <div class="m-tbody-box">Fresher</div>
-                                            </div>
-                                        </div>
-                                    </td>
-                                    <td class="m-td">
-                                        <div class="m-tbody">
-                                            <div class="m-tbody-text">
-                                                <div class="m-tbody-box">0123456789</div>
-                                            </div>
-                                        </div>
-                                    </td>
-                                    <td class="m-td">
-                                        <div class="m-tbody">
-                                            <div class="m-tbody-text">
-                                                <div class="m-tbody-box">Web09</div>
-                                            </div>
-                                        </div>
-                                    </td>
-                                    <td class="m-td">
-                                        <div class="m-tbody">
-                                            <div class="m-tbody-text">
-                                                <div class="m-tbody-box">0123456789</div>
-                                            </div>
-                                        </div>
-                                    </td>
-                                    <td class="m-td">
-                                        <div class="m-tbody">
-                                            <div class="m-tbody-text">
-                                                <div class="m-tbody-box">Techcombank</div>
-                                            </div>
-                                        </div>
-                                    </td>
-                                    <td class="m-td">
-                                        <div class="m-tbody">
-                                            <div class="m-tbody-text">
-                                                <div class="m-tbody-box">Thanh Xuân, Hà Nội</div>
-                                            </div>
-                                        </div>
-                                    </td>
-                                    <td class="m-td">
-                                        <div class="m-tbody">
-                                            <div class="m-tbody-text">
-                                                <div class="m-tbody-box">Thanh Xuân, Hà Nội</div>
-                                            </div>
-                                        </div>
-                                    </td>
-                                    <td class="m-td m-td-widget" style="right: 30px">
-                                        <div class="m-dropdown">
-                                            <button class="m-dropdown-type-feature m-dropdown-btn-text m-edit-employee">
-                                                <div class="m-btn-text">Sửa</div>
-                                            </button>
-                                            <button
-                                                class="m-dropdown-type-feature m-dropdown-btn-icon m-dropdown-icon-emp">
-                                                <div class="m-btn-text">
-                                                    <div class="m-icon-16 m-icon-arrow-down-blue"></div>
-                                                </div>
-                                            </button>
-                                        </div>
-                                    </td>
-                                    <td class="m-out-right-white-30"></td>
-                                    <td class="m-out-right-grey-30"></td>
-                                </tr>
-                                <!-- Nhập dữ liệu cho bảng -->
-                                <tr class="m-tr" ondblclick="doubleClick()">
-                                    <td class="m-out-left-white-16"></td>
-                                    <td class="m-td m-td-multi" style="left: 16px">
-                                        <label class="m-table-checkbox">
-                                            <input type="checkbox" class="m-input-checkbox" />
-                                            <span class="m-checkbox">
-                                                <span class="m-checkbox-inner">
-                                                    <div class="m-icon-16 m-icon-checkbox-active"></div>
-                                                </span>
-                                            </span>
-                                        </label>
-                                    </td>
-                                    <td class="m-td m-td-emp-code">
-                                        <div class="m-tbody">
-                                            <div class="m-tbody-text">
-                                                <div class="m-tbody-box">NV0001</div>
-                                            </div>
-                                        </div>
-                                    </td>
-                                    <td class="m-td">
-                                        <div class="m-tbody">
-                                            <div class="m-tbody-text">
-                                                <div class="m-tbody-box">Ngọ Văn Quý</div>
-                                            </div>
-                                        </div>
-                                    </td>
-                                    <td class="m-td">
-                                        <div class="m-tbody">
-                                            <div class="m-tbody-text">
-                                                <div class="m-tbody-box">Nam</div>
-                                            </div>
-                                        </div>
-                                    </td>
-                                    <td class="m-td" style="text-align: center;">
-                                        <div class="m-tbody">
-                                            <div class="m-tbody-text">
-                                                <div class="m-tbody-box">28/06/2001</div>
-                                            </div>
-                                        </div>
-                                    </td>
-                                    <td class="m-td">
-                                        <div class="m-tbody">
-                                            <div class="m-tbody-text">
-                                                <div class="m-tbody-box">Fresher</div>
-                                            </div>
-                                        </div>
-                                    </td>
-                                    <td class="m-td">
-                                        <div class="m-tbody">
-                                            <div class="m-tbody-text">
-                                                <div class="m-tbody-box">0123456789</div>
-                                            </div>
-                                        </div>
-                                    </td>
-                                    <td class="m-td">
-                                        <div class="m-tbody">
-                                            <div class="m-tbody-text">
-                                                <div class="m-tbody-box">Web09</div>
-                                            </div>
-                                        </div>
-                                    </td>
-                                    <td class="m-td">
-                                        <div class="m-tbody">
-                                            <div class="m-tbody-text">
-                                                <div class="m-tbody-box">0123456789</div>
-                                            </div>
-                                        </div>
-                                    </td>
-                                    <td class="m-td">
-                                        <div class="m-tbody">
-                                            <div class="m-tbody-text">
-                                                <div class="m-tbody-box">Techcombank</div>
-                                            </div>
-                                        </div>
-                                    </td>
-                                    <td class="m-td">
-                                        <div class="m-tbody">
-                                            <div class="m-tbody-text">
-                                                <div class="m-tbody-box">Thanh Xuân, Hà Nội</div>
-                                            </div>
-                                        </div>
-                                    </td>
-                                    <td class="m-td">
-                                        <div class="m-tbody">
-                                            <div class="m-tbody-text">
-                                                <div class="m-tbody-box">Thanh Xuân, Hà Nội</div>
+                                                <div class="m-tbody-box"></div>
                                             </div>
                                         </div>
                                     </td>
@@ -1383,7 +323,7 @@
                         <div class="m-pagination">
                             <div class="m-pagination-bar">
                                 <div class="m-pagination-left">
-                                    <div class="m-total-record">Tổng số: <b class="m-total"></b> bản ghi</div>
+                                    <div class="m-total-record">Tổng số: <b class="m-total">100</b> bản ghi</div>
                                 </div>
                                 <div class="m-pagination-right">
                                     <div class="m-record-in-page">
@@ -1418,7 +358,6 @@
                     </div>
 
                     <!-- Form chi tiết nhân viên -->
-
                     <div class="m-popup m-add-popup m-dialog" hidden>
                         <div class="m-popup-con">
                             <div class="m-popup-background"></div>
@@ -1449,7 +388,7 @@
                                         <div class="m-popup--close" onclick="hiddenForm()">
                                             <div class="m-icon-24 m-icon-help" style="margin-right: 6px"
                                                 title="Trợ giúp"></div>
-                                            <div class="m-icon-24 m-icon-close m-close-add-popup" title="Đóng">
+                                            <div class="m-icon-24 m-icon-close m-close-add-popup" title="Đóng(ESC)">
                                             </div>
                                         </div>
                                     </div>
@@ -1645,18 +584,18 @@
                                             <div class="m-popup-btn">
                                                 <div class="m-popup-btn-left">
                                                     <button
-                                                        class="m-button m-button-secondary m-button-size-default m-button-border-false">
+                                                        class="m-button m-button-secondary m-button-size-default m-button-border-false" onclick="hiddenForm()">
                                                         <div class="m-button-text">Hủy</div>
                                                     </button>
                                                 </div>
                                                 <div class="m-popup-btn-right">
                                                     <button
-                                                        class="m-button m-button-secondary m-button-size-default m-button-border-false m-popup-store-btn">
+                                                        class="m-button m-button-secondary m-button-size-default m-button-border-false m-popup-store-btn" onclick="showDialog()">
                                                         <div class="m-button-text">Cất</div>
                                                     </button>
                                                     <button
                                                         class="m-button m-button-size-default m-button-border-false m-popup-store-and-add-btn"
-                                                        onkeydown=" stopTabIndex(event)">
+                                                        onkeydown=" stopTabIndex(event)" onclick="showDialogQuestion()">
                                                         <div class="m-button-text">Cất và thêm</div>
                                                     </button>
                                                 </div>
@@ -1687,7 +626,7 @@
                         <div class="m-dialog-line"></div>
                         <div class="m-dialog-footer">
                             <button
-                                class="m-button m-close-employee-danger m-button-size-default m-button-border-false">
+                                class="m-button m-close-employee-danger m-button-size-default m-button-border-false" onclick="hiddenDialogDanger()">
                                 <div class="m-button-text">Đóng</div>
                             </button>
                         </div>
@@ -1713,10 +652,10 @@
                         <div class="m-dialog-footer">
                             <button
                                 class="m-button m-button-secondary m-close-delete-warning m-button-size-default m-button-border-false"
-                                onclick="hiddenForm()">
+                                onclick=" hiddenDialogDelete()">
                                 <div class="m-button-text">Không</div>
                             </button>
-                            <button class="m-button m-confirm-delete m-button-size-default m-button-border-false">
+                            <button class="m-button m-confirm-delete m-button-size-default m-button-border-false" onclick=" hiddenDialogDelete()">
                                 <div class="m-button-text">Có</div>
                             </button>
                         </div>
@@ -1769,13 +708,13 @@
                             <div class="m-btn-left">
                                 <button
                                     class="m-button m-button-secondary m-question-cancel m-button-size-default m-button-border-false"
-                                    onclick="hiddenForm()">
+                                    onclick="hiddenForm() ">
                                     <div class="m-button-text">Hủy</div>
                                 </button>
                             </div>
                             <div class="m-btn-right">
                                 <button
-                                    class="m-button m-button-secondary m-question-close m-button-size-default m-button-border-false">
+                                    class="m-button m-button-secondary m-question-close m-button-size-default m-button-border-false" onclick="hiddenDialogQuestion()">
                                     <div class="m-button-text">Không</div>
                                 </button>
                                 <button
@@ -1836,17 +775,10 @@
             <table class="m-menu-table">
                 <tbody class="m-menu-items m-departments-list">
                     <tr class="m-menu-items-tr">
-                        <td class="m-menu-items-td" style="width: 100px; text-align: left"><span>VP01</span></td>
-                        <td class="m-menu-items-td" style="width: 250px; text-align: left"><span>Văn phòng 1<span></td>
+                        <td class="m-menu-items-td" style="width: 100px; text-align: left"><span></span></td>
+                        <td class="m-menu-items-td" style="width: 250px; text-align: left"><span><span></td>
                     </tr>
-                    <tr class="m-menu-items-tr">
-                        <td class="m-menu-items-td" style="width: 100px; text-align: left"><span>VP02</span></td>
-                        <td class="m-menu-items-td" style="width: 250px; text-align: left"><span>Văn phòng 2<span></td>
-                    </tr>
-                    <tr class="m-menu-items-tr">
-                        <td class="m-menu-items-td" style="width: 100px; text-align: left"><span>VP03</span></td>
-                        <td class="m-menu-items-td" style="width: 250px; text-align: left"><span>Văn phòng 3<span></td>
-                    </tr>
+
                 </tbody>
             </table>
         </div>
@@ -1854,69 +786,7 @@
     <!-- Khai báo js -->
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"
         integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
-    <!-- <script src="./js/index.js"></script> --> -->
-    <script>
-
-        //load lại trang
-        $(window).on('load', function (event) {
-            $('body').removeClass('preloading');
-            $('.m-loading-svg').delay(1000).fadeOut('fast');
-        });
-
-
-        // Hiển thị icon loading
-        function loading() {
-            let loadElement = document.querySelector('.m-loading-svg');
-            loadElement.style.display = "block";
-            setTimeout(function () {
-                loadElement.style.display = "none";
-            }, 1000);
-        }
-
-        // Hiển thị form chi tiết nhân viên
-        function showForm() {
-            loading();
-            setTimeout(function () {
-                let nodeElement = document.querySelector('.m-popup');
-                nodeElement.style.display = "block";
-                document.querySelector('.m-input-code').focus();
-            }, 1000);
-        }
-        // Ẩn form chi tiết nhân viên
-        function hiddenForm() {
-            let closeElement = document.querySelector('.m-popup');
-            closeElement.style.display = "none";
-        }
-
-        // Stop tabIndex
-
-        function stopTabIndex(event) {
-            event.preventDefault();
-        }
-
-        //double click
-
-        let dbClick = document.querySelector('.m-popup');
-        function doubleClick() {
-            dbClick.style.display = "block";
-        }
-
-        //Reload trang
-        function reload() {
-            location.reload();
-        }
-
-        //  Gán css top để phần header trong body trượt khi scroll
-
-        $('.m-content-body').scroll(function () {
-            $('.m-content-header').css({ top: -$(this).scrollTop() });
-        });
-        // Gán chiều rộng cho phần phân trang
-        $('.m-pagination').css({ width: $('.m-table').width() });
-
-
-
-    </script>
+    <script src="./js/index.js"></script>
 </body>
 
 </html>

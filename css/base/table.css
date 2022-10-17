@@ -196,7 +196,7 @@ td, th {
     background-color: #fff;
 }
 
-.m-tr:hover, .m-tbody-box:hover {
+.m-tr:hover .m-td {
     background-color: #f2f9ff !important;
 }
 
