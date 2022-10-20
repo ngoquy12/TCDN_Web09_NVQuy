@@ -15,8 +15,6 @@
 @import url(./base/combobox.css);
 @import url(./base/dialog.css);
 @import url(./base/loading.css);
-@import url(./base/keyframes.css);
-
 
 
 @font-face {
@@ -70,6 +68,14 @@ body {
   
 }
 
+.font-family-bold{
+  font-family: Noto-Sans-Bold;
+}
+
+.font-family-semibold{
+  font-family: Noto-Sans-SemiBold;
+}
+
 /* Chiều dài và chiều rộng của thanh scroll */
 ::-webkit-scrollbar {
   width: 10px;
@@ -113,6 +119,10 @@ body {
 
 .m-pb-12 {
   padding-bottom: 12px;
+}
+
+.m-pd-24{
+  padding-bottom: 24px;
 }
  
 .m-ml-8 {

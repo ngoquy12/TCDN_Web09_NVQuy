@@ -1,11 +1,16 @@
-//load lại trang
+// load lại trang
 $(window).on('load', function (event) {
     $('body').removeClass('preloading');
     $('.m-loading-svg').delay(1000).fadeOut('fast');
 });
 
 
-// Hiển thị icon loading
+/**
+ * Hiển thị icon loading
+ * @param {string} name Ten 
+ * @returns Ten nhan vien
+ * Author: NNQUY(ngay)
+ */
 function loading() {
     let loadElement = document.querySelector('.m-loading-svg');
     loadElement.style.display = "block";
@@ -20,6 +25,21 @@ function showForm() {
     setTimeout(function () {
         let nodeElement = document.querySelector('.m-popup');
         nodeElement.style.display = "block";
+        //Thay đổi heading của popup khi thay đổi trạng thái
+        let headingPopup = document.querySelector('.m-title');
+        headingPopup.innerText = "Thêm mới nhân viên";
+        document.querySelector('.m-input-code').focus();
+    }, 1000);
+}
+
+function showFormUpEmp() {
+    loading();
+    setTimeout(function () {
+        let nodeElement = document.querySelector('.m-popup');
+        nodeElement.style.display = "block";
+        //Thay đổi heading của popup khi thay đổi trạng thái
+        let headingPopup = document.querySelector('.m-title');
+        headingPopup.innerText = "Cập nhật nhân viên";
         document.querySelector('.m-input-code').focus();
     }, 1000);
 }
@@ -29,9 +49,7 @@ window.onload = function () {
     document.onkeyup = function (e) {
         switch (e.which) {
             case 45:
-                let insert = document.querySelector('.m-popup');
-                insert.style.display = "block";
-                document.querySelector('.m-input-code').focus();
+                showFormUpEmp();
                 break;
             case 27:
                 let closeElement = document.querySelector('.m-popup');
@@ -65,9 +83,21 @@ function stopTabIndex(event) {
 
 let dbClick = document.querySelector('.m-popup');
 function doubleClick() {
-    dbClick.style.display = "block";
-    document.querySelector('.m-input-code').focus();
+    loading();
+    setTimeout(function () {
+        dbClick.style.display = "block";
+        //Thay đổi heading của popup khi thay đổi trạng thái
+        let headingPopup = document.querySelector('.m-title');
+        headingPopup.innerText = "Thông tin nhân viên";
+        document.querySelector('.m-input-code').focus();
+    }, 1000);
 }
+
+let undbClick = document.querySelector('.m-popup');
+function unDoubleClick() {
+    undbClick.style.display = "none";
+}
+
 
 //Reload trang
 function reload() {
@@ -107,11 +137,13 @@ let dialogQuestion = document.querySelector('.m-employee-question');
 function hiddenDialogQuestion() {
     dialogQuestion.style.display = 'none';
 }
-let dialogDelete= document.querySelector('.m-delete-warning');
+let dialogDelete = document.querySelector('.m-delete-warning');
 function hiddenDialogDelete() {
     dialogDelete.style.display = 'none';
 }
- 
+
+
+
 
 $(document).ready(function () {
     new EmployeePage();
@@ -319,7 +351,7 @@ class EmployeePage {
                                 <td class="m-out-left-white-16"></td>
                                 <td class="m-td m-td-multi" style="left: 16px">
                                     <label class="m-table-checkbox">
-                                        <input type="checkbox" class="m-input-checkbox" />
+                                        <input type="checkbox" class="m-input-checkbox" ondblclick="unDoubleClick()"/>
                                         <span class="m-checkbox">
                                             <span class="m-checkbox-inner">
                                                 <div
@@ -340,9 +372,9 @@ class EmployeePage {
                                 <td class="m-td">${emp.BankName ? emp.BankName : ''}</td>
                                 <td class="m-td">${emp.BankBranchName ? emp.BankBranchName : ''}</td>
                                 <td class="m-td">${emp.BankProvinceName ? emp.BankProvinceName : ''}</td>
-                                <td class="m-td m-td-widget" style="right: 30px">
+                                <td class="m-td m-td-widget" style="right: 30px" ondblclick="unDoubleClick()">
                                     <div class="m-dropdown">
-                                        <button class="m-dropdown-type-feature m-dropdown-btn-text m-edit-employee">
+                                        <button class="m-dropdown-type-feature m-dropdown-btn-text m-edit-employee" onclick="showFormUpEmp()">
                                             <div class="m-btn-text">Sửa</div>
                                         </button>
                                         <button class="m-dropdown-type-feature m-dropdown-btn-icon m-dropdown-icon-emp">
@@ -361,7 +393,7 @@ class EmployeePage {
                                 $('.m-tbody').append(trHTML);
                             }
                         }
-                        
+
                     } catch (error) {
                         console.log(error);
                     }
@@ -413,8 +445,3 @@ class EmployeePage {
     }
 }
 
-
-
-// document.onkeyup = function (e){
-//     console.log(e.which);
-// }

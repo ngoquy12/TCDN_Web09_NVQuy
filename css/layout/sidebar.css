@@ -21,12 +21,16 @@
 .m-option-icon {
     width: 24px;
     height: 24px;
-    margin-right: 10px;
+    /* margin-right: 10px; */
     background: url(../../assets/img/Sprites.64af8f61.svg) no-repeat -424px -86px;
 }
 
 .m-logo-icon {
     height: 32px;
+}
+
+.m-menu-hidden{
+    display: none !important;
 }
 
 .m-sidebar-item {

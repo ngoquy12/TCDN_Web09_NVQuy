@@ -5,9 +5,9 @@
 
 .m-combo-main-content {
     display: flex;
-    min-height: 32px;
+    min-height: 36px;
     border: 1px solid #babec5;
-    border-radius: 2px;
+    border-radius: 4px;
     background-color: #fff;
     overflow: hidden;
 }
@@ -16,22 +16,13 @@
     border-color: #2ca01c;
 }
 
-.m-selected-options {
-    display: flex;
-    flex-basis: 100%;
-    flex-grow: 1;
-    flex-wrap: wrap;
-    width: calc(100% - 32px);
-    align-items: center;
-    padding: 0 0 0 10px;
-}
 
 .m-combo-action {
     display: flex;
 }
 
 .m-btn-dropdown {
-    width: 32px;
+    width: 36px;
     background-color: transparent;
     display: flex;
     align-items: center;
@@ -51,7 +42,7 @@
     flex-wrap: wrap;
     width: calc(100% - 32px);
     align-items: center;
-    padding: 0 0 0 10px;
+    padding: 0 0 0 12px;
 }
 
 .m-combo-input {

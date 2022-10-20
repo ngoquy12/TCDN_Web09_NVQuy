@@ -1,7 +1,7 @@
 .m-input {
     padding-left: 12px;
     padding-right: 8px;
-    border-radius: 4px;
+    border-radius: var(--boder-radius);
     height: 36px;
     border: 1px solid #babec5;
     outline: none;
@@ -56,15 +56,12 @@
 }
 
 .m-input-title-gender {
-    padding-top: 5px;
-    padding-bottom: 6px;
-    padding-left: 10px;
-
+    padding-bottom: 8px;
 }
 
 .m-input-title {
     font-size: 12px;
-    font-weight: 700;
+   font-family: Noto-Sans-SemiBold;
     padding-bottom: 8px;
     white-space: nowrap;
 }
@@ -73,8 +70,16 @@
     border-color: #E60000;
 }
 
-.m-input-title-require {
-    color: #E60000;
+.m-input-message-error{
+   position: absolute;
+   padding-top: 8px;
+   font-size: 12px;
+   color: #E60000;
+   display: none;
+}
+
+input[required].m-input-error+div.m-input-message-error{
+    display: block;
 }
 
 /* Input radio */

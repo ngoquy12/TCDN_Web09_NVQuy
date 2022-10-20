@@ -35,7 +35,7 @@
 }
 
 .m-popup-drag {
-    cursor: grab;
+    cursor: pointer;
     position: absolute;
     z-index: 100;
 }
@@ -44,7 +44,7 @@
     min-width: 900px;
     max-width: 900px;
     width: 900px;
-    height:auto;
+    height: auto;
     position: relative;
 }
 
@@ -95,7 +95,7 @@
 }
 
 .m-popup--title {
-    padding: 20px 12px 20px 32px;
+    padding: 24px;
     position: relative;
     display: flex;
     width: 100%;
@@ -104,7 +104,7 @@
 .m-title {
     font-size: 24px;
     color: #111;
-    font-weight: 700;
+    font-family: Noto-Sans-SemiBold;
 }
 
 .m-input-checkbox-label {
@@ -115,25 +115,27 @@
 
 .m-popup--close {
     display: flex;
-    padding: 12px;
+    padding: 24px;
 }
 
 .m-popup--content {
     height: calc(100% - 73px);
-    padding: 0 32px 20px;
+    padding: 0 24px 12px;
     display: flex;
     flex-direction: column;
     overflow: auto;
     overflow-y: visible;
 }
 
-.m-content-2-col, .m-content-1-col, .m-content-4-col {
+.m-content-2-col,
+.m-content-1-col,
+.m-content-4-col {
     display: flex;
-    padding-bottom: 12px;
+    /* padding-bottom: 12px; */
 }
 
-.m-content-2-col > div {
-    width: 50%!important;
+.m-content-2-col>div {
+    width: 50% !important;
 }
 
 .m-content-2-col .m-col-1 {
@@ -141,7 +143,9 @@
 }
 
 .m-radio-group {
-    padding: 5px 0 6px 10px;
+    display: flex;
+    height: 36px;   
+    padding: 0;
 }
 
 .m-close-dialog {

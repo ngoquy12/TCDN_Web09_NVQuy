@@ -36,6 +36,15 @@
   overflow: auto;
 }
 
+.m-menu-item-change{
+  padding-top: 20px;
+  overflow: auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
 .m-item-router {
   height: 44px;
   display: flex;
