@@ -7,17 +7,13 @@
     justify-content: space-between;
 }
 
-.m-navbar:hover{
-    cursor: pointer;
-}
-
 .m-navbar-left, .m-navbar-right {
     display: flex;
     align-items: center;
 }
 
 .m-navbar-icon {
-    margin: 0 16px;
+    margin: 0 10px;
 }
 
 .m-navbar-branch {
@@ -27,7 +23,7 @@
 
 .m-branch-name, .m-user-name {
     font-size: 14px;
-    font-family:  Noto-Sans-SemiBold;
+    font-family: var(--font-family-SemiBolds);
     padding-left: 8px;
 }
 

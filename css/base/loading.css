@@ -5,7 +5,7 @@
     left: 50%;
     top: 50%;
     transform: rotate(50% 50%);
-    z-index: 999999;
+    z-index: 99999;
     border-radius: 50%;
     box-sizing: border-box;
 }
@@ -23,5 +23,5 @@
     background: url(../../assets/loading.svg) no-repeat center;
     width: 100%;
     height: 100%;
-    animation: rotate 1s  ;
+    animation: rotate 1s ;
 }

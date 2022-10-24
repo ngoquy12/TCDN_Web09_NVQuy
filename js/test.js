@@ -1,202 +1,185 @@
-
-// // window.onload=function(){
-// //     initEvent();
-// // }
-
-// // validate dữ liệu
-// // Thu thập dữ liệu
-// // Gọi api thực hiện cất dữ liệu
-// // Kiểm tra kết quả trả về-> đưa ra thong báo
-
-// // function validate(){
-// //     //Các thông tin cần nhập
-// //     //Các thông tin đinh dạng đúng(email)
-// //     //Ngày tháng
-// // }
-
-
-
-// function handelSidebar() {
-//     statusSidebar();
-
-// }
-// /**
-//  * Thu nhỏ sidebar
-//  * author:nvquy(19/10/2022)
-//  */
-// function statusSidebar() {
-//     let sidebarTitle = document.querySelectorAll('.m-item-title');
-//     //Độ dài các phần tử của sidebar
-//     let sideLength = sidebarTitle.length;
-//     //Thẻ chứa toàn bộ phần header
-//     let menuItem = document.querySelector('.m-menu-item');
-//     //logo icon
-//     let logoIcon = document.querySelector('.m-logo-icon');
-//     //Lặp qua các phần tử của sidebar
-//     for (let i = 0; i < sideLength; i++) {
-//         if (sidebarTitle[i].style.display === "none") {
-//             sidebarTitle[i].style.display = "block";
-//             document.querySelector('.m-menu').style.width = "200px";
-//             menuItem.classList.remove('m-menu-item-change');
-
-//         } else {
-//             sidebarTitle[i].style.display = "none";
-//             document.querySelector('.m-menu').style.width = "56px";
-//             menuItem.classList.add('m-menu-item-change');
-
-//         }
-//     }
-// }
-
-// /**
-//  * Xử lý dữ liệu trong form
-//  * author :nvquy(20/10/2022)
-//  * 
-//  */
-// function validateForm() {
-//     //Các thông tin bắt buộc nhập
-//     //Láy ra toàn bộ các thông tin bắt buộc nhập
-//     inputRequired();
-//     //Kiểm tra định dạng emailemail
-//     checkEmail();
-//     //Kiểm tra định dạng ngày tháng
-//     isValidDate();
-// }
-
-// /**
-//  * Xử lý các thông tin bắt buộc nhập
-//  * author:nvquy(20/10/2022)
-//  */
-
-// function inputRequired() {
-//     let inputRequireds = getElementsWithAttribute("required");
-//     for (let input of inputRequireds) {
-//         let value = input.value;
-//         if (!value) {
-//             //Hiển thị boder màu đỏ và hiển thị thông báo lỗi
-//             input.classList.add("m-input-error");
-
-//         } else {
-//             //Ẩn boder màu đỏ và hiển thị thông báo lỗi
-//             input.classList.remove("m-input-error");
-
-//         }
-//     }
-// }
-
-// /**
-//  * Đinh dạng email
-//  * author: nvquy(20/10/2022)
-//  */
-// function checkEmail() {
-//     //Lấy ra phần element của input có type là email
-//     let email = document.querySelector('input[type="email"]');
-//     //Lấy ra giá trị người dùng nhập từ bàn phím
-//     let value = email.value;
-//     //Kiểm tra người dùng đã nhập dữ liệu hay chưa?
-//     if (!value) {
-//         email.classList.add('m-input-error');
-//         document.querySelector('.m-input-email-error').innerHTML = "&lt;Email&gt; không được để trống";
-//     } else {
-//         let filter = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-//         if (!filter.test(value)) {
-//             document.querySelector('.m-input-email-error').innerHTML = "&lt;Email&gt; chưa đúng định dạng";
-//             email.classList.add('m-input-error');
-//         }
-//         else {
-//             email.classList.remove('m-input-error');
-//             document.querySelector('.m-input-email-error').style.display = "none";
-//         }
-
-//     }
-// }
-
-
-// /**
-//  * Định dạng ngày tháng
-//  * Author :nvquy(20/10/2022)
-//  * @param {string} name : date
-//  * @return
-//  */
-
-// function isValidDate() {
-//     let dateElement = getElementsWithAttribute("dateTime");
-//     for (let dateTime of dateElement) {
-//         if (!dateTime.value) {
-//             // document.querySelectorAll('.m-input-date-error').innerHTML = "Trường này không được để trống";
-//             console.log('Trường này không được để trống');
-//         }
-//     }
-
-
-//     // for (let date of dateValue) {
-//     //     if (!date) {
-//     //         document.querySelector('.m-input-date-error').innerHTML = "Trường này không được để trống";
-//     //     } else {
-//     //         console.log(date);
-//     //         // First check for the pattern
-//     //         if (!/^\d{1,2}\/\d{1,2}\/\d{4}$/.test(dateString))
-//     //             return false;
-
-//     //         // Parse the date parts to integers
-//     //         let parts = dateString.split("/");
-//     //         let day = parseInt(parts[1], 10);
-//     //         let month = parseInt(parts[0], 10);
-//     //         let year = parseInt(parts[2], 10);
-
-//     //         // Check the ranges of month and year
-//     //         if (year < 1000 || year > 3000 || month == 0 || month > 12)
-//     //             return false;
-
-//     //         let monthLength = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31];
-
-//     //         // Adjust for leap years
-//     //         if (year % 400 == 0 || (year % 100 != 0 && year % 4 == 0))
-//     //             monthLength[1] = 29;
-
-//     //         // Check the range of the day
-//     //         return day > 0 && day <= monthLength[month - 1];
-//     //     };
-//     // }
-// }
-
-
-
-
-
-
-// /**
-//  * Lấy ra attributes của các ô input
-//  * author: nvquy(20/10/2022)
-//  * @param {string} attribute 
-//  * @returns 
-//  */
-
-// function getElementsWithAttribute(attribute) {
-//     let mathchingElements = [];
-//     let allElements = document.getElementsByTagName('*');
-//     for (let i = 0, n = allElements.length; i < n; i++) {
-//         if (allElements[i].getAttribute(attribute) != null) {
-//             mathchingElements.push(allElements[i]);
-//         }
-//     }
-//     return mathchingElements;
-//}
-
-$(document).ready(function () {
-    new EmployeePage();
+// load lại trang
+$(window).on('load', function (event) {
+    $('body').removeClass('preloading');
+    $('.m-loading-svg').delay(1000).fadeOut('fast');
 });
 
-class EmployeePage {
+/**
+ * Hiển thị icon loading
+ * @param {string} name Ten 
+ * @returns Ten nhan vien
+ * Author: NNQUY(ngay)
+ */
+function loading() {
+    let loadElement = document.querySelector('.m-loading-svg');
+    loadElement.style.display = "block";
+    setTimeout(function () {
+        loadElement.style.display = "none";
+    }, 1000);
+}
+
+// Hiển thị form chi tiết nhân viên
+function showForm() {
+    loading();
+    setTimeout(function () {
+        let nodeElement = document.querySelector('.m-popup');
+        nodeElement.style.display = "block";
+        //Thay đổi heading của popup khi thay đổi trạng thái
+        let headingPopup = document.querySelector('.m-title');
+        headingPopup.innerText = "Thêm mới nhân viên";
+        document.querySelector('.m-input-code').focus();
+    }, 1000);
+}
+
+function showFormUpEmp() {
+    loading();
+    setTimeout(function () {
+        let nodeElement = document.querySelector('.m-popup');
+        nodeElement.style.display = "block";
+        //Thay đổi heading của popup khi thay đổi trạng thái
+        let headingPopup = document.querySelector('.m-title');
+        headingPopup.innerText = "Cập nhật nhân viên";
+        document.querySelector('.m-input-code').focus();
+    }, 1000);
+}
+
+// Taọ phím tắt
+window.onload = function () {
+    document.onkeyup = function (e) {
+        switch (e.which) {
+            case 45:
+                showFormUpEmp();
+                break;
+            case 27:
+                let closeElement = document.querySelector('.m-popup');
+                closeElement.style.display = "none";
+                break;
+            case 46:
+                let dialogDelete = document.querySelector('.m-delete-warning');
+                dialogDelete.style.display = "block";
+                break;
+            case 13:
+                let showForm = document.querySelector('.m-popup');
+                showForm.style.display = "block";
+                document.querySelector('.m-input-code').focus();
+                break;
+        }
+    }
+}
+// Ẩn form chi tiết nhân viên
+function hiddenForm() {
+    let closeElement = document.querySelector('.m-popup');
+    closeElement.style.display = "none";
+}
+
+// Stop tabIndex
+
+function stopTabIndex(event) {
+    event.preventDefault();
+}
+
+//double click
+let dbClick = document.querySelector('.m-popup');
+function doubleClick() {
+    loading();
+    setTimeout(function () {
+        dbClick.style.display = "block";
+        //Thay đổi heading của popup khi thay đổi trạng thái
+        let headingPopup = document.querySelector('.m-title');
+        headingPopup.innerText = "Thông tin nhân viên";
+        document.querySelector('.m-input-code').focus();
+    }, 1000);
+}
+
+
+//Reload trang
+function reload() {
+    location.reload();
+}
+
+//  Gán css top để phần header trong body trượt khi scroll
+
+$('.m-content-body').scroll(function () {
+    $('.m-content-header').css({ top: -$(this).scrollTop() });
+});
+// Gán chiều rộng cho phần phân trang
+$('.m-pagination').css({ width: $('.m-table').width() });
+
+
+//show dialog warning
+
+let dialogWarn = document.querySelector('.m-employee-danger');
+function showDialog() {
+    dialogWarn.style.display = 'block';
+}
+
+// show dialog question
+
+function showDialogQuestion() {
+    $('.m-employee-question').show();
+}
+
+// hidden dialog
+
+let dialogDanger = document.querySelector('.m-employee-danger');
+function hiddenDialogDanger() {
+    dialogDanger.style.display = 'none';
+}
+
+let dialogQuestion = document.querySelector('.m-employee-question');
+function hiddenDialogQuestion() {
+    dialogQuestion.style.display = 'none';
+}
+let dialogDelete = document.querySelector('.m-delete-warning');
+function hiddenDialogDelete() {
+    dialogDelete.style.display = 'none';
+}
+
+ /**
+  * Đinh dạng email
+  * author: nvquy(20/10/2022)
+  */
+
+//  function checkEmail() {
+//     //  Lấy ra phần element của input có type là email
+//      let email = document.querySelector('input[type="email"]');
+//     //  Lấy ra giá trị người dùng nhập từ bàn phím
+//      let value = email.value;
+//     //  Kiểm tra người dùng đã nhập dữ liệu hay chưa?
+//      if (!value) {
+//          email.classList.add('m-input-error');
+//          document.querySelector('.m-input-email-error').innerHTML = "&lt;Email&gt; không được để trống";
+//      } else {
+//          let filter = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+//          if (!filter.test(value)) {
+//              document.querySelector('.m-input-email-error').innerHTML = "&lt;Email&gt; chưa đúng định dạng";
+//              email.classList.add('m-input-error');
+//          }
+//          else {
+//              email.classList.remove('m-input-error');
+//              document.querySelector('.m-input-email-error').style.display = "none";
+//          }
+
+//      }
+//  }
+
+
+
+
+$(document).ready(function () {
+    new Employee();
+});
+
+class Employee {
     // Cờ check mode khi gửi dữ liệu. VD: thêm, sửa,...
     formMode = EmpEnum.FormMode.Add;
     constructor() {
-        this.setupEvent();
+        this.initEvent();
         this.loadData();
     }
 
     // Setup các sự kiện trong trang
-    setupEvent() {
+    initEvent() {
         try {
             // Gán con trỏ this
             let self = this;
@@ -205,11 +188,11 @@ class EmployeePage {
              * Các sự kiện cần gán css
              * 1. Gán css top để phần header trong body trượt khi scroll
              */
-            // $('.m-content-body').scroll(function () {
-            //     $('.m-content-header').css({ top: -$(this).scrollTop() });
-            // });
-            // // // 2. Gán chiều rộng cho phần phân trang
-            // $('.m-pagination').css({ width: $('.m-table').width() });
+            $('.m-content-body').scroll(function () {
+                $('.m-content-header').css({ top: -$(this).scrollTop() });
+            });
+            // // 2. Gán chiều rộng cho phần phân trang
+            $('.m-pagination').css({ width: $('.m-table').width() });
 
             /**********************************************
              * Xử lý các sự kiện liên quan đến checkbox
@@ -383,7 +366,7 @@ class EmployeePage {
             $(document)
                 .on('keyup', 'input.m-input-require', function () {
                     if (!$(this).val()) {
-                        $(this).addClass('m-input-error');
+                        $(this).addClass('m-input-error');           
                     } else {
                         $(this).removeClass('m-input-error');
                     }
@@ -539,38 +522,8 @@ class EmployeePage {
     }
 
     /**
-     * So sánh 2 object
-     * Author: Phạm Văn Linh (11/06/2022)
-     */
-    objectEqual(object1, object2) {
-        const keys1 = Object.keys(object1);
-        const keys2 = Object.keys(object2);
-
-        // Check số lượng key của 2 object
-        if (keys1.length !== keys2.length) {
-            return false;
-        }
-
-        // Check lần lượt các value
-        for (const key of keys1) {
-            const val1 = object1[key];
-            const val2 = object2[key];
-            const areObjects = this.isObject(val1) && this.isObject(val2);
-
-            if ((areObjects && !objectEqual(val1, val2)) || (!areObjects && val1 !== val2)) {
-                return false;
-            }
-        }
-
-        return true;
-    }
-    isObject(object) {
-        return object != null && typeof object === 'object';
-    }
-
-    /**
      * Người dùng sửa thông tin nhân viên
-     * Author: Phạm Văn Linh (10/06/2022)
+     * Author: NVQUY(23/10/2022)
      */
     handleEditEmployee() {
         // 1. Gán con trỏ this
@@ -626,7 +579,7 @@ class EmployeePage {
 
     /**
      * Người dùng xóa nhân viên
-     * Author: Phạm Văn Linh 10/06/2022
+     * Author: NVQUY(23/10/2022
      */
     handleDeleteEmployee() {
         let empId = localStorage.getItem('empId');
@@ -653,7 +606,7 @@ class EmployeePage {
 
     /**
      * Người dùng thêm nhân viên mới
-     * Author: Phạm Văn Linh (07/06/2022)
+     * Author: NVQUY (23/10/2022)
      */
     handleAddEmployee() {
         try {
@@ -709,7 +662,6 @@ class EmployeePage {
                     ModifiedBy: null,
                 };
                 employeeData = { ...employeeData, ...formData };
-                // employeeData.DepartmentName = $(`option[value=${employeeData.DepartmentId}]`).text();
                 // 3.Post dữ liệu
                 $('.m-loading-svg').show();
                 this.postEmployeeData(employeeData);
@@ -721,7 +673,7 @@ class EmployeePage {
 
     /**
      * Post dữ liệu nhân viên mới
-     * Author: Phạm Văn Linh (08/06/2022)
+     * Author: NVQUY (23/10/2022)
      */
     postEmployeeData(data) {
         try {
@@ -765,7 +717,7 @@ class EmployeePage {
 
     /**
      * Kiểm tra những trường bắt buộc nhập
-     * Author: Phạm Văn Linh (07/06/2022)
+     * Author: NQUY (22/10/2022)
      */
     validationData() {
         try {
@@ -786,14 +738,33 @@ class EmployeePage {
             }
 
             // 2. Kiểm tra định dạng email
-            if ($('input[name="Email"]').val()) {
-                if (!$('input[name="Email"]').val().includes('@')) {
-                    $('input[name="Email"]').addClass('m-input-error');
-                    $('.m-employee-danger .m-content-message').html('Email không đúng định dạng');
-                    $('.m-employee-danger').show();
-                    return false;
-                }
-            }
+            // if ($('input[name="Email"]').val()) {
+            //     if (!$('input[name="Email"]').val().includes('@')) {
+            //         $('input[name="Email"]').addClass('m-input-error');
+            //         $('.m-employee-danger .m-content-message').html('Email không đúng định dạng');
+            //         $('.m-employee-danger').show();
+            //         return false;
+            //     }
+            // }
+            let email = document.querySelector('input[type="email"]');
+            //  Lấy ra giá trị người dùng nhập từ bàn phím
+             let value = email.value;
+            //  Kiểm tra người dùng đã nhập dữ liệu hay chưa?
+             if (!value) {
+                 email.classList.add('m-input-error');
+                 document.querySelector('.m-input-email-error').innerHTML = "&lt;Email&gt; không được để trống";
+             } else {
+                 let filter = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+                 if (!filter.test(value)) {
+                     document.querySelector('.m-input-email-error').innerHTML = "&lt;Email&gt; chưa đúng định dạng";
+                     email.classList.add('m-input-error');
+                 }
+                 else {
+                     email.classList.remove('m-input-error');
+                     document.querySelector('.m-input-email-error').style.display = "none";
+                 }
+        
+             }
             return true;
         } catch (error) {
             console.log(error);
@@ -802,7 +773,7 @@ class EmployeePage {
 
     /**
      * Load dữ liệu
-     * Author: Phạm Văn Linh
+     * Author: NVQUY(23/10/2022)
      */
     loadData() {
         // Gọi API lấy giữ liệu nhân viên
@@ -823,43 +794,13 @@ class EmployeePage {
                 // Đổ dữ liệu ra table
                 function handleData(employees, perPage, page) {
                     try {
-                        // Phân trang
-                        let totalPage = Math.ceil(employees.length / perPage);
-                        let pageHtml = '';
-                        if (totalPage <= 5) {
-                            for (let i = 1; i <= totalPage; i++) {
-                                pageHtml += `<div class="m-number ${i == page ? 'm-selected' : ''}">${i}</div>`;
-                            }
-                        } else if (totalPage - page + 1 <= 5) {
-                            for (let i = totalPage - 4; i <= totalPage; i++) {
-                                pageHtml += `<div class="m-number ${i == page ? 'm-selected' : ''}">${i}</div>`;
-                            }
-                        } else {
-                            pageHtml += `<div class="m-number m-selected">${page}</div>`;
-                            for (let i = page + 1; i <= page + 3; i++) {
-                                pageHtml += `<div class="m-number">${i}</div>`;
-                            }
-                            pageHtml += `<div>...</div><div class="m-number">${totalPage}</div>`;
-                        }
-                        $('.m-page-index').empty();
-                        $('.m-page-index').append(pageHtml);
-                        $('.m-prev-page').removeClass('m-disable');
-                        $('.m-next-page').removeClass('m-disable');
-
-                        if (page == 1) {
-                            $('.m-prev-page').addClass('m-disable');
-                        }
-
-                        if (page == totalPage) {
-                            $('.m-next-page').addClass('m-disable');
-                        }
                         // Làm trống table
                         $('.m-tbody').empty();
                         // Render danh sách nhân viên
                         for (let i = (page - 1) * perPage; i < (page - 1) * perPage + perPage; i++) {
                             const emp = employees[i];
-
                             if (emp) {
+                                //Định dạng ngày tháng
                                 let dob = emp.DateOfBirth;
                                 if (dob) {
                                     dob = new Date(dob);
@@ -874,9 +815,9 @@ class EmployeePage {
 
                                     dob = `${date}/${month}/${year}`;
                                 }
-
+                                //Đẩy dữ liệu vào bảng
                                 let trHTML = $(`<tr class="m-tr">
-                               
+                                <td class="m-out-left-white-16"></td>
                                 <td class="m-td m-td-multi" style="left: 16px">
                                     <label class="m-table-checkbox">
                                         <input type="checkbox" class="m-input-checkbox" />
@@ -891,15 +832,15 @@ class EmployeePage {
                                 </td>
                                 <td class="m-td m-td-emp-code">${emp.EmployeeCode || ''}</td>
                                 <td class="m-td">${emp.EmployeeName || ''}</td>
-                                <td class="m-td">${emp.GenderNamEmployeeName || ''}</td>
-                                <td class="m-td" style="text-align:center;">${dob ? dob : ''}</td>
-                                <td class="m-td">${emp.EmployeePosition ? emp.EmployeePosition : ''}</td>
-                                <td class="m-td">${emp.IdentityNumber ? emp.IdentityNumber : ''}</td>
-                                <td class="m-td">${emp.DepartmentNamEmployeeName || ''}</td>
-                                <td class="m-td">${emp.BankAccountNumber ? emp.BankAccountNumber : ''}</td>
-                                <td class="m-td">${emp.BankNamEmployeeName || ''}</td>
-                                <td class="m-td">${emp.BankBranchNamEmployeeName || ''}</td>
-                                <td class="m-td">${emp.BankProvinceNamEmployeeName || ''}</td>
+                                <td class="m-td">${emp.GenderName||  ''}</td>
+                                <td class="m-td" style="text-align:center;">${dob ||''}</td>
+                                <td class="m-td">${emp.EmployeePosition || ''}</td>
+                                <td class="m-td">${emp.IdentityNumber || ''}</td>
+                                <td class="m-td">${emp.DepartmentName || ''}</td>
+                                <td class="m-td">${emp.BankAccountNumber || ''}</td>
+                                <td class="m-td">${emp.BankName || ''}</td>
+                                <td class="m-td">${emp.BankBranchName || ''}</td>
+                                <td class="m-td">${emp.BankProvinceName || ''}</td>
                                 <td class="m-td m-td-widget" style="right: 30px">
                                     <div class="m-dropdown">
                                         <button class="m-dropdown-type-feature m-dropdown-btn-text m-edit-employee">
@@ -912,7 +853,8 @@ class EmployeePage {
                                         </button>
                                     </div>
                                 </td>
-                               
+                                <td class="m-out-right-white-30"></td>
+                                <td class="m-out-right-grey-30"></td>
                             </tr>`);
                                 $(trHTML).data('object', emp);
                                 $(trHTML).data('id', emp.EmployeeId);
@@ -924,58 +866,7 @@ class EmployeePage {
                         console.log(error);
                     }
                 }
-
-                /**********************************************
-                 * Các sự kiện sau khi đổ dữ liệu ra table
-                 */
-                function handleEvent() {
-                    try {
-                        // 1. Hiển thị phân trang
-                        $('.m-total-record .m-total').html(employees.length);
-                        $('.m-pagination').css({ display: 'flex' });
-
-                        // 2. Nếu checkall được tích thì check tất cả các checkbox hiển thị
-                        if ($('.m-input-checkall').prop('checked')) {
-                            $('.m-input-checkbox').prop('checked', true);
-                            $('.m-input-checkbox').parents('tr').addClass('checked');
-                        }
-                    } catch (error) {
-                        console.log(error);
-                    }
-                }
-
-                /**********************************************
-                 * Các sự kiện cần đổ lại dữ liệu ra bảng
-                 * 1. Chọn các trang theo số thứ tự
-                 */
-                $(document).on('click', '.m-page-index  .m-number', function () {
-                    handleData(employees, parseInt($('.m-item-highlight').data('total')), parseInt($(this).html()));
-                });
-                // 2. Chọn trang trước
-                $('.m-prev-page').click(function () {
-                    if (!$(this).hasClass('m-disable')) {
-                        handleData(employees, parseInt($('.m-item-highlight').data('total')), parseInt($('.m-selected').html()) - 1);
-                    }
-                });
-                // 3. Chọn trang sau
-                $('.m-next-page').click(function () {
-                    if (!$(this).hasClass('m-disable')) {
-                        handleData(employees, parseInt($('.m-item-highlight').data('total')), parseInt($('.m-selected').html()) + 1);
-                    }
-                });
-                // 4. Chọn tổng số bản ghi trên 1 trang
-                $('.m-combo-box-item').click(function () {
-                    $('.m-combo-box-item').each(function () {
-                        $(this).removeClass('m-item-highlight');
-                    });
-                    $(this).addClass('m-item-highlight');
-                    $('.m-icon-arrow-dropdown').addClass('m-dropdown-close');
-                    $('.m-icon-arrow-dropdown').removeClass('m-dropdown-open');
-                    $('.m-combo-input').val($(this).html());
-                    $('.m-combo-dropdown-panel').css({ display: 'none' });
-                    handleData(employees, parseInt($(this).data('total')), 1);
-                });
-                // 5. Tìm nhân viên theo tên, mã nhân viên
+                //Tìm nhân viên theo tên, mã nhân viên
                 $('.m-search-emp').on('keyup', function () {
                     employees = allEmployees.filter((emp) => {
                         return emp.EmployeeCode.toLowerCase().includes($('.m-search-emp').val().toLowerCase()) || emp.EmployeeName.toLowerCase().includes($('.m-search-emp').val().toLowerCase());
@@ -987,7 +878,6 @@ class EmployeePage {
                 debugger;
             },
         });
-
         // Gọi API lấy dữ liệu phòng ban
         $.ajax({
             type: 'GET',
@@ -1023,4 +913,3 @@ let EmpEnum = {
         EditAndAdd: 5,
     },
 };
-

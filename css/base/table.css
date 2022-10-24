@@ -161,10 +161,6 @@ td, th {
     cursor: pointer;
     padding-right: 12px;
 }
-.m-th-title-dob{
-    display: inline-block;
-    text-align: center;
-}
 
 .m-td-widget {
     border-right: none;

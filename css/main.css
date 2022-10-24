@@ -62,18 +62,17 @@ body {
     font-size: inherit;
 }
 
+
 :root{
+  --text-color:#fff;
+  --font-family-Bolds:  Noto-Sans-Bold;
+  --font-family-SemiBolds: Noto-Sans-SemiBold;
+  --boder-radius: 4px;
   --boder-radius: 4px;
   --backgroud-primary-color: #2ca01c;
-  
-}
+  --height-36: 36px;
+  --error-color : #E60000;
 
-.font-family-bold{
-  font-family: Noto-Sans-Bold;
-}
-
-.font-family-semibold{
-  font-family: Noto-Sans-SemiBold;
 }
 
 /* Chiều dài và chiều rộng của thanh scroll */
@@ -121,7 +120,7 @@ body {
   padding-bottom: 12px;
 }
 
-.m-pd-24{
+.m-pb-24{
   padding-bottom: 24px;
 }
  

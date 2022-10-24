@@ -5,7 +5,6 @@
     background-color: #fff;
   
 }
-
 .m-pagination-bar {
     padding: 12px;
     width: 100%!important;
@@ -52,10 +51,6 @@
 .m-page-index {
     display: flex; 
     padding: 0 6.5px;
-}
-
-.m-page-index  {
-    padding: 0 6.5px;
     cursor: pointer;
 }
 
@@ -66,7 +61,8 @@
 
 .m-page-index .m-selected {
     border: 1px solid #e0e0e0;
-    font-weight: 700;
+    font-family: var(--font-family-Bolds);
+    padding: 0 6.5px;
 }
 
 .m-pagination-left {
