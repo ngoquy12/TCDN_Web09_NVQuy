@@ -1,8 +1,9 @@
-.m-pagination {
-    position: sticky;
-    z-index: 30;
+/* .m-pagination {
+    position: fixed;
+    z-index: 3;
     bottom: 0;
     background-color: #fff;
+    min-width: 100%;
   
 }
 .m-pagination-bar {
@@ -76,4 +77,4 @@
     white-space: nowrap;
     min-width: 10px;
     display: flex;
-}
+} */

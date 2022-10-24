@@ -123,8 +123,6 @@
     padding: 0 24px 12px;
     display: flex;
     flex-direction: column;
-    overflow: auto;
-    overflow-y: visible;
 }
 
 .m-content-2-col, .m-content-1-col, .m-content-4-col {

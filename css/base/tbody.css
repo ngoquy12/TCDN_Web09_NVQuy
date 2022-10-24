@@ -1,4 +1,4 @@
-.m-tbody .m-tbody-box {
+/* .m-tbody .m-tbody-box {
     display: inline-block;
     position: relative;
     overflow: hidden;
@@ -18,16 +18,14 @@
     -webkit-animation: shimmer .8s infinite;
     animation: shimmer .8s infinite;
     content: ""
-}
-
-
+} 
 
 .m-tbody .m-tbody-circle {
-    border-radius: 50%
+    border-radius: 50%;
 }
 
 .m-tbody .m-tbody-rectangle {
-    border-radius: 2px
+    border-radius: var(--boder-radius)
 }
 
 .m-tbody .m-tbody-text {
@@ -36,4 +34,4 @@
 
 .m-tbody .m-tbody-text .m-tbody-box {
     border-radius: 1px
-}
+} */

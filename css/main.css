@@ -16,7 +16,6 @@
 @import url(./base/dialog.css);
 @import url(./base/loading.css);
 
-
 @font-face {
   font-family: Noto-Sans-Regular;
   src: url(../assets/fonts/notosans-regular.2cb88a13.woff2);
@@ -62,17 +61,14 @@ body {
     font-size: inherit;
 }
 
-
 :root{
   --text-color:#fff;
   --font-family-Bolds:  Noto-Sans-Bold;
   --font-family-SemiBolds: Noto-Sans-SemiBold;
   --boder-radius: 4px;
-  --boder-radius: 4px;
   --backgroud-primary-color: #2ca01c;
   --height-36: 36px;
   --error-color : #E60000;
-
 }
 
 /* Chiều dài và chiều rộng của thanh scroll */
@@ -126,8 +122,4 @@ body {
  
 .m-ml-8 {
   margin-left: 8px;
-}
-
-.m-margin-top-24{
-  margin-top: 24px;
 }

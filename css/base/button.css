@@ -39,6 +39,9 @@
     cursor: default;
     background-color: #35bf22;
 }
+.m-button-disabled:hover {
+    background-color: #35bf22;
+}
 
 .m-button-text {
     font-family: var(--font-family-SemiBolds);

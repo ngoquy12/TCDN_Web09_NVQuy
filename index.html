@@ -10,19 +10,8 @@
     <title>Nhân viên</title>
 </head>
 
-<body>
-    <!-- Combo dropdown chọn số bản ghi -->
-    <div class="m-combo-dropdown-panel" style="display: none">
-        <div class="m-dropdown-body-container">
-            <ul class="m-combo-dropdown-items">
-                <li class="m-combo-box-item m-item-highlight" data-total="10">10 bản ghi trên 1 trang</li>
-                <li class="m-combo-box-item" data-total="20">20 bản ghi trên 1 trang</li>
-                <li class="m-combo-box-item" data-total="30">30 bản ghi trên 1 trang</li>
-                <li class="m-combo-box-item" data-total="50">50 bản ghi trên 1 trang</li>
-                <li class="m-combo-box-item" data-total="100">100 bản ghi trên 1 trang</li>
-            </ul>
-        </div>
-    </div>
+<body class="preloading">
+
     <!-- Combo dropdown chọn phòng ban -->
     <div class="m-combo-menu" hidden>
         <div class="m-combo-menu-header">
@@ -37,7 +26,9 @@
         </div>
         <div class="m-combo-menu-content">
             <table class="m-menu-table">
-                <tbody class="m-menu-items m-departments-list"></tbody>
+                <tbody class="m-menu-items m-departments-list">
+                    <!-- Danh sách mã và tên phòng ban -->
+                </tbody>
             </table>
         </div>
     </div>
@@ -165,12 +156,10 @@
             </div>
             <div class="m-main-content">
                 <div class="m-content-header">
-                    <div class="m-header-di">
-                        <div class="m-header-title">Nhân viên</div>
-                        <button class="m-button m-button-add-emp">
-                            <div class="m-button-text">Thêm mới nhân viên</div>
-                        </button>
-                    </div>
+                    <div class="m-header-title">Nhân viên</div>
+                    <button class="m-button m-button-add-emp" onclick="showForm()">
+                        <div class="m-button-text">Thêm mới nhân viên</div>
+                    </button>
                 </div>
                 <div class="m-content-body">
                     <div class="m-body-toolbar">
@@ -187,14 +176,14 @@
                             </div>
                             <div class="m-refresh-button m-icon-24 m-icon-refresh"></div>
                         </div>
-                        
+
                     </div>
-                    <div class="m-body-table">
+                    <!-- <div class="m-body-table">
                         <table class="m-table">
                             <thead class="m-thead">
                                 <tr class="m-tr">
                                     <th class="m-out-left-white-16" style="top: -78px"></th>
-                                    <th class="m-th m-checkall" style="left: 16px; top: -87px">
+                                    <th class="m-th m-checkall" style="left: 16px;">
                                         <label class="m-table-checkbox">
                                             <input type="checkbox" class="m-input-checkall" />
                                             <span class="m-checkbox">
@@ -204,51 +193,93 @@
                                             </span>
                                         </label>
                                     </th>
-                                    <th class="m-th m-dynamic-col" style="min-width: 143px; width: 143px; top: -87px">
+                                    <th class="m-th " style="min-width: 143px; width: 143px;">
                                         <div class="m-th-title">Mã nhân viên</div>
                                     </th>
-                                    <th class="m-th m-dynamic-col" style="min-width: 173px; top: -87px">
+                                    <th class="m-th " style="min-width: 173px;">
                                         <div class="m-th-title">Tên nhân viên</div>
                                     </th>
-                                    <th class="m-th m-dynamic-col" style="min-width: 120px; width: 120px; top: -87px">
+                                    <th class="m-th " style="min-width: 120px; width: 120px;">
                                         <div class="m-th-title">Giới tính</div>
                                     </th>
-                                    <th class="m-th m-dynamic-col" style="min-width: 145px; width: 145px; top: -87px;">
-                                        <div class="m-th-title" style=" display: inline-block; text-align: center;">Ngày sinh</div>
+                                    <th class="m-th " style="min-width: 145px; width: 145px; top: -87px;">
+                                        <div class="m-th-title" style=" display: inline-block; text-align: center;">Ngày
+                                            sinh</div>
                                     </th>
-                                    <th class="m-th m-dynamoc-col" style="min-width: 122px; width: 122px; top: -87px">
+                                    <th class="m-th m-dynamoc-col" style="min-width: 122px; width: 122px;">
                                         <div class="m-th-title">Chức danh</div>
                                     </th>
-                                    <th class="m-th m-dynamic-col" style="min-width: 200px; width: 200px; top: -87px">
+                                    <th class="m-th " style="min-width: 200px; width: 200px;">
                                         <div class="m-th-title" title="Số chứng minh nhân dândân">Số CMND</div>
                                     </th>
-                                    <th class="m-th m-dynamic-col" style="min-width: 250px; top: -87px">
+                                    <th class="m-th " style="min-width: 250px;">
                                         <div class="m-th-title">Tên đơn vị</div>
                                     </th>
-                                    <th class="m-th m-dynamic-col" style="min-width: 150px; width: 150px; top: -87px">
+                                    <th class="m-th " style="min-width: 150px; width: 150px;">
                                         <div class="m-th-title">Số tài khoản</div>
                                     </th>
-                                    <th class="m-th m-dynamic-col" style="min-width: 250px; width: 250px; top: -87px">
+                                    <th class="m-th " style="min-width: 250px; width: 250px;">
                                         <div class="m-th-title">Tên ngân hàng</div>
                                     </th>
-                                    <th class="m-th m-dynamic-col" style="min-width: 250px; width: 250px; top: -87px">
-                                        <div class="m-th-title" title="Chi nhánh tài khoản ngân hàng">Chi nhánh TK ngân hàng</div>
+                                    <th class="m-th " style="min-width: 250px; width: 250px;">
+                                        <div class="m-th-title" title="Chi nhánh tài khoản ngân hàng">Chi nhánh TK ngân
+                                            hàng</div>
                                     </th>
-                                    <th class="m-th m-dynamic-col" style="min-width: 150px; width: 150px; top: -87px">
+                                    <th class="m-th " style="min-width: 150px; width: 150px;">
                                         <div class="m-th-title">Chi nhánh</div>
                                     </th>
                                     <th class="m-th m-th-widget"
-                                        style="right: 30px; width: 120px; min-width: 120px; top: -87px">
+                                        style="right: 30px; width: 120px; min-width: 120px;">
                                         <div class="m-th-title">Chức năng</div>
                                     </th>
-                                    <th class="m-out-right-white-30" style="top: -87px"></th>
-                                    <th class="m-out-right-grey-30" style="top: -87px"></th>
+                                    <th class="m-out-right-white-30" style="></th>
+                                    <th class="m-out-right-grey-30" style="></th>
                                 </tr>
                             </thead>
                             <tbody class="m-tbody">
-                                <!-- Nhập gía trị cho bảng -->
+                                
+                                <tr class="m-tr" ondblclick="doubleClick()">
+                                    <td class="m-out-left-white-16"></td>
+                                    <td class="m-td m-td-multi" style="left: 16px">
+                                        <label class="m-table-checkbox">
+                                            <input type="checkbox" class="m-input-checkbox" />
+                                            <span class="m-checkbox">
+                                                <span class="m-checkbox-inner">
+                                                    <div class="m-icon-16 m-icon-checkbox-active"></div>
+                                                </span>
+                                            </span>
+                                        </label>
+                                    </td>
+                                    <td class="m-td m-td-emp-code"></td>
+                                    <td class="m-td">1</td>
+                                    <td class="m-td">1</td>
+                                    <td class="m-td" style="text-align:center;">1</td>
+                                    <td class="m-td">1</td>
+                                    <td class="m-td">1</td>
+                                    <td class="m-td">1</td>
+                                    <td class="m-td">1</td>
+                                    <td class="m-td">1</td>
+                                    <td class="m-td">1</td>
+                                    <td class="m-td">1</td>
+                                    <td class="m-td m-td-widget" style="right: 30px">
+                                        <div class="m-dropdown">
+                                            <button class="m-dropdown-type-feature m-dropdown-btn-text m-edit-employee">
+                                                <div class="m-btn-text">Sửa</div>
+                                            </button>
+                                            <button
+                                                class="m-dropdown-type-feature m-dropdown-btn-icon m-dropdown-icon-emp">
+                                                <div class="m-btn-text">
+                                                    <div class="m-icon-16 m-icon-arrow-down-blue"></div>
+                                                </div>
+                                            </button>
+                                        </div>
+                                    </td>
+                                    <td class="m-out-right-white-30"></td>
+                                    <td class="m-out-right-grey-30"></td>
+                                </tr>
                             </tbody>
                         </table>
+
                         <div class="m-pagination">
                             <div class="m-pagination-bar">
                                 <div class="m-pagination-left">
@@ -283,244 +314,352 @@
                             <div class="m-out-right-white-30"></div>
                             <div class="m-out-right-grey-30"></div>
                         </div>
+                    </div> -->
+                    <!-- Table -->
+                    <div class="table-wrapper">
+                        <table id="empTable">
+                            <thead>
+                                <tr class="m-tr">
+                                    <th>
+                                        <label class="m-table-checkbox">
+                                            <input type="checkbox" class="m-input-checkall" />
+                                            <span class="m-checkbox">
+                                                <span class="m-checkbox-inner">
+                                                    <div class="m-icon-16 m-icon-checkbox-active"></div>
+                                                </span>
+                                            </span>
+                                        </label>
+                                    </th>
+                                    <th  style="min-width: 143px; width: 143px;">
+                                        <div class="m-th-title">Mã nhân viên</div>
+                                    </th>
+                                    <th  style="min-width: 173px;">
+                                        <div class="m-th-title">Tên nhân viên</div>
+                                    </th>
+                                    <th  style="min-width: 120px; width: 120px;">
+                                        <div class="m-th-title">Giới tính</div>
+                                    </th>
+                                    <th  style="min-width: 145px; width: 145px; top: -87px;">
+                                        <div class="m-th-title" style=" display: inline-block; text-align: center;">Ngày
+                                            sinh</div>
+                                    </th>
+                                    <th class="m-th m-dynamoc-col" style="min-width: 122px; width: 122px;">
+                                        <div class="m-th-title">Chức danh</div>
+                                    </th>
+                                    <th  style="min-width: 200px; width: 200px;">
+                                        <div class="m-th-title" title="Số chứng minh nhân dândân">Số CMND</div>
+                                    </th>
+                                    <th  style="min-width: 250px;">
+                                        <div class="m-th-title">Tên đơn vị</div>
+                                    </th>
+                                    <th  style="min-width: 150px; width: 150px;">
+                                        <div class="m-th-title">Số tài khoản</div>
+                                    </th>
+                                    <th  style="min-width: 250px; width: 250px;">
+                                        <div class="m-th-title">Tên ngân hàng</div>
+                                    </th>
+                                    <th  style="min-width: 250px; width: 250px;">
+                                        <div class="m-th-title" title="Chi nhánh tài khoản ngân hàng">Chi nhánh TK ngân
+                                            hàng</div>
+                                    </th>
+                                    <th  style="min-width: 150px; width: 150px;">
+                                        <div class="m-th-title">Chi nhánh</div>
+                                    </th>
+                                    <th class="function" style="min-width:120px">CHỨC NĂNG</th>
+                                </tr>
+                            </thead>
+                            <tbody class="m-td">
+                                <tr>
+                                    <td>
+                                        <label class="m-table-checkbox">
+                                            <input type="checkbox" class="m-input-checkall" />
+                                            <span class="m-checkbox">
+                                                <span class="m-checkbox-inner">
+                                                    <div class="m-icon-16 m-icon-checkbox-active"></div>
+                                                </span>
+                                            </span>
+                                        </label>
+                                    </td>
+                                    <td id="employeeCodeCell">NV001</td>
+                                    <td>Nguyen Van A</td>
+                                    <td>Nam</td>
+                                    <td style="text-align: center;">20/12/2022</td>
+                                    <td>Trưởng phòng</td>
+                                    <td>012345</td>
+                                    <td>Nhân sự</td>
+                                    <td>012345</td>
+                                    <td>Thanh Xuân, Hà Nội</td>
+                                    <td>Thanh Xuân, Hà Nội</td>
+                                    <td>
+                                        <div class="table-function">
+                                            <div class="modify">Sửa</div>
+                                            <div class="dropdown context-menu">
+                                                <div class="icon dropdown-button icon-arrow-down-blue"></div>
+                                                <div class="dropdown-list">
+                                                    <div class="dropdown-item">Nhân bản</div>
+                                                    <div class="dropdown-item delete-item">Xóa</div>
+                                                    <div class="dropdown-item">Ngưng sử dụng</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
                     </div>
-                    <div class="m-popup m-add-popup m-dialog" hidden>
-                        <div class="m-popup-con">
-                            <div class="m-popup-background"></div>
-                            <div class="m-popup-drag">
-                                <div class="m-popup m-popup-content">
-                                    <div class="m-popup--header">
-                                        <div class="m-popup--title">
-                                            <div class="m-title">Thông tin nhân viên</div>
-                                            <label class="m-popup-checkbox">
-                                                <input type="checkbox" class="m-input-checkbox-popup" checked />
-                                                <span class="m-checkbox">
-                                                    <span class="m-checkbox-inner">
-                                                        <div class="m-icon-16 m-icon-checkbox-active"></div>
-                                                    </span>
-                                                </span>
-                                                <span class="m-input-checkbox-label">Là khách hàng</span>
-                                            </label>
-                                            <label class="m-popup-checkbox">
-                                                <input type="checkbox" class="m-input-checkbox-popup" />
-                                                <span class="m-checkbox">
-                                                    <span class="m-checkbox-inner">
-                                                        <div class="m-icon-16 m-icon-checkbox-active"></div>
-                                                    </span>
-                                                </span>
-                                                <span class="m-input-checkbox-label">Là nhà cung cấp</span>
-                                            </label>
+                </div>
+            </div>
+
+
+        </div>
+
+    </div>
+
+
+    <!-- Form thông tin nhân viên -->
+    <div class="m-popup m-add-popup m-dialog" hidden>
+        <div class="m-popup-con">
+            <div class="m-popup-background"></div>
+            <div class="m-popup-drag">
+                <div class="m-popup m-popup-content">
+                    <div class="m-popup--header">
+                        <div class="m-popup--title">
+                            <div class="m-title">Thông tin nhân viên</div>
+                            <label class="m-popup-checkbox">
+                                <input type="checkbox" class="m-input-checkbox-popup" checked />
+                                <span class="m-checkbox">
+                                    <span class="m-checkbox-inner">
+                                        <div class="m-icon-16 m-icon-checkbox-active"></div>
+                                    </span>
+                                </span>
+                                <span class="m-input-checkbox-label">Là khách hàng</span>
+                            </label>
+                            <label class="m-popup-checkbox">
+                                <input type="checkbox" class="m-input-checkbox-popup" />
+                                <span class="m-checkbox">
+                                    <span class="m-checkbox-inner">
+                                        <div class="m-icon-16 m-icon-checkbox-active"></div>
+                                    </span>
+                                </span>
+                                <span class="m-input-checkbox-label">Là nhà cung cấp</span>
+                            </label>
+                        </div>
+                        <div class="m-popup--close">
+                            <div class="m-icon-24 m-icon-help" style="margin-right: 6px"></div>
+                            <div class="m-icon-24 m-icon-close m-close-add-popup" title="Đóng (ESC)" onclick="">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="m-popup--content">
+                        <div class="m-popup--content-scroll">
+                            <form id="employeeForm">
+                                <div class="m-content-2-col">
+                                    <div class="m-col-1 m-flex-wrap">
+                                        <div class="m-input-40 m-pr-6 m-pb-24">
+                                            <div class="m-flex">
+                                                <div class="m-input-title">Mã</div>
+                                                <div class="m-input-title-require">&nbsp;*</div>
+                                            </div>
+                                            <input type="text" class="m-input m-input-require" name="EmployeeCode"
+                                                maxlength="25" propName="EmployeeCode" tabindex="1" />
+                                            <div class="m-input-message-error"></div>
+
                                         </div>
-                                        <div class="m-popup--close">
-                                            <div class="m-icon-24 m-icon-help" style="margin-right: 6px"></div>
-                                            <div class="m-icon-24 m-icon-close m-close-add-popup" title="Đóng (ESC)">
+                                        <div class="m-input-60 m-pb-24">
+                                            <div class="m-flex">
+                                                <div class="m-input-title">Tên</div>
+                                                <div class="m-input-title-require">&nbsp;*</div>
+                                            </div>
+                                            <input type="text" class="m-input m-input-require" name="EmployeeName"
+                                                maxlength="128" propName="EmployeeName" tabindex="2" />
+                                            <div class="m-input-message-error">&lt;Tên&gt; Không được để
+                                                trống</div>
+                                        </div>
+                                        <div class="m-input-100 m-pb-24">
+                                            <div class="m-flex">
+                                                <div class="m-input-title">Đơn vị</div>
+                                                <div class="m-input-title-require">&nbsp;*</div>
+                                            </div>
+                                            <div class="m-combo-box">
+                                                <div class="m-combo-main-content">
+                                                    <div class="m-selected-options">
+                                                        <input type="hidden" name="DepartmentId"
+                                                            propName="DepartmentId" />
+                                                        <input type="text" class="m-combo-input" name="DepartmentName"
+                                                            propName="DepartmentName" tabindex="7" />
+                                                    </div>
+                                                    <div class="m-combo-action m-select-department">
+                                                        <div class="m-btn-dropdown">
+                                                            <div class="m-icon-16 m-icon-arrow-dropdown">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="m-input-message-error"></div>
                                             </div>
                                         </div>
-                                    </div>
-                                    <div class="m-popup--content">
-                                        <div class="m-popup--content-scroll">
-                                            <form id="employeeForm">
-                                                <div class="m-content-2-col">
-                                                    <div class="m-col-1 m-flex-wrap">
-                                                        <div class="m-input-40 m-pr-6 m-pb-24">
-                                                            <div class="m-flex">
-                                                                <div class="m-input-title">Mã</div>
-                                                                <div class="m-input-title-require">&nbsp;*</div>
-                                                            </div>
-                                                            <input type="text" class="m-input m-input-require"
-                                                                name="EmployeeCode" maxlength="25"
-                                                                propName="EmployeeCode" tabindex="1"/>
-                                                        </div>
-                                                        <div class="m-input-60 m-pb-24">
-                                                            <div class="m-flex">
-                                                                <div class="m-input-title">Tên</div>
-                                                                <div class="m-input-title-require">&nbsp;*</div>
-                                                            </div>
-                                                            <input type="text" class="m-input m-input-require"
-                                                                name="EmployeeName" maxlength="128"
-                                                                propName="EmployeeName" tabindex="2"/>
-                                                        </div>
-                                                        <div class="m-input-100 m-pb-24">
-                                                            <div class="m-flex">
-                                                                <div class="m-input-title">Đơn vị</div>
-                                                                <div class="m-input-title-require">&nbsp;*</div>
-                                                            </div>
-                                                            <div class="m-combo-box">
-                                                                <div class="m-combo-main-content">
-                                                                    <div class="m-selected-options">
-                                                                        <input type="hidden" name="DepartmentId"
-                                                                            propName="DepartmentId" />
-                                                                        <input type="text" class="m-combo-input"
-                                                                            name="DepartmentName"
-                                                                            propName="DepartmentName" tabindex="7"/>
-                                                                    </div>
-                                                                    <div class="m-combo-action m-select-department">
-                                                                        <div class="m-btn-dropdown">
-                                                                            <div
-                                                                                class="m-icon-16 m-icon-arrow-dropdown">
-                                                                            </div>
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                        <div class="m-input-100 m-pb-24">
-                                                            <div class="m-flex-wrap">
-                                                                <div class="m-input-title">Chức danh</div>
-                                                            </div>
-                                                            <input type="text" class="m-input" name="EmployeePosition"
-                                                                maxlength="128" propName="EmployeePosition" tabindex="10"/>
-                                                        </div>
-                                                    </div>
-                                                    <div class="m-col-2 m-flex-wrap">
-                                                        <div class="m-input-40 m-pr-6 m-pb-24">
-                                                            <div class="m-flex-wrap">
-                                                                <div class="m-input-title">Ngày sinh</div>
-                                                            </div>
-                                                            <input type="date" class="m-input" name="DateOfBirth"
-                                                                propName="DateOfBirth" tabindex="3" />
-                                                        </div>
-                                                        <div class="m-input-60 m-pb-24">
-                                                            <div class="m-flex-wrap">
-                                                                <div class="m-input-title m-input-title-gender">Giới tính</div>
-                                                            </div>
-                                                            <div class="m-radio-group">
-                                                                <label class="m-con-radio">
-                                                                    <input type="radio" class="m-input-radio" value="1"
-                                                                        name="Gender" checked tabindex="4"/>
-                                                                    <span class="m-radio">
-                                                                        <span class="m-radio-border"></span>
-                                                                        <span class="m-radio-circle"></span>
-                                                                    </span>
-                                                                    <span class="m-radio-label">Nam</span>
-                                                                </label>
-                                                                <label class="m-con-radio">
-                                                                    <input type="radio" class="m-input-radio" value="0"
-                                                                        name="Gender" tabindex="5"/>
-                                                                    <span class="m-radio">
-                                                                        <span class="m-radio-border"></span>
-                                                                        <span class="m-radio-circle"></span>
-                                                                    </span>
-                                                                    <span class="m-radio-label">Nữ</span>
-                                                                </label>
-                                                                <label class="m-con-radio">
-                                                                    <input type="radio" class="m-input-radio" value="2"
-                                                                        name="Gender" tabindex="6"/>
-                                                                    <span class="m-radio">
-                                                                        <span class="m-radio-border"></span>
-                                                                        <span class="m-radio-circle"></span>
-                                                                    </span>
-                                                                    <span class="m-radio-label">Khác</span>
-                                                                </label>
-                                                            </div>
-                                                        </div>
-                                                        <div class="m-input-60 m-pr-6 m-pb-24">
-                                                            <div class="m-flex-wrap">
-                                                                <div class="m-input-title" title="Số chứng minh nhân dân">Số CMND</div>
-                                                            </div>
-                                                            <input type="text" class="m-input" name="IdentityNumber"
-                                                                maxlength="20" propName="IdentityNumber" tabindex="8" />
-                                                        </div>
-                                                        <div class="m-input-40 m-pb-24">
-                                                            <div class="m-flex-wrap">
-                                                                <div class="m-input-title">Ngày cấp</div>
-                                                            </div>
-                                                            <input type="date" class="m-input" name="IdentityDate"
-                                                                propName="IdentityDate" tabindex="9"/>
-                                                        </div>
-                                                        <div class="m-input-100 m-pb-24">
-                                                            <div class="m-flex-wrap">
-                                                                <div class="m-input-title">Nơi cấp</div>
-                                                            </div>
-                                                            <input type="text" class="m-input" name="IdentityPlace"
-                                                                propName="IdentityPlace" tabindex="11"/>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="m-content-1-col m-pb-24">
-                                                    <div class="m-input-100">
-                                                        <div class="m-flex-wrap">
-                                                            <div class="m-input-title">Địa chỉ</div>
-                                                        </div>
-                                                        <input type="text" class="m-input" name="Address"
-                                                            propName="Address" tabindex="12"/>
-                                                    </div>
-                                                </div>
-                                                <div class="m-content-4-col">
-                                                    <div class="m-col-1 m-pr-6">
-                                                        <div class="m-input-100 m-pb-24">
-                                                            <div class="m-flex-wrap">
-                                                                <div class="m-input-title" title="Điện thoại di động">ĐT di động</div>
-                                                            </div>
-                                                            <input type="text" class="m-input" name="TelephoneNumber"
-                                                                propName="TelephoneNumber" tabindex="13"/>
-                                                        </div>
-                                                        <div class="m-input-100 m-pb-24">
-                                                            <div class="m-flex-wrap">
-                                                                <div class="m-input-title">Tài khoản ngân hàng</div>
-                                                            </div>
-                                                            <input type="text" class="m-input" name="BankAccountNumber"
-                                                                propName="BankAccountNumber" tabindex="16"/>
-                                                        </div>
-                                                    </div>
-                                                    <div class="m-col-2 m-pr-6">
-                                                        <div class="m-input-100 m-pb-24">
-                                                            <div class="m-flex-wrap">
-                                                                <div class="m-input-title" title="Điện thoại cố định">ĐT cố định</div>
-                                                            </div>
-                                                            <input type="text" class="m-input" name="PhoneNumber"
-                                                                propName="PhoneNumber" tabindex="14"/>
-                                                        </div>
-                                                        <div class="m-input-100 m-pb-24">
-                                                            <div class="m-flex-wrap">
-                                                                <div class="m-input-title">Tên ngân hàng</div>
-                                                            </div>
-                                                            <input type="text" class="m-input" name="BankName"
-                                                                propName="BankName" tabindex="17"/>
-                                                        </div>
-                                                    </div>
-                                                    <div class="m-col-3 m-pr-6">
-                                                        <div class="m-input-100 m-pb-24">
-                                                            <div class="m-flex-wrap">
-                                                                <div class="m-input-title">Email</div>
-                                                            </div>
-                                                            <input type="text" class="m-input" name="Email"
-                                                                propName="Email" tabindex="15"/>
-                                                        </div>
-                                                        <div class="m-input-100 m-pb-24">
-                                                            <div class="m-flex-wrap">
-                                                                <div class="m-input-title">Chi nhánh</div>
-                                                            </div>
-                                                            <input type="text" class="m-input" name="BankBranchName"
-                                                                propName="BankBranchName" tabindex="18"/>
-                                                        </div>
-                                                    </div>
-                                                    <div class="m-col-4"></div>
-                                                </div>
-                                            </form>
+                                        <div class="m-input-100 m-pb-24">
+                                            <div class="m-flex-wrap">
+                                                <div class="m-input-title">Chức danh</div>
+                                            </div>
+                                            <input type="text" class="m-input" name="EmployeePosition" maxlength="128"
+                                                propName="EmployeePosition" tabindex="10" />
                                         </div>
-                                        <div class="m-popup--footer">
-                                            <div class="m-divine"></div>
-                                            <div class="m-popup-btn">
-                                                <div class="m-popup-btn-left">
-                                                    <button
-                                                        class="m-button m-button-secondary m-button-size-default m-button-border-false" tabindex="21">
-                                                        <div class="m-button-text">Hủy</div>
-                                                    </button>
-                                                </div>
-                                                <div class="m-popup-btn-right">
-                                                    <button
-                                                        class="m-button m-button-secondary m-button-size-default m-button-border-false m-popup-store-btn" tabindex="20">
-                                                        <div class="m-button-text">Cất</div>
-                                                    </button>
-                                                    <button
-                                                        class="m-button m-button-size-default m-button-border-false m-popup-store-and-add-btn" tabindex="19">
-                                                        <div class="m-button-text">Cất và thêm</div>
-                                                    </button>
-                                                </div>
+                                    </div>
+                                    <div class="m-col-2 m-flex-wrap">
+                                        <div class="m-input-40 m-pr-6 m-pb-24">
+                                            <div class="m-flex-wrap">
+                                                <div class="m-input-title">Ngày sinh</div>
+                                            </div>
+                                            <input type="date" class="m-input" name="DateOfBirth" propName="DateOfBirth"
+                                                tabindex="3" />
+                                        </div>
+                                        <div class="m-input-60 m-pb-24">
+                                            <div class="m-flex-wrap">
+                                                <div class="m-input-title m-input-title-gender">Giới
+                                                    tính</div>
+                                            </div>
+                                            <div class="m-radio-group">
+                                                <label class="m-con-radio">
+                                                    <input type="radio" class="m-input-radio" value="1" name="Gender"
+                                                        checked tabindex="4" />
+                                                    <span class="m-radio">
+                                                        <span class="m-radio-border"></span>
+                                                        <span class="m-radio-circle"></span>
+                                                    </span>
+                                                    <span class="m-radio-label">Nam</span>
+                                                </label>
+                                                <label class="m-con-radio">
+                                                    <input type="radio" class="m-input-radio" value="0" name="Gender"
+                                                        tabindex="5" />
+                                                    <span class="m-radio">
+                                                        <span class="m-radio-border"></span>
+                                                        <span class="m-radio-circle"></span>
+                                                    </span>
+                                                    <span class="m-radio-label">Nữ</span>
+                                                </label>
+                                                <label class="m-con-radio">
+                                                    <input type="radio" class="m-input-radio" value="2" name="Gender"
+                                                        tabindex="6" />
+                                                    <span class="m-radio">
+                                                        <span class="m-radio-border"></span>
+                                                        <span class="m-radio-circle"></span>
+                                                    </span>
+                                                    <span class="m-radio-label">Khác</span>
+                                                </label>
                                             </div>
                                         </div>
+                                        <div class="m-input-60 m-pr-6 m-pb-24">
+                                            <div class="m-flex-wrap">
+                                                <div class="m-input-title" title="Số chứng minh nhân dân">Số
+                                                    CMND</div>
+                                            </div>
+                                            <input type="text" class="m-input" name="IdentityNumber" maxlength="20"
+                                                propName="IdentityNumber" tabindex="8" />
+                                        </div>
+                                        <div class="m-input-40 m-pb-24">
+                                            <div class="m-flex-wrap">
+                                                <div class="m-input-title">Ngày cấp</div>
+                                            </div>
+                                            <input type="date" class="m-input" name="IdentityDate"
+                                                propName="IdentityDate" tabindex="9" />
+                                        </div>
+                                        <div class="m-input-100 m-pb-24">
+                                            <div class="m-flex-wrap">
+                                                <div class="m-input-title">Nơi cấp</div>
+                                            </div>
+                                            <input type="text" class="m-input" name="IdentityPlace"
+                                                propName="IdentityPlace" tabindex="11" />
+                                        </div>
                                     </div>
+                                </div>
+                                <div class="m-content-1-col m-pb-24">
+                                    <div class="m-input-100">
+                                        <div class="m-flex-wrap">
+                                            <div class="m-input-title">Địa chỉ</div>
+                                        </div>
+                                        <input type="text" class="m-input" name="Address" propName="Address"
+                                            tabindex="12" />
+                                    </div>
+                                </div>
+                                <div class="m-content-4-col">
+                                    <div class="m-col-1 m-pr-6">
+                                        <div class="m-input-100 m-pb-24">
+                                            <div class="m-flex-wrap">
+                                                <div class="m-input-title" title="Điện thoại di động">ĐT
+                                                    di động</div>
+                                            </div>
+                                            <input type="text" class="m-input" name="TelephoneNumber"
+                                                propName="TelephoneNumber" tabindex="13" />
+                                        </div>
+                                        <div class="m-input-100 m-pb-24">
+                                            <div class="m-flex-wrap">
+                                                <div class="m-input-title">Tài khoản ngân hàng</div>
+                                            </div>
+                                            <input type="text" class="m-input" name="BankAccountNumber"
+                                                propName="BankAccountNumber" tabindex="16" />
+                                        </div>
+                                    </div>
+                                    <div class="m-col-2 m-pr-6">
+                                        <div class="m-input-100 m-pb-24">
+                                            <div class="m-flex-wrap">
+                                                <div class="m-input-title" title="Điện thoại cố định">ĐT
+                                                    cố định</div>
+                                            </div>
+                                            <input type="text" class="m-input" name="PhoneNumber" propName="PhoneNumber"
+                                                tabindex="14" />
+                                        </div>
+                                        <div class="m-input-100 m-pb-24">
+                                            <div class="m-flex-wrap">
+                                                <div class="m-input-title">Tên ngân hàng</div>
+                                            </div>
+                                            <input type="text" class="m-input" name="BankName" propName="BankName"
+                                                tabindex="17" />
+                                        </div>
+                                    </div>
+                                    <div class="m-col-3 m-pr-6">
+                                        <div class="m-input-100 m-pb-24">
+                                            <div class="m-flex-wrap">
+                                                <div class="m-input-title">Email</div>
+                                            </div>
+                                            <input type="email" class="m-input" name="Email" propName="Email"
+                                                tabindex="15" />
+                                            <div class="m-email-message-error"></div>
+
+                                        </div>
+                                        <div class="m-input-100 m-pb-24">
+                                            <div class="m-flex-wrap">
+                                                <div class="m-input-title">Chi nhánh</div>
+                                            </div>
+                                            <input type="text" class="m-input" name="BankBranchName"
+                                                propName="BankBranchName" tabindex="18" />
+                                        </div>
+                                    </div>
+                                    <div class="m-col-4"></div>
+                                </div>
+                            </form>
+                        </div>
+                        <div class="m-popup--footer">
+                            <div class="m-divine"></div>
+                            <div class="m-popup-btn">
+                                <div class="m-popup-btn-left">
+                                    <button
+                                        class="m-button m-button-secondary m-button-size-default m-button-border-false"
+                                        tabindex="21" onkeydown="stopTabIndex(event)">
+                                        <div class="m-button-text">Hủy</div>
+                                    </button>
+                                </div>
+                                <div class="m-popup-btn-right">
+                                    <button
+                                        class="m-button m-button-secondary m-button-size-default m-button-border-false m-popup-store-btn"
+                                        tabindex="20">
+                                        <div class="m-button-text">Cất</div>
+                                    </button>
+                                    <button
+                                        class="m-button m-button-size-default m-button-border-false m-popup-store-and-add-btn"
+                                        tabindex="19">
+                                        <div class="m-button-text">Cất và thêm</div>
+                                    </button>
                                 </div>
                             </div>
                         </div>
@@ -529,6 +668,7 @@
             </div>
         </div>
     </div>
+
     <!-- Danger Dialog -->
     <div class="m-dialog m-employee-danger" hidden>
         <div class="m-dialog-box">
@@ -644,7 +784,7 @@
         </div>
     </div>
     <!-- SVG Loading -->
-    <div class="m-loading-svg" >
+    <div class="m-loading-svg">
         <div class="m-icon-loading"></div>
     </div>
     <!-- Dropdown menu xóa nhân viên -->

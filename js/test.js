@@ -99,11 +99,11 @@ function reload() {
 
 //  Gán css top để phần header trong body trượt khi scroll
 
-$('.m-content-body').scroll(function () {
-    $('.m-content-header').css({ top: -$(this).scrollTop() });
-});
-// Gán chiều rộng cho phần phân trang
-$('.m-pagination').css({ width: $('.m-table').width() });
+// $('.m-content-body').scroll(function () {
+//     $('.m-content-header').css({ top: -$(this).scrollTop() });
+// });
+// // Gán chiều rộng cho phần phân trang
+// $('.m-pagination').css({ width: $('.m-table').width() });
 
 
 //show dialog warning
@@ -135,10 +135,10 @@ function hiddenDialogDelete() {
     dialogDelete.style.display = 'none';
 }
 
- /**
-  * Đinh dạng email
-  * author: nvquy(20/10/2022)
-  */
+/**
+ * Đinh dạng email
+ * author: nvquy(20/10/2022)
+ */
 
 //  function checkEmail() {
 //     //  Lấy ra phần element của input có type là email
@@ -366,7 +366,7 @@ class Employee {
             $(document)
                 .on('keyup', 'input.m-input-require', function () {
                     if (!$(this).val()) {
-                        $(this).addClass('m-input-error');           
+                        $(this).addClass('m-input-error');
                     } else {
                         $(this).removeClass('m-input-error');
                     }
@@ -738,33 +738,33 @@ class Employee {
             }
 
             // 2. Kiểm tra định dạng email
-            // if ($('input[name="Email"]').val()) {
-            //     if (!$('input[name="Email"]').val().includes('@')) {
-            //         $('input[name="Email"]').addClass('m-input-error');
-            //         $('.m-employee-danger .m-content-message').html('Email không đúng định dạng');
-            //         $('.m-employee-danger').show();
-            //         return false;
-            //     }
-            // }
+            if ($('input[name="Email"]').val()) {
+                if (!$('input[name="Email"]').val().includes('@')) {
+                    $('input[name="Email"]').addClass('m-input-error');
+                    $('.m-employee-danger .m-email-message-error').html('Email không đúng định dạng');
+                    $('.m-employee-danger').show();
+                    return false;
+                }
+            }
             let email = document.querySelector('input[type="email"]');
             //  Lấy ra giá trị người dùng nhập từ bàn phím
-             let value = email.value;
+            let value = email.value;
             //  Kiểm tra người dùng đã nhập dữ liệu hay chưa?
-             if (!value) {
-                 email.classList.add('m-input-error');
-                 document.querySelector('.m-input-email-error').innerHTML = "&lt;Email&gt; không được để trống";
-             } else {
-                 let filter = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-                 if (!filter.test(value)) {
-                     document.querySelector('.m-input-email-error').innerHTML = "&lt;Email&gt; chưa đúng định dạng";
-                     email.classList.add('m-input-error');
-                 }
-                 else {
-                     email.classList.remove('m-input-error');
-                     document.querySelector('.m-input-email-error').style.display = "none";
-                 }
-        
-             }
+            if (!value) {
+                email.classList.add('m-input-error');
+                document.querySelector('.m-email-message-error').innerHTML = "&lt;Email&gt; không được để trống";
+            } else {
+                let filter = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+                if (!filter.test(value)) {
+                    document.querySelector('m-email-message-error').innerHTML = "&lt;Email&gt; chưa đúng định dạng";
+                    email.classList.add('m-input-error');
+                }
+                else {
+                    email.classList.remove('m-input-error');
+                    document.querySelector('m-email-message-error').style.display = "none";
+                }
+
+            }
             return true;
         } catch (error) {
             console.log(error);
@@ -832,8 +832,8 @@ class Employee {
                                 </td>
                                 <td class="m-td m-td-emp-code">${emp.EmployeeCode || ''}</td>
                                 <td class="m-td">${emp.EmployeeName || ''}</td>
-                                <td class="m-td">${emp.GenderName||  ''}</td>
-                                <td class="m-td" style="text-align:center;">${dob ||''}</td>
+                                <td class="m-td">${emp.GenderName || ''}</td>
+                                <td class="m-td" style="text-align:center;">${dob || ''}</td>
                                 <td class="m-td">${emp.EmployeePosition || ''}</td>
                                 <td class="m-td">${emp.IdentityNumber || ''}</td>
                                 <td class="m-td">${emp.DepartmentName || ''}</td>
