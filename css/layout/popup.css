@@ -104,7 +104,7 @@
 .m-title {
     font-size: 24px;
     color: #111;
-    font-family: Noto-Sans-SemiBold;
+    font-family: var(--font-family-Bolds);
 }
 
 .m-input-checkbox-label {
@@ -127,15 +127,13 @@
     overflow-y: visible;
 }
 
-.m-content-2-col,
-.m-content-1-col,
-.m-content-4-col {
+.m-content-2-col, .m-content-1-col, .m-content-4-col {
     display: flex;
-    /* padding-bottom: 12px; */
+   
 }
 
-.m-content-2-col>div {
-    width: 50% !important;
+.m-content-2-col > div {
+    width: 50%!important;
 }
 
 .m-content-2-col .m-col-1 {
@@ -143,9 +141,9 @@
 }
 
 .m-radio-group {
+    height: 36px;
     display: flex;
-    height: 36px;   
-    padding: 0;
+    align-items: center;
 }
 
 .m-close-dialog {

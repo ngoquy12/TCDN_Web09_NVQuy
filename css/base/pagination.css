@@ -52,6 +52,11 @@
     display: flex; 
     padding: 0 6.5px;
     cursor: pointer;
+    border: 1px solid transparent;
+}
+
+.m-page-index:hover{
+    border: 1px solid #333;
 }
 
 .m-disable {
