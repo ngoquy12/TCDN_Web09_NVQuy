@@ -1,10 +1,9 @@
-/* .m-pagination {
-    position: fixed;
-    z-index: 3;
-    bottom: 0;
-    background-color: #fff;
-    min-width: 100%;
-  
+.m-pagination {
+    min-height:50px;
+    padding:12px 16px;
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
 }
 .m-pagination-bar {
     padding: 12px;
@@ -16,8 +15,7 @@
 
 .m-pagination-right {
     display: flex;
-    position: sticky;
-    right: 60px;
+    gap: 16px;
 }
 
 .m-record-in-page {
@@ -31,7 +29,7 @@
 }
 
 .m-number:hover{
-    border: 1px solid ;
+    border: 1px solid #333;
 }
 
 .m-page-number {
@@ -53,11 +51,6 @@
     display: flex; 
     padding: 0 6.5px;
     cursor: pointer;
-    border: 1px solid transparent;
-}
-
-.m-page-index:hover{
-    border: 1px solid #333;
 }
 
 .m-disable {
@@ -77,4 +70,4 @@
     white-space: nowrap;
     min-width: 10px;
     display: flex;
-} */
+}

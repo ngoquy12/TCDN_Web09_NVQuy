@@ -1,5 +1,10 @@
 .m-main-content {
+    flex: 1;
     background-color: #eceef1;
+    overflow: auto;
+    position: relative;
+    display: flex;
+    flex-direction: column;
     height: calc(100vh - 56px);
     padding: 0 24px;
 }
@@ -27,12 +32,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-}
-
-.m-body-toolbar-right{
-    display: flex;
-    align-items: center;
-    gap: 16px;
+    
 }
 
 .m-refresh-button {
@@ -46,4 +46,10 @@
     position: relative;
     justify-content: center;
     width: fit-content;
+}
+
+.m-tbody-toolbar-right{
+    display: flex;
+    align-items: center;
+    gap: 16px;
 }

@@ -1,175 +1,30 @@
-// load lại trang
-$(window).on('load', function (event) {
-    $('body').removeClass('preloading');
-    $('.m-loading-svg').delay(1000).fadeOut('fast');
-});
-
 /**
- * Hiển thị icon loading
- * @param {string} name Ten 
- * @returns Ten nhan vien
- * Author: NNQUY(ngay)
+ * Gắn các sự kiện khi trang được tải
+ * Author: NVQUY(23/10/2022)
+ */
+$(window).on('load', function (event) {
+    loading();
+    new Employee();
+});
+/**
+ * Tạo hiệu ứng loading 
+ * Author: NVQUY(23/10/2022)
  */
 function loading() {
-    let loadElement = document.querySelector('.m-loading-svg');
-    loadElement.style.display = "block";
-    setTimeout(function () {
-        loadElement.style.display = "none";
-    }, 1000);
+    $('.m-loading-svg').show();
+    $('.m-loading-svg').delay(1000).fadeOut('fast');
 }
-
-// Hiển thị form chi tiết nhân viên
-function showForm() {
-    loading();
-    setTimeout(function () {
-        let nodeElement = document.querySelector('.m-popup');
-        nodeElement.style.display = "block";
-        //Thay đổi heading của popup khi thay đổi trạng thái
-        let headingPopup = document.querySelector('.m-title');
-        headingPopup.innerText = "Thêm mới nhân viên";
-        document.querySelector('.m-input-code').focus();
-    }, 1000);
-}
-
-function showFormUpEmp() {
-    loading();
-    setTimeout(function () {
-        let nodeElement = document.querySelector('.m-popup');
-        nodeElement.style.display = "block";
-        //Thay đổi heading của popup khi thay đổi trạng thái
-        let headingPopup = document.querySelector('.m-title');
-        headingPopup.innerText = "Cập nhật nhân viên";
-        document.querySelector('.m-input-code').focus();
-    }, 1000);
-}
-
-// Taọ phím tắt
-window.onload = function () {
-    document.onkeyup = function (e) {
-        switch (e.which) {
-            case 45:
-                showFormUpEmp();
-                break;
-            case 27:
-                let closeElement = document.querySelector('.m-popup');
-                closeElement.style.display = "none";
-                break;
-            case 46:
-                let dialogDelete = document.querySelector('.m-delete-warning');
-                dialogDelete.style.display = "block";
-                break;
-            case 13:
-                let showForm = document.querySelector('.m-popup');
-                showForm.style.display = "block";
-                document.querySelector('.m-input-code').focus();
-                break;
-        }
-    }
-}
-// Ẩn form chi tiết nhân viên
-function hiddenForm() {
-    let closeElement = document.querySelector('.m-popup');
-    closeElement.style.display = "none";
-}
-
-// Stop tabIndex
-
+/**Stop tabIndex
+ * Author: NVQUY(23/10/2022)
+ * @param(event) : event
+ */
 function stopTabIndex(event) {
     event.preventDefault();
 }
-
-//double click
-let dbClick = document.querySelector('.m-popup');
-function doubleClick() {
-    loading();
-    setTimeout(function () {
-        dbClick.style.display = "block";
-        //Thay đổi heading của popup khi thay đổi trạng thái
-        let headingPopup = document.querySelector('.m-title');
-        headingPopup.innerText = "Thông tin nhân viên";
-        document.querySelector('.m-input-code').focus();
-    }, 1000);
-}
-
-
-//Reload trang
-function reload() {
-    location.reload();
-}
-
-//  Gán css top để phần header trong body trượt khi scroll
-
-// $('.m-content-body').scroll(function () {
-//     $('.m-content-header').css({ top: -$(this).scrollTop() });
-// });
-// // Gán chiều rộng cho phần phân trang
-// $('.m-pagination').css({ width: $('.m-table').width() });
-
-
-//show dialog warning
-
-let dialogWarn = document.querySelector('.m-employee-danger');
-function showDialog() {
-    dialogWarn.style.display = 'block';
-}
-
-// show dialog question
-
-function showDialogQuestion() {
-    $('.m-employee-question').show();
-}
-
-// hidden dialog
-
-let dialogDanger = document.querySelector('.m-employee-danger');
-function hiddenDialogDanger() {
-    dialogDanger.style.display = 'none';
-}
-
-let dialogQuestion = document.querySelector('.m-employee-question');
-function hiddenDialogQuestion() {
-    dialogQuestion.style.display = 'none';
-}
-let dialogDelete = document.querySelector('.m-delete-warning');
-function hiddenDialogDelete() {
-    dialogDelete.style.display = 'none';
-}
-
 /**
- * Đinh dạng email
- * author: nvquy(20/10/2022)
+ * Tạo class chung bao hàm các phương thức khởi tạo sự kiện và tải dữ liệu
+ * Author: NVQUY(23/10/2022)
  */
-
-//  function checkEmail() {
-//     //  Lấy ra phần element của input có type là email
-//      let email = document.querySelector('input[type="email"]');
-//     //  Lấy ra giá trị người dùng nhập từ bàn phím
-//      let value = email.value;
-//     //  Kiểm tra người dùng đã nhập dữ liệu hay chưa?
-//      if (!value) {
-//          email.classList.add('m-input-error');
-//          document.querySelector('.m-input-email-error').innerHTML = "&lt;Email&gt; không được để trống";
-//      } else {
-//          let filter = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-//          if (!filter.test(value)) {
-//              document.querySelector('.m-input-email-error').innerHTML = "&lt;Email&gt; chưa đúng định dạng";
-//              email.classList.add('m-input-error');
-//          }
-//          else {
-//              email.classList.remove('m-input-error');
-//              document.querySelector('.m-input-email-error').style.display = "none";
-//          }
-
-//      }
-//  }
-
-
-
-
-$(document).ready(function () {
-    new Employee();
-});
-
 class Employee {
     // Cờ check mode khi gửi dữ liệu. VD: thêm, sửa,...
     formMode = EmpEnum.FormMode.Add;
@@ -177,23 +32,14 @@ class Employee {
         this.initEvent();
         this.loadData();
     }
-
-    // Setup các sự kiện trong trang
+    /**
+     * Setup các sự kiện trong trang
+     * Author: NVQUY(23/10/2022)
+     */
     initEvent() {
         try {
             // Gán con trỏ this
             let self = this;
-
-            /**********************************************
-             * Các sự kiện cần gán css
-             * 1. Gán css top để phần header trong body trượt khi scroll
-             */
-            $('.m-content-body').scroll(function () {
-                $('.m-content-header').css({ top: -$(this).scrollTop() });
-            });
-            // // 2. Gán chiều rộng cho phần phân trang
-            $('.m-pagination').css({ width: $('.m-table').width() });
-
             /**********************************************
              * Xử lý các sự kiện liên quan đến checkbox
              * 1. Người dùng tích check all
@@ -240,6 +86,7 @@ class Employee {
 
             /**
              * Các sự kiện đóng mở combo box
+             * Author: NVQUY(23/10/2022)
              * 1. Mở và đóng combo box chọn số bản ghi
              */
             $('.m-select-record').click(function () {
@@ -285,18 +132,19 @@ class Employee {
                 $('input[name="DepartmentName"]').val(department.DepartmentName);
                 $('.m-combo-menu').removeClass('m-open').hide();
             });
-
             /**
-             * Các sự kiện liên quan đến popup thêm nhân viên
-             * 1. Người dùng chọn thêm mới nhân viên
+             * Hàm thêm mới nhân viên
+             * Author: NVQUY(23/10/2022)
+             * @param {}
              */
-            $(document).on('click', '.m-button-add-emp', function () {
+            function addEmployee() {
+                //Thay đổi title của popup khi thực hiện chức năng thêm mới nhân viên
+                $('.m-title-content').text('Thêm mới nhân viên');
                 self.formMode = EmpEnum.FormMode.Add;
                 $.ajax({
                     type: 'GET',
                     url: 'https://amis.manhnv.net/api/v1/Employees/NewEmployeeCode',
                     success: function (response) {
-                        // debugger;
                         $('input[name="EmployeeCode"]').val(response);
                         // Lấy object data trên popup
                         let formData = $('#employeeForm')
@@ -315,9 +163,22 @@ class Employee {
                 $('input[name="Gender"][value="1"]').prop('checked', true);
                 $('.m-add-popup').show();
                 $('input[name="EmployeeCode"]').focus();
+            }
+
+            /**
+             * Các sự kiện liên quan đến popup thêm nhân viên
+             * Author: NVQUY(23/10/2022)
+             * 1. Người dùng chọn thêm mới nhân viên
+             */
+            $(document).on('click', '.m-button-add-emp', function () {
+                //Hiệu ứng loading trước khi hiển thị popup thêm mới nhân viên
+                loading();
+                setTimeout(() => {
+                    addEmployee();
+                }, 1000);
             });
             // 2. Người dùng ẩn popup qua button X
-            $(document).on('click', '.m-close-add-popup', function () {
+            $(document).on('click', '.m-icon-close', function () {
                 // Lấy object data trên popup
                 let formData = $('#employeeForm')
                     .serializeArray()
@@ -336,6 +197,16 @@ class Employee {
                     $('.m-add-popup input:not([name="Gender"])').val('');
                     $('.m-input-require').removeClass('m-input-error');
                     $('.m-combo-main-content').removeClass('m-input-error');
+                }
+            });
+
+            //Hiển thị form chi tiết nhân viên bằng phím tắt Insert
+            $(document).keydown(function (e) {
+                if (e.which === 45) {
+                    loading();
+                    setTimeout(function(){
+                        addEmployee();
+                    },1000);
                 }
             });
             // 3. Người dùng ẩn popup qua phím ESC
@@ -362,6 +233,8 @@ class Employee {
                     }
                 }
             });
+
+
             // 4. Hiển thị border màu đỏ cảnh báo người dùng không nhập không hợp lệ
             $(document)
                 .on('keyup', 'input.m-input-require', function () {
@@ -423,7 +296,6 @@ class Employee {
                 }
                 $('.m-add-popup').show();
             });
-
             /**
              * Các sự kiện trên dropdown: Nhân bản, Xóa, Ngừng sử dụng
              * 1. Người dúng mở dropdown
@@ -482,6 +354,8 @@ class Employee {
              * Người dùng chọn sửa nhân viên
              */
             $(document).on('click', '.m-edit-employee', function () {
+                //Thay đổi title của popup khi thực hiện chức năng sửa nhân viên
+                $('.m-title-content').text('Sửa nhân viên');
                 self.formMode = EmpEnum.FormMode.Edit;
                 // Lấy dữ liệu
                 const empObject = $(this).parents('tr').data('object');
@@ -522,8 +396,38 @@ class Employee {
     }
 
     /**
+     * So sánh 2 object
+     * Author: NVQUY (24/10/2022)
+     */
+    objectEqual(object1, object2) {
+        const keys1 = Object.keys(object1);
+        const keys2 = Object.keys(object2);
+
+        // Check số lượng key của 2 object
+        if (keys1.length !== keys2.length) {
+            return false;
+        }
+
+        // Check lần lượt các value
+        for (const key of keys1) {
+            const val1 = object1[key];
+            const val2 = object2[key];
+            const areObjects = this.isObject(val1) && this.isObject(val2);
+
+            if ((areObjects && !objectEqual(val1, val2)) || (!areObjects && val1 !== val2)) {
+                return false;
+            }
+        }
+
+        return true;
+    }
+    isObject(object) {
+        return object != null && typeof object === 'object';
+    }
+
+    /**
      * Người dùng sửa thông tin nhân viên
-     * Author: NVQUY(23/10/2022)
+     * Author:NVQUY (24/10/2022)
      */
     handleEditEmployee() {
         // 1. Gán con trỏ this
@@ -579,7 +483,7 @@ class Employee {
 
     /**
      * Người dùng xóa nhân viên
-     * Author: NVQUY(23/10/2022
+     * Author: NVQUY(24/10/2022)
      */
     handleDeleteEmployee() {
         let empId = localStorage.getItem('empId');
@@ -606,9 +510,10 @@ class Employee {
 
     /**
      * Người dùng thêm nhân viên mới
-     * Author: NVQUY (23/10/2022)
+     * Author:NVQUY (24/10/2022)
      */
     handleAddEmployee() {
+
         try {
             // 1.Validate dữ liệu
             const valid = this.validationData();
@@ -662,6 +567,7 @@ class Employee {
                     ModifiedBy: null,
                 };
                 employeeData = { ...employeeData, ...formData };
+                employeeData.DepartmentName = $(`option[value=${employeeData.DepartmentId}]`).text();
                 // 3.Post dữ liệu
                 $('.m-loading-svg').show();
                 this.postEmployeeData(employeeData);
@@ -673,9 +579,10 @@ class Employee {
 
     /**
      * Post dữ liệu nhân viên mới
-     * Author: NVQUY (23/10/2022)
+     * Author: NVQUY (24/10/2022)
      */
     postEmployeeData(data) {
+
         try {
             self = this;
             $.ajax({
@@ -696,7 +603,6 @@ class Employee {
                     $('.m-employee-success').show();
                 },
                 error: function (response) {
-                    debugger;
                     // Hiển thị dialog nếu có lỗi xảy ra
                     $('.m-loading-svg').hide();
                     switch (response.status) {
@@ -717,7 +623,7 @@ class Employee {
 
     /**
      * Kiểm tra những trường bắt buộc nhập
-     * Author: NQUY (22/10/2022)
+     * Author: NVQUY (25/10/2022)
      */
     validationData() {
         try {
@@ -741,29 +647,10 @@ class Employee {
             if ($('input[name="Email"]').val()) {
                 if (!$('input[name="Email"]').val().includes('@')) {
                     $('input[name="Email"]').addClass('m-input-error');
-                    $('.m-employee-danger .m-email-message-error').html('Email không đúng định dạng');
+                    $('.m-employee-danger .m-content-message').html('Email không đúng định dạng');
                     $('.m-employee-danger').show();
                     return false;
                 }
-            }
-            let email = document.querySelector('input[type="email"]');
-            //  Lấy ra giá trị người dùng nhập từ bàn phím
-            let value = email.value;
-            //  Kiểm tra người dùng đã nhập dữ liệu hay chưa?
-            if (!value) {
-                email.classList.add('m-input-error');
-                document.querySelector('.m-email-message-error').innerHTML = "&lt;Email&gt; không được để trống";
-            } else {
-                let filter = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-                if (!filter.test(value)) {
-                    document.querySelector('m-email-message-error').innerHTML = "&lt;Email&gt; chưa đúng định dạng";
-                    email.classList.add('m-input-error');
-                }
-                else {
-                    email.classList.remove('m-input-error');
-                    document.querySelector('m-email-message-error').style.display = "none";
-                }
-
             }
             return true;
         } catch (error) {
@@ -773,7 +660,7 @@ class Employee {
 
     /**
      * Load dữ liệu
-     * Author: NVQUY(23/10/2022)
+     * Author: NVQUY(25/10/2022)
      */
     loadData() {
         // Gọi API lấy giữ liệu nhân viên
@@ -781,7 +668,6 @@ class Employee {
             type: 'GET',
             url: 'https://amis.manhnv.net/api/v1/Employees',
             success: function (response) {
-                // debugger;
                 // Xử lý dữ liệu
                 const allEmployees = response;
                 // Lọc nhân viên theo tìm kiếm
@@ -794,13 +680,43 @@ class Employee {
                 // Đổ dữ liệu ra table
                 function handleData(employees, perPage, page) {
                     try {
+                        // Phân trang
+                        let totalPage = Math.ceil(employees.length / perPage);
+                        let pageHtml = '';
+                        if (totalPage <= 5) {
+                            for (let i = 1; i <= totalPage; i++) {
+                                pageHtml += `<div class="m-number ${i == page ? 'm-selected' : ''}">${i}</div>`;
+                            }
+                        } else if (totalPage - page + 1 <= 5) {
+                            for (let i = totalPage - 4; i <= totalPage; i++) {
+                                pageHtml += `<div class="m-number ${i == page ? 'm-selected' : ''}">${i}</div>`;
+                            }
+                        } else {
+                            pageHtml += `<div class="m-number m-selected">${page}</div>`;
+                            for (let i = page + 1; i <= page + 3; i++) {
+                                pageHtml += `<div class="m-number">${i}</div>`;
+                            }
+                            pageHtml += `<div>...</div><div class="m-number">${totalPage}</div>`;
+                        }
+                        $('.m-page-index').empty();
+                        $('.m-page-index').append(pageHtml);
+                        $('.m-prev-page').removeClass('m-disable');
+                        $('.m-next-page').removeClass('m-disable');
+
+                        if (page == 1) {
+                            $('.m-prev-page').addClass('m-disable');
+                        }
+
+                        if (page == totalPage) {
+                            $('.m-next-page').addClass('m-disable');
+                        }
                         // Làm trống table
                         $('.m-tbody').empty();
                         // Render danh sách nhân viên
                         for (let i = (page - 1) * perPage; i < (page - 1) * perPage + perPage; i++) {
                             const emp = employees[i];
+
                             if (emp) {
-                                //Định dạng ngày tháng
                                 let dob = emp.DateOfBirth;
                                 if (dob) {
                                     dob = new Date(dob);
@@ -815,10 +731,9 @@ class Employee {
 
                                     dob = `${date}/${month}/${year}`;
                                 }
-                                //Đẩy dữ liệu vào bảng
-                                let trHTML = $(`<tr class="m-tr">
-                                <td class="m-out-left-white-16"></td>
-                                <td class="m-td m-td-multi" style="left: 16px">
+
+                                let trHTML = $(`<tr class="m-tr"  >
+                                <td class="m-td m-td-multi">
                                     <label class="m-table-checkbox">
                                         <input type="checkbox" class="m-input-checkbox" />
                                         <span class="m-checkbox">
@@ -830,18 +745,18 @@ class Employee {
                                         </span>
                                     </label>
                                 </td>
-                                <td class="m-td m-td-emp-code">${emp.EmployeeCode || ''}</td>
-                                <td class="m-td">${emp.EmployeeName || ''}</td>
-                                <td class="m-td">${emp.GenderName || ''}</td>
-                                <td class="m-td" style="text-align:center;">${dob || ''}</td>
-                                <td class="m-td">${emp.EmployeePosition || ''}</td>
-                                <td class="m-td">${emp.IdentityNumber || ''}</td>
-                                <td class="m-td">${emp.DepartmentName || ''}</td>
-                                <td class="m-td">${emp.BankAccountNumber || ''}</td>
-                                <td class="m-td">${emp.BankName || ''}</td>
-                                <td class="m-td">${emp.BankBranchName || ''}</td>
-                                <td class="m-td">${emp.BankProvinceName || ''}</td>
-                                <td class="m-td m-td-widget" style="right: 30px">
+                                <td class="m-td-db m-td m-td-emp-code" >${emp.EmployeeCode || ''}</td>
+                                <td class="m-td-db m-td"">${emp.EmployeeName || ''}</td>
+                                <td class="m-td-db m-td">${emp.GenderNamEmployeeName || ''}</td>
+                                <td class="m-td-db m-td" style="text-align:center;">${dob ? dob : ''}</td>
+                                <td class="m-td-db m-td">${emp.EmployeePosition ? emp.EmployeePosition : ''}</td>
+                                <td class="m-td-db m-td">${emp.IdentityNumber ? emp.IdentityNumber : ''}</td>
+                                <td class="m-td-db m-td">${emp.DepartmentNamEmployeeName || ''}</td>
+                                <td class="m-td-db m-td">${emp.BankAccountNumber ? emp.BankAccountNumber : ''}</td>
+                                <td class="m-td-db m-td">${emp.BankNamEmployeeName || ''}</td>
+                                <td class="m-td-db m-td">${emp.BankBranchNamEmployeeName || ''}</td>
+                                <td class="m-td-db m-td">${emp.BankProvinceNamEmployeeName || ''}</td>
+                                <td class="m-td m-td-widget">
                                     <div class="m-dropdown">
                                         <button class="m-dropdown-type-feature m-dropdown-btn-text m-edit-employee">
                                             <div class="m-btn-text">Sửa</div>
@@ -853,8 +768,7 @@ class Employee {
                                         </button>
                                     </div>
                                 </td>
-                                <td class="m-out-right-white-30"></td>
-                                <td class="m-out-right-grey-30"></td>
+                               
                             </tr>`);
                                 $(trHTML).data('object', emp);
                                 $(trHTML).data('id', emp.EmployeeId);
@@ -866,7 +780,60 @@ class Employee {
                         console.log(error);
                     }
                 }
-                //Tìm nhân viên theo tên, mã nhân viên
+
+                /**********************************************
+                 * Các sự kiện sau khi đổ dữ liệu ra table
+                 * Author: NVQUY(24/10/2022)
+                 */
+                function handleEvent() {
+                    try {
+                        // 1. Hiển thị phân trang
+                        $('.m-total-record .m-total').html(employees.length);
+                        $('.m-pagination').css({ display: 'flex' });
+
+                        // 2. Nếu checkall được tích thì check tất cả các checkbox hiển thị
+                        if ($('.m-input-checkall').prop('checked')) {
+                            $('.m-input-checkbox').prop('checked', true);
+                            $('.m-input-checkbox').parents('tr').addClass('checked');
+                        }
+                    } catch (error) {
+                        console.log(error);
+                    }
+                }
+
+                /**********************************************
+                 * Các sự kiện cần đổ lại dữ liệu ra bảng
+                 * Author: NVQUY(24/10/2022)
+                 * 1. Chọn các trang theo số thứ tự
+                 */
+                $(document).on('click', '.m-page-index  .m-number', function () {
+                    handleData(employees, parseInt($('.m-item-highlight').data('total')), parseInt($(this).html()));
+                });
+                // 2. Chọn trang trước
+                $('.m-prev-page').click(function () {
+                    if (!$(this).hasClass('m-disable')) {
+                        handleData(employees, parseInt($('.m-item-highlight').data('total')), parseInt($('.m-selected').html()) - 1);
+                    }
+                });
+                // 3. Chọn trang sau
+                $('.m-next-page').click(function () {
+                    if (!$(this).hasClass('m-disable')) {
+                        handleData(employees, parseInt($('.m-item-highlight').data('total')), parseInt($('.m-selected').html()) + 1);
+                    }
+                });
+                // 4. Chọn tổng số bản ghi trên 1 trang
+                $('.m-combo-box-item').click(function () {
+                    $('.m-combo-box-item').each(function () {
+                        $(this).removeClass('m-item-highlight');
+                    });
+                    $(this).addClass('m-item-highlight');
+                    $('.m-icon-arrow-dropdown').addClass('m-dropdown-close');
+                    $('.m-icon-arrow-dropdown').removeClass('m-dropdown-open');
+                    $('.m-combo-input').val($(this).html());
+                    $('.m-combo-dropdown-panel').css({ display: 'none' });
+                    handleData(employees, parseInt($(this).data('total')), 1);
+                });
+                // 5. Tìm nhân viên theo tên, mã nhân viên
                 $('.m-search-emp').on('keyup', function () {
                     employees = allEmployees.filter((emp) => {
                         return emp.EmployeeCode.toLowerCase().includes($('.m-search-emp').val().toLowerCase()) || emp.EmployeeName.toLowerCase().includes($('.m-search-emp').val().toLowerCase());
@@ -878,12 +845,14 @@ class Employee {
                 debugger;
             },
         });
-        // Gọi API lấy dữ liệu phòng ban
+        /**Gọi API lấy dữ liệu phòng ban
+         * Author: NVQUY(24/10/2022)
+         */
+
         $.ajax({
             type: 'GET',
             url: 'https://amis.manhnv.net/api/v1/Departments',
             success: function (response) {
-                // debugger
                 const departments = response;
                 $('.m-departments-list').empty();
                 for (const department of departments) {
