@@ -23,5 +23,5 @@
     background: url(../../assets/loading.svg) no-repeat center;
     width: 100%;
     height: 100%;
-    animation: rotate 1s ;
+    animation: rotate 1s ease ;
 }

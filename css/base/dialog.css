@@ -9,6 +9,10 @@
     opacity: 1;
 }
 
+.m-dialog{
+    display: none;
+}
+
 .m-dialog-center {
     display: flex;
     align-items: center;

@@ -17,6 +17,11 @@
     background-color: #2ca01c;
 }
 
+.m-button:disabled{
+    opacity: 0.6;
+    cursor: default;
+}
+
 .m-button-secondary {
     border: 1px solid #8d9096;
     color: #111;

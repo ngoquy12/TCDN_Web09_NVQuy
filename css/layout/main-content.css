@@ -32,6 +32,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    gap: 16px;
     
 }
 
@@ -39,17 +40,18 @@
     cursor: pointer;
 }
 
+.m-body-toolbar-right{
+    display: flex;
+    align-items: center;
+    gap: 16px;
+
+}
+
 .m-search-area {
     display: flex;
     align-items: flex-start;
-    flex-direction: column;
     position: relative;
     justify-content: center;
     width: fit-content;
 }
 
-.m-tbody-toolbar-right{
-    display: flex;
-    align-items: center;
-    gap: 16px;
-}

@@ -38,6 +38,7 @@ td, th {
 .m-thead{
     position: sticky;
     top: 0;
+    z-index: 100;
 }
 .m-th-widget {
     border-right: none;
@@ -155,11 +156,11 @@ td, th {
 }
 
 .m-tr:hover .m-td {
-    background-color: #f2f9ff !important;
+    background-color: #f2f9ff;
 }
 
 .checked .m-td {
-    background-color: #e5f3ff !important;
+    background-color: #e5f3ff;
 }
 
 th:first-child, td:first-child {
@@ -170,4 +171,6 @@ th:last-child, td:last-child{
     position:sticky;
     right:0;
 }
+
+
 

@@ -61,6 +61,12 @@
     white-space: nowrap;
 }
 
+.m-input-disabled, .m-input-disabled:hover{
+    cursor: default;
+    background-color: rgb(115, 198, 99);
+
+}
+
 .m-input-title-require{
     color: #E60000;
 }
@@ -68,8 +74,7 @@
 .m-input-error{
     border-color: #E60000;
 }
-
-/* .m-input-message-error{
+.m-input-message-error{
    position: absolute;
    padding-top: 8px;
    font-size: 12px;
@@ -77,9 +82,9 @@
    display: none;
 }
 
-input[required].m-input-error+div.m-input-message-error{
+/* input[required].m-input-error+div.m-input-message-error{
     display: block;
-} */
+}  */
 
 /* Input radio */
 .m-con-radio {

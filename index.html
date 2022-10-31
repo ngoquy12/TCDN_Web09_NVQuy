@@ -105,19 +105,13 @@
                         <div class="m-item-title">Báo cáo</div>
                     </a>
                 </div>
-                <!-- <div class="m-tooltip-content">
-                    <a href="#" class="m-item-router" title="Phân tích tài chính">
-                        <div class="m-item-icon m-icon-24 m-icon-finance"></div>
-                        <div class="m-item-title">Phân tích tài chính</div>
-                    </a>
-                </div> -->
             </div>
         </div>
         <!-- navbar -->
         <div class="m-content">
             <div class="m-navbar">
                 <div class="m-navbar-left">
-                    <div class="m-navbar-icon m-icon-24 m-icon-three-stripes" onclick=" handelSidebar()"></div>
+                    <div class="m-navbar-icon m-icon-24 m-icon-three-stripes"></div>
                     <div class="m-navbar-branch">
                         <div class="m-branch-name">CÔNG TY TNHH SẢN XUẤT - THƯƠNG MẠI - DỊCH VỤ QUI PHÚC</div>
                         <div class="m-navbar-icon m-icon-14 m-icon-chevron-down-bold"></div>
@@ -136,29 +130,26 @@
             </div>
             <div class="m-main-content">
                 <div class="m-content-header">
-
                     <div class="m-header-title">Nhân viên</div>
                     <button class="m-button m-button-add-emp" title="(Insert)">
                         <div class="m-button-text">Thêm mới nhân viên</div>
                     </button>
-
                 </div>
                 <!-- toolbar -->
                 <div class="m-content-body">
                     <div class="m-body-toolbar">
-                        <div class="m-tbody-toolbar-left">
-                            <button class="m-button m-button-disabled">
+                        <div class="m-body-toolbar-left">
+                            <button id="m-input-delete" class="m-button " disabled>
                                 <div class="m-button-text">Xóa</div>
                             </button>
                         </div>
-                        <div class="m-tbody-toolbar-right">
+                        <div class="m-body-toolbar-right">
                             <div class="m-search-area">
                                 <input type="text" class="m-input m-input-icon m-input-search m-search-emp"
                                     placeholder="Tìm theo mã, tên nhân viên" />
                                 <div class="m-icon-after m-icon-16 m-icon-search" title="Tìm kiếm"></div>
                             </div>
-                            <div class="m-refresh-button m-icon-24 m-icon-refresh"
-                                title="Lấy lại dữ liệu"></div>
+                            <div class="m-refresh-button m-icon-24 m-icon-refresh" title="Lấy lại dữ liệu"></div>
                         </div>
                     </div>
                     <div class="m-body-table">
@@ -187,11 +178,11 @@
                                     <th class="m-th m-dynamic-col" style="min-width: 145px; width: 145px;;">
                                         <div class="m-th-title m-th-title-dob">Ngày sinh</div>
                                     </th>
-                                    <th class="m-th m-dynamoc-col" style="min-width: 122px; width: 122px;">
-                                        <div class="m-th-title">Chức danh</div>
-                                    </th>
                                     <th class="m-th m-dynamic-col" style="min-width: 200px; width: 200px;">
                                         <div class="m-th-title" title="Số chứng minh nhân dân">Số CMND</div>
+                                    </th>
+                                    <th class="m-th m-dynamoc-col" style="min-width: 122px; width: 122px;">
+                                        <div class="m-th-title">Chức danh</div>
                                     </th>
                                     <th class="m-th m-dynamic-col" style="min-width: 250px;">
                                         <div class="m-th-title">Tên đơn vị</div>
@@ -206,10 +197,10 @@
                                         <div class="m-th-title" title="Chi nhánh tài khoản ngân hàng">Chi nhánh TK ngân
                                             hàng</div>
                                     </th>
-                                    <th class="m-th m-dynamic-col" style="min-width: 150px; width: 150px;">
+                                    <th class="m-th m-dynamic-col" style="min-width: 250px; width: 250px;">
                                         <div class="m-th-title">Chi nhánh</div>
                                     </th>
-                                    <th class="m-th m-th-widget" style="width: 158px; min-width: 158px;">
+                                    <th class="m-th m-th-widget" style="width: 120px; min-width: 120px;">
                                         <div class="m-th-title">Chức năng</div>
                                     </th>
 
@@ -255,7 +246,7 @@
         </div>
     </div>
     <!-- Form chi tiết nhân viên -->
-    <div class="m-popup m-add-popup m-dialog" hidden>
+    <div class="m-popup m-add-popup m-dialog ">
         <div class="m-popup-con">
             <div class="m-popup-background"></div>
             <div class="m-popup-drag">
@@ -264,7 +255,7 @@
                         <div class="m-popup--title">
                             <div class="m-title m-title-content">Thông tin nhân viên</div>
                             <label class="m-popup-checkbox">
-                                <input type="checkbox" class="m-input-checkbox-popup" checked />
+                                <input type="checkbox" class="m-input-checkbox-popup" />
                                 <span class="m-checkbox">
                                     <span class="m-checkbox-inner">
                                         <div class="m-icon-16 m-icon-checkbox-active"></div>
@@ -284,8 +275,7 @@
                         </div>
                         <div class="m-popup--close">
                             <div class="m-icon-24 m-icon-help" style="margin-right: 6px" title="Trợ giúp"></div>
-                            <div class="m-icon-24 m-icon-close" title="Đóng(ESC)"
-                                >
+                            <div class="m-icon-24 m-icon-close m-close-add-popup" title="Đóng(ESC)">
                             </div>
                         </div>
                     </div>
@@ -302,8 +292,7 @@
                                             <input type="text" class="m-input m-input-require m-input-code" required
                                                 name="EmployeeCode" maxlength="25" propName="EmployeeCode"
                                                 tabindex="1" />
-                                            <!-- <div class="m-input-message">&lt;Mã&gt;không được để trống</div> -->
-                                            
+                                            <div class="m-input-message-error">&lt;Mã&gt;không được để trống</div>
                                         </div>
                                         <div class="m-input-60 m-pb-24">
                                             <div class="m-flex">
@@ -313,20 +302,20 @@
                                             <input type="text" class="m-input m-input-require" required
                                                 name="EmployeeName" maxlength="128" propName="EmployeeName"
                                                 tabindex="2" />
-                                            <!-- <div class="m-input-message">&lt;Tên&gt;không được để trống</div> -->
-                                            
+                                            <div class="m-input-message-error">&lt;Tên&gt;không được để trống</div>
+
                                         </div>
                                         <div class="m-input-100 m-pb-24">
                                             <div class="m-flex">
                                                 <div class="m-input-title">Đơn vị</div>
                                                 <div class="m-input-title-require">&nbsp;*</div>
                                             </div>
-                                            <div class="m-combo-box">
-                                                <div class="m-combo-main-content">
-                                                    <div class="m-selected-options">
+                                            <div class="m-combo-box ">
+                                                <div class="m-combo-main-content m-input-error">
+                                                    <div class="m-selected-options ">
                                                         <input type="hidden" name="DepartmentId"
                                                             propName="DepartmentId" />
-                                                        <input type="text" class="m-combo-input" required
+                                                        <input type="text" class="m-combo-input " required
                                                             name="DepartmentName" propName="DepartmentName"
                                                             tabindex="7" />
                                                     </div>
@@ -337,7 +326,8 @@
                                                         </div>
                                                     </div>
                                                 </div>
-                                               
+                                                <div class="m-input-message-error">&lt;Đơn vị&gt;không được để trống
+                                                </div>
                                             </div>
                                         </div>
                                         <div class="m-input-100 m-pb-24">
@@ -355,8 +345,6 @@
                                             </div>
                                             <input type="date" class="m-input" name="DateOfBirth" propName="DateOfBirth"
                                                 tabindex="3" />
-                                            <!-- <div class="m-input-message">&lt;Ngày&gt; chưa đúng định dạng</div> -->
-
                                         </div>
                                         <div class="m-input-60 m-pb-24">
                                             <div class="m-flex-wrap">
@@ -365,7 +353,7 @@
                                             </div>
                                             <div class="m-radio-group">
                                                 <label class="m-con-radio">
-                                                    <input type="radio" class="m-input-radio" value="1" name="Gender"
+                                                    <input type="radio" class="m-input-radio" value="0" name="Gender"
                                                         checked tabindex="4" />
                                                     <span class="m-radio">
                                                         <span class="m-radio-border"></span>
@@ -374,7 +362,7 @@
                                                     <span class="m-radio-label">Nam</span>
                                                 </label>
                                                 <label class="m-con-radio">
-                                                    <input type="radio" class="m-input-radio" value="0" name="Gender"
+                                                    <input type="radio" class="m-input-radio" value="1" name="Gender"
                                                         tabindex="5" />
                                                     <span class="m-radio">
                                                         <span class="m-radio-border"></span>
@@ -406,14 +394,13 @@
                                             </div>
                                             <input type="date" class="m-input" name="IdentityDate"
                                                 propName="IdentityDate" tabindex="9" />
-                                            <!-- <div class="m-input-message">&lt;Ngày&gt; chưa đúng định dạng</div> -->
                                         </div>
                                         <div class="m-input-100 m-pb-24">
                                             <div class="m-flex-wrap">
                                                 <div class="m-input-title">Nơi cấp</div>
                                             </div>
                                             <input type="text" class="m-input" name="IdentityPlace"
-                                                propName="IdentityPlace" tabindex="10" />
+                                                propName="IdentityPlace" tabindex="11" />
                                         </div>
                                     </div>
                                 </div>
@@ -423,7 +410,7 @@
                                             <div class="m-input-title">Địa chỉ</div>
                                         </div>
                                         <input type="text" class="m-input" name="Address" propName="Address"
-                                            tabindex="11" />
+                                            tabindex="12" />
                                     </div>
                                 </div>
                                 <div class="m-content-4-col">
@@ -434,14 +421,14 @@
                                                     di động</div>
                                             </div>
                                             <input type="text" class="m-input" name="TelephoneNumber"
-                                                propName="TelephoneNumber" tabindex="12" />
+                                                propName="TelephoneNumber" tabindex="13" />
                                         </div>
                                         <div class="m-input-100 m-pb-24">
                                             <div class="m-flex-wrap">
                                                 <div class="m-input-title">Tài khoản ngân hàng</div>
                                             </div>
                                             <input type="text" class="m-input" name="BankAccountNumber"
-                                                propName="BankAccountNumber" tabindex="15" />
+                                                propName="BankAccountNumber" tabindex="16" />
                                         </div>
                                     </div>
                                     <div class="m-col-2 m-pr-6">
@@ -451,14 +438,14 @@
                                                     cố định</div>
                                             </div>
                                             <input type="text" class="m-input" name="PhoneNumber" propName="PhoneNumber"
-                                                tabindex="13" />
+                                                tabindex="14" />
                                         </div>
                                         <div class="m-input-100 m-pb-24">
                                             <div class="m-flex-wrap">
                                                 <div class="m-input-title">Tên ngân hàng</div>
                                             </div>
                                             <input type="text" class="m-input" name="BankName" propName="BankName"
-                                                tabindex="16" />
+                                                tabindex="17" />
                                         </div>
                                     </div>
                                     <div class="m-col-3 m-pr-6">
@@ -466,17 +453,15 @@
                                             <div class="m-flex-wrap">
                                                 <div class="m-input-title">Email</div>
                                             </div>
-                                            <input type="text" class="m-input" name="Email" propName="Email"
-                                                tabindex="14" isEmail />
-                                            <!-- <div class="m-input-message-error">&lt;Email&gt; chưa đúng
-                                                định dạng</div> -->
+                                            <input type="text" id="m-email" class="m-input" name="Email"
+                                                propName="Email" tabindex="15" isEmail />
                                         </div>
                                         <div class="m-input-100 m-pb-24">
                                             <div class="m-flex-wrap">
                                                 <div class="m-input-title">Chi nhánh</div>
                                             </div>
                                             <input type="text" class="m-input" name="BankBranchName"
-                                                propName="BankBranchName" tabindex="17" />
+                                                propName="BankBranchName" tabindex="18" />
                                         </div>
                                     </div>
                                     <div class="m-col-4"></div>
@@ -488,20 +473,20 @@
                             <div class="m-popup-btn">
                                 <div class="m-popup-btn-left">
                                     <button
-                                        class="m-button m-button-secondary m-button-size-default m-button-border-false"
-                                        tabindex="20" onkeydown=" stopTabIndex(event)">
+                                        class="m-button m-button-secondary m-button-size-default m-button-border-false m-button-close "
+                                        tabindex="21" id="m-button-close ">
                                         <div class="m-button-text">Hủy</div>
                                     </button>
                                 </div>
                                 <div class="m-popup-btn-right">
                                     <button
                                         class="m-button m-button-secondary m-button-size-default m-button-border-false m-popup-store-btn"
-                                        tabindex="19">
+                                        tabindex="20">
                                         <div class="m-button-text">Cất</div>
                                     </button>
                                     <button
                                         class="m-button m-button-size-default m-button-border-false m-popup-store-and-add-btn"
-                                        tabindex="18">
+                                        tabindex="19">
                                         <div class="m-button-text">Cất và thêm</div>
                                     </button>
                                 </div>
@@ -513,7 +498,7 @@
         </div>
     </div>
     <!-- Danger Dialog -->
-    <div class="m-dialog m-employee-danger" style="display: none;">
+    <div class="m-dialog m-employee-danger">
         <div class="m-dialog-box">
             <div class="m-dialog-center">
                 <div class="m-dialog-background"></div>
@@ -527,8 +512,8 @@
                         </div>
                         <div class="m-dialog-line"></div>
                         <div class="m-dialog-footer">
-                            <button
-                                class="m-button m-close-employee-danger m-button-size-default m-button-border-false">
+                            <button class="m-button m-close-employee-danger m-button-size-default m-button-border-false"
+                                tabindex="1">
                                 <div class="m-button-text">Đóng</div>
                             </button>
                         </div>
@@ -538,7 +523,7 @@
         </div>
     </div>
     <!-- Warning dialog -->
-    <div class="m-dialog m-delete-warning" style="display: none;">
+    <div class="m-dialog m-delete-warning">
         <div class="m-dialog-box">
             <div class="m-dialog-center">
                 <div class="m-dialog-background"></div>
@@ -553,10 +538,12 @@
                         <div class="m-dialog-line"></div>
                         <div class="m-dialog-footer">
                             <button
-                                class="m-button m-button-secondary m-close-delete-warning m-button-size-default m-button-border-false">
+                                class="m-button m-button-secondary m-close-delete-warning m-button-size-default m-button-border-false"
+                                tabindex="2">
                                 <div class="m-button-text">Không</div>
                             </button>
-                            <button class="m-button m-confirm-delete m-button-size-default m-button-border-false">
+                            <button class="m-button m-confirm-delete m-button-size-default m-button-border-false"
+                                tabindex="1">
                                 <div class="m-button-text">Có</div>
                             </button>
                         </div>
@@ -566,7 +553,7 @@
         </div>
     </div>
     <!-- Warning dialog -->
-    <div class="m-dialog " style="display: none;">
+    <div class="m-dialog ">
         <div class="m-dialog-box">
             <div class="m-dialog-center">
                 <div class="m-dialog-background"></div>
@@ -580,7 +567,8 @@
                         </div>
                         <div class="m-dialog-line"></div>
                         <div class="m-dialog-footer" style="display: flex; justify-content: flex-end;">
-                            <button class="m-button m-confirm-delete m-button-size-default m-button-border-false">
+                            <button class="m-button m-confirm-delete m-button-size-default m-button-border-false"
+                                tabindex="1">
                                 <div class="m-button-text">Đồng ý</div>
                             </button>
                         </div>
@@ -590,7 +578,7 @@
         </div>
     </div>
     <!-- Question dialog -->
-    <div class="m-dialog m-employee-question" style="display: none;">
+    <div class="m-dialog m-employee-question">
         <div class="m-dialog-box">
             <div class="m-dialog-center">
                 <div class="m-dialog-background"></div>
@@ -606,17 +594,20 @@
                         <div class="m-dialog-footer">
                             <div class="m-btn-left">
                                 <button
-                                    class="m-button m-button-secondary m-question-cancel m-button-size-default m-button-border-false">
+                                    class="m-button m-button-secondary m-question-cancel m-button-size-default m-button-border-false"
+                                    tabindex="3">
                                     <div class="m-button-text">Hủy</div>
                                 </button>
                             </div>
                             <div class="m-btn-right">
                                 <button
-                                    class="m-button m-button-secondary m-question-close m-button-size-default m-button-border-false">
+                                    class="m-button m-button-secondary m-question-close m-button-size-default m-button-border-false"
+                                    tabindex="2">
                                     <div class="m-button-text">Không</div>
                                 </button>
                                 <button
-                                    class="m-button m-question-store m-button-size-default m-button-border-false m-ml-8">
+                                    class="m-button m-question-store m-button-size-default m-button-border-false m-ml-8"
+                                    tabindex="1">
                                     <div class="m-button-text">Cất</div>
                                 </button>
                             </div>
@@ -627,7 +618,7 @@
         </div>
     </div>
     <!-- Success dialog -->
-    <div class="m-dialog m-employee-success" hidden>
+    <div class="m-dialog m-employee-success">
         <div class="m-dialog-box">
             <div class="m-dialog-center">
                 <div class="m-dialog-background"></div>
@@ -641,7 +632,8 @@
                         </div>
                         <div class="m-dialog-line"></div>
                         <div class="m-dialog-footer">
-                            <button class="m-button m-close-success-dialog m-button-size-default m-button-border-false">
+                            <button class="m-button m-close-success-dialog m-button-size-default m-button-border-false"
+                                tabindex="1">
                                 <div class="m-button-text">Đóng</div>
                             </button>
                         </div>
@@ -682,7 +674,7 @@
         </div>
     </div>
     <!-- Combo dropdown chọn phòng ban -->
-    <div class="m-combo-menu" style="display: none;">
+    <div class="m-combo-menu">
         <div class="m-combo-menu-header">
             <table class="m-menu-table">
                 <thead class="m-menu-header">
@@ -694,17 +686,15 @@
             </table>
         </div>
         <div class="m-combo-menu-content">
+
             <table class="m-menu-table">
                 <tbody class="m-menu-items m-departments-list">
-                    <tr class="m-menu-items-tr">
-                        <td class="m-menu-items-td" style="width: 100px; text-align: left"><span></span></td>
-                        <td class="m-menu-items-td" style="width: 250px; text-align: left"><span><span></td>
-                    </tr>
-
+                    <!-- Dữ liệu phòng ban -->
                 </tbody>
             </table>
         </div>
     </div>
+
     <!-- Khai báo js -->
     <script src="./lib/jquery-3.6.1.min.js"></script>
     <script src="./js/test.js"></script>
